@@ -1,3 +1,7 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+
 import cx_Oracle,pymysql
 import pandas as pd
 from sqlalchemy import create_engine
