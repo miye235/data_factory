@@ -1,0 +1,42 @@
+SELECT  o272412.VENDOR_NUM as E272416,o272412.VENDOR_NAME as E272417,o272412.VENDOR_SITE_NAME as E272418,o272412.VAT_REGISTRATION_NUM as E272419,o272412.INVOICE_NUM as E272420,o272412.INVOICE_DATE as E272421,o272412.GL_DATE as E272422,o272412.VOUCHER_NUMBER as E272423,o272412.DUE_DATE as E272424,o272412.INVOICE_CURRENCY_CODE as E272425,o272412.GROSS_AMOUNT as E272426,o272412.HOLD_FLAG as E272427,o272412.BANK_NAME as E272429,o272412.BANK_BRANCH_NAME as E272430,o272412.BANK_NUMBER as E272431,o272412.BRANCH_NUMBER as E272432,o272412.AMOUNT_REMAINING as E272435,o272412.PAYMENT_METHOD_CODE as E274512,o272412.COMPANY_ACCT as E324584,o272412.SCHEDULES_BANK_ACCOUNT_NAME as E325230,o272412.SCHEDULES_BANK_ACCOUNT_NUM as E325231,o272412.INVOICE_BANK_ACCOUNT_NAME as E325232,o272412.INVOICE_BANK_ACCOUNT_NUM as E325233,o272412.STATUS as E325234
+ FROM ( select pv.segment1 vendor_num
+      ,pv.vendor_name
+      ,pvs.vendor_site_code vendor_site_name 
+      ,nvl(pvs.attribute15,pv.attribute15) VAT_REGISTRATION_NUM
+      ,ai.invoice_num  
+      ,ai.invoice_date
+      ,ai.gl_date 
+      ,ai.doc_sequence_value  voucher_number 
+      ,aps.due_date
+      ,ai.invoice_currency_code 
+      ,aps.gross_amount 
+      ,aps.hold_flag
+      ,ai.payment_method_code
+      ,cbb.bank_name
+      ,cbb.bank_branch_name
+      ,cbb.bank_number
+      ,cbb.branch_number
+      ,ieba.bank_account_name  schedules_bank_account_name
+      ,ieba.bank_account_num   schedules_bank_account_num
+      ,ieba1.bank_account_name  invoice_bank_account_name
+      ,ieba1.bank_account_num   invoice_bank_account_num
+      ,(case when nvl(ieba.bank_account_num,0)=nvl(ieba1.bank_account_num,0) then 'Y'  else 'N'  end)  status
+      ,aps.amount_remaining
+      ,gcc.segment1  company_acct
+ from apps.ap_invoices_all ai
+     ,apps.ap_payment_schedules_all aps
+     ,apps.po_vendors pv
+     ,apps.po_vendor_sites_all pvs
+     ,apps.iby_ext_bank_accounts ieba
+    ,apps.iby_ext_bank_accounts ieba1
+     ,apps.ce_bank_branches_v cbb
+     ,apps.gl_code_combinations  gcc
+where ai.invoice_id=aps.invoice_id(+)
+      and ai.vendor_id=pv.vendor_id
+      and ai.vendor_site_id=pvs.vendor_site_id
+      and aps.external_bank_account_id = ieba.ext_bank_account_id(+)
+and ai.external_bank_account_id=ieba1.ext_bank_account_id(+)
+      and ieba.branch_id = cbb.branch_party_id(+)
+      and ai.ACCTS_PAY_CODE_COMBINATION_ID = gcc.code_combination_id
+ ---   and ai.org_id= apps.fnd_profile.value('ORG_ID')
+ ) o272412;

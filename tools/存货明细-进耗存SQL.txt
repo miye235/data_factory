@@ -1,0 +1,41 @@
+SELECT  o287073.ITEM_NUMBER as E287077,o287073.ITEM_DESCRIPTION as E287078,o287073.TRANSACTION_DATE_FM as E287079,o287073.TRANSACTION_DATE_TO as E287080,o287073.CATEGORY_NAME as E287081,o287073.BEG_STK as E287082,o287073.BEG_AMT as E287083,o287073.PO_STK_IN as E287084,o287073.PO_IN_AMT as E287085,o287073.WIP_STK_IN as E287086,o287073.WIP_IN_AMT as E287087,o287073.WIP_STK_OUT as E287088,o287073.WIP_OUT_AMT as E287089,o287073.SO_STK_OUT as E287090,o287073.SO_OUT_AMT as E287091,o287073.DEPT_STK_OUT as E287092,o287073.DEPT_OUT_AMT as E287093,o287073.OTHER_STK_OUT as E287094,o287073.OTHER_OUT_AMT as E287095,o287073.END_STK as E287096,o287073.END_AMT as E287097,o287073.END_UP as E287098,o287073.STANDARD_COST as E287099
+ FROM ( select msi.segment1 item_number
+       ,msi.description item_description
+       ,transaction_date_fm
+       ,transaction_date_to
+       ,mcb.segment1 category_name   
+       ,beg_stk,       beg_amt
+       ,po_stk_in,     po_in_amt
+       ,wip_stk_in,    wip_in_amt
+       ,wip_stk_out,   wip_out_amt
+       ,so_stk_out,    so_out_amt
+       ,dept_stk_out,  dept_out_amt
+       ,other_stk_out, other_out_amt    
+/*       ,ic_stk_in , ic_in_amt
+       ,ic_stk_out, ic_out_amt
+       ,ir_stk_in, ir_in_amt
+       ,iso_stk_out, iso_out_amt
+       ,intransit_stk, intransit_amt*/
+       ,end_stk,       end_amt
+       ,decode(end_stk,0,0,round(end_amt/end_stk,4)) end_up
+       ,NVL(standard_cost,0) standard_cost
+       ,mp.organization_code
+       ,msi.organization_id
+       ,msi.inventory_item_id
+  from apps.ycst_mtl_io_dtls_tmp mio
+       ,apps.mtl_system_items msi
+       ,apps.mtl_item_categories mic
+       ,apps.mtl_categories_b mcb
+       ,apps.mtl_category_sets_tl mcs
+       ,apps.mtl_parameters mp
+ where mio.organization_id=msi.organization_id
+       and mio.inventory_item_id=msi.inventory_item_id
+       and msi.organization_id=mic.organization_id
+       and msi.inventory_item_id=mic.inventory_item_id
+       and mic.category_id=mcb.category_id
+       and mic.category_set_id=mcs.category_set_id
+       and mcs.category_set_name like 'Inventory%'
+       and mio.organization_id=mp.organization_id
+       and mp.organization_id in (select organization_id from apps.org_access where responsibility_id = apps.fnd_profile.value('RESP_ID'))
+       and mio.created_by=apps.fnd_profile.value('USER_ID')
+ ) o287073;

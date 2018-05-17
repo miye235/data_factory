@@ -1,0 +1,42 @@
+SELECT  o283859.ORGANIZATION_CODE as E283862,o283859.ITEM_NUMBER as E283865,o283859.DESCRIPTION as E283866,o283859.FACTORY_APPROVED as E283867,o283859.KNIFEID as E283868,o283859.UNIT_LENGTH as E283869,o283859.UNIT_WIDTH as E283870,o283859.UNIT_WEIGHT as E283871,o283859.SHELF_LIFE_DAYS as E283872,o283859.STATUS as E284899,o283859.PRIMARY_UNIT_OF_MEASURE as E284912,o283859.CREATION_DATE as E284915,o283859.INVENTORY_MAIN_CATEGORY as E287111,o283859.INVENTORY_SUB_CATEGORY as E287112,o283859.PURCHASING_MAIN_CATEGORY as E287113,o283859.PURCHASING_SUB_CATEGORY as E287114
+ FROM ( SELECT MP.ORGANIZATION_CODE,
+       MSI.ORGANIZATION_ID,
+       MSI.INVENTORY_ITEM_ID,
+       MSI.SEGMENT1 ITEM_NUMBER,
+       MSI.DESCRIPTION,
+       msi.PRIMARY_UNIT_OF_MEASURE,
+       MSI.ATTRIBUTE1 FACTORY_APPROVED,
+       MSI.ATTRIBUTE2 KNIFEID,  
+       msi.unit_length,
+       msi.unit_width,
+       msi.unit_weight, 
+       msi.SHELF_LIFE_DAYS  
+       ,msi.INVENTORY_ITEM_STATUS_CODE status
+       ,(select mcbk.SEGMENT1 from apps.MTL_CATEGORIES_b_kfv mcbk,apps.MTL_ITEM_CATEGORIES mic
+          where mic.INVENTORY_ITEM_ID = msi.inventory_item_id
+                and mic.organization_id=msi.organization_id
+                and mic.category_id=mcbk.category_id
+                and mic.category_set_id = '1') INVENTORY_MAIN_CATEGORY
+       ,(select mcbk.SEGMENT2 from apps.MTL_CATEGORIES_b_kfv mcbk,apps.MTL_ITEM_CATEGORIES mic
+          where mic.INVENTORY_ITEM_ID = msi.inventory_item_id
+                and mic.organization_id=msi.organization_id
+                and mic.category_id=mcbk.category_id
+                and mic.category_set_id = '1') INVENTORY_SUB_CATEGORY
+       ,(select mcbk.SEGMENT1 from apps.MTL_CATEGORIES_b_kfv mcbk,apps.MTL_ITEM_CATEGORIES mic
+          where mic.INVENTORY_ITEM_ID = msi.inventory_item_id
+                and mic.organization_id=msi.organization_id
+                and mic.category_id=mcbk.category_id
+                and mic.category_set_id = '1100000041') PURCHASING_MAIN_CATEGORY
+       ,(select mcbk.SEGMENT2 from apps.MTL_CATEGORIES_b_kfv mcbk,apps.MTL_ITEM_CATEGORIES mic
+          where mic.INVENTORY_ITEM_ID = msi.inventory_item_id
+                and mic.organization_id=msi.organization_id
+                and mic.category_id=mcbk.category_id
+                and mic.category_set_id = '1100000041') PURCHASING_SUB_CATEGORY
+       ,msi.CREATION_DATE
+  FROM apps.MTL_SYSTEM_ITEMS MSI, apps.MTL_PARAMETERS MP
+ WHERE MSI.ORGANIZATION_ID = MP.ORGANIZATION_ID
+  AND MP.ORGANIZATION_ID IN
+    (SELECT ORGANIZATION_ID
+        FROM apps.ORG_ACCESS
+       WHERE RESPONSIBILITY_ID = apps.FND_PROFILE.VALUE('RESP_ID'))
+ ) o283859;
