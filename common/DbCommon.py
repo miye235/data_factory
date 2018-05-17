@@ -1,11 +1,10 @@
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
-
-
+# -*- coding: utf-8 -*-
 import cx_Oracle,pymysql
 import pandas as pd
 from sqlalchemy import create_engine
+import os
 
+os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8'
 class oracle2pd:
     def __init__(self,host,port,db,user,pwd):
         '''
@@ -49,7 +48,7 @@ class oracle2pd:
         except Exception as e:
             raise e
         return res
-    def getdata(self,table,pars=None,blimit=None,elimit=None):
+    def getdata(self,table,pars=None,tjs=None,blimit=None,elimit=None):
         '''
         从数据库中取出数据放到dataframe中
         :param table: 数据源表
@@ -68,7 +67,10 @@ class oracle2pd:
             if blimit!=None and elimit!=None:sql1+='<='+str(elimit)+' minus '+'select '+items+' from '+table+' where rownum<='+str(blimit)
             elif elimit!=None:sql1+='<='+str(elimit)
             else:sql1='select '+items+' from '+table+' minus '+'select '+items+' from '+table+' where rownum<='+str(blimit)
-        print("执行查询：" + sql1)
+        if tjs!=None:
+            if sql1.find('where')!=-1:sql1=sql1.replace('where','where '+' and '.join(tjs)+'and')
+            else:sql1+=' where '+' and '.join(tjs)
+        # print("执行查询：" + sql1)
         try:
             res=pd.read_sql(sql1, self.conn)
         except Exception as e:
@@ -178,7 +180,7 @@ class mysql2pd:
         sql_insert = "insert into "+table+" "
         for i in range(0,len(values)):
             if not str(values[i]).isdigit() and values[i][0]!="'":
-                values[i]="'"+values[i]+"'"
+                values[i]="'"+str(values[i])+"'"
         if keys!=None:
             sql_insert+="("+",".join([str(key) for key in keys])+") "
         sql_insert+="values("+",".join([str(value) for value in values])+")"
@@ -208,7 +210,7 @@ class mysql2pd:
         更新数据
         :param table: 目标表
         :param keyandvals: 更新值，例如：{'age':'age-1','性别':'男'}
-        :param find_dict: where条件对，例如：{'equal':[('部门','业务组'),('性别','男')],'like':[('name','%冯%')]}
+        :param find_dict: where条件对，例如：{'=':[('部门','业务组'),('性别','男')],'like':[('name','%冯%')]}
         :return:
         '''
         sql="update "+table+" set "+",".join([str(k)+"="+str(v) for k,v in keyandvals.items()])
