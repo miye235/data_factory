@@ -1,0 +1,36 @@
+SELECT  SUBSTRB(o289371.ITEM_DESCRIPTION,INSTR(o289371.ITEM_DESCRIPTION,';',1,2),INSTR(o289371.ITEM_DESCRIPTION,';',2,3)-INSTR(o289371.ITEM_DESCRIPTION,';',1,2)) as C_2,NVL(( ( o289371.UNIT_LENGTH*o289371.UNIT_WIDTH )/1000000 )*o289371.TRANSACTION_QUANTITY,0) as C_1,o289371.CUSTOMER_NAME as E289380,o289371.TRANSACTION_NUMBER as E289381,o289371.TRANSACTION_QUANTITY as E289382,o289371.REVENUE_AMOUNT as E289383,o289371.COGS_MATERIAL as E289384,o289371.COGS_RESOURCE as E289385,o289371.COGS_OVERHEAD as E289386,o289371.DEFERRED as E289387,o289371.COGS_ACCT as E289388,o289371."Inventory Category" as E289396,o289371.ITEM_NUMBER as E289397,o289371.ITEM_DESCRIPTION as E289398,o289371.PRIMARY_UOM_CODE as E289399,o289371.COGS as E289400,o289371.PROFIT as E289401
+ FROM ( select tmp.txn_type
+       ,tmp.customer_name
+       ,tmp.transaction_number
+       ,tmp.txn_id
+       ,mcb.segment1||'.'||mcb.segment2  "Inventory Category"
+       ,msi.segment1 item_number
+       ,msi.description item_description
+       ,msi.primary_uom_code
+       ,msi.unit_length
+       ,msi.unit_width
+       ,msi.unit_weight
+       ,tmp.transaction_quantity
+       ,tmp.revenue_amount
+       ,cogs_material
+       ,cogs_resource
+       ,cogs_overhead
+       ,(cogs_material+cogs_resource+cogs_overhead) cogs
+       ,(tmp.revenue_amount - (cogs_material+cogs_resource+cogs_overhead)) profit
+       ,cogs_acct
+       ,tmp.deferred,mcs.category_set_name
+  from  apps.YCST_COGS_TMP tmp
+       ,apps.mtl_system_items msi
+       ,apps.mtl_item_categories mic
+       ,apps.mtl_categories_b mcb
+       ,apps.mtl_category_sets_tl mcs       
+ where tmp.organization_id=msi.organization_id
+       and tmp.inventory_item_id=msi.inventory_item_id
+       and msi.organization_id=mic.organization_id
+       and msi.inventory_item_id=mic.inventory_item_id
+       and mic.category_id=mcb.category_id        
+       and mic.category_set_id=mcs.category_set_id
+       and mcs.category_set_name like 'Inventory%'
+       and tmp.created_by = apps.fnd_profile.value('USER_ID')
+ ) o289371
+ ORDER BY o289371.COGS_ACCT ASC ;
