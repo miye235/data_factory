@@ -6,15 +6,15 @@ from ..base import BASE
 
 
 ################
-#  主营业务成本
+# 应付暂估款
 ################
-SQL_NAME = "main_business_cost"
+SQL_NAME = "amount_of_temporary_assessment_payable"
 
 
-class MainBusinessCost(BASE):
+class AmountOfTemporaryAssessmentPayable(BASE):
 
     def __init__(self):
-        super(MainBusinessCost, self).__init__(SQL_NAME)
+        super(AmountOfTemporaryAssessmentPayable, self).__init__(SQL_NAME)
 
     def __call__(self):
         data = self.get_remote_db_data()

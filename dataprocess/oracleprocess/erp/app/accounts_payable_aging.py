@@ -6,15 +6,15 @@ from ..base import BASE
 
 
 ################
-#  主营业务成本
+# 应付账款账龄
 ################
-SQL_NAME = "main_business_cost"
+SQL_NAME = "accounts_payable_aging"
 
 
-class MainBusinessCost(BASE):
+class AccountsPayableAging(BASE):
 
     def __init__(self):
-        super(MainBusinessCost, self).__init__(SQL_NAME)
+        super(AccountsPayableAging, self).__init__(SQL_NAME)
 
     def __call__(self):
         data = self.get_remote_db_data()

@@ -47,4 +47,4 @@ FROM apps.HZ_CUST_PROFILE_AMTS acpa1
 WHERE rct.bill_to_site_use_id = acpa1.site_use_id(+)
 AND rct.invoice_currency_code = acpa1.currency_code(+)) OR
 acpa.cust_acct_profile_amt_id IS NULL )
-) o289440;
+) o289440

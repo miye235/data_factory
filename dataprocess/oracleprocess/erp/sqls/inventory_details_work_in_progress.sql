@@ -120,4 +120,4 @@ from APPS.FND_RESPONSIBILITY_VL FRV, apps.yerp_wip_operations_summary ywos,WIP.W
     or DATE_CLOSED is null)
    and ywos.organization_id in (select organization_id from apps.org_access where responsibility_id=FRV.RESPONSIBILITY_ID
  )) o318403
- GROUP BY o318403.WIP_ENTITY_NAME,o318403.ITEM_CODE,o318403.STATUS_TYPE,o318403.DATE_CLOSED;
+ GROUP BY o318403.WIP_ENTITY_NAME,o318403.ITEM_CODE,o318403.STATUS_TYPE,o318403.DATE_CLOSED

@@ -38,4 +38,4 @@ where ai.invoice_id=aps.invoice_id(+)
 and ai.external_bank_account_id=ieba1.ext_bank_account_id(+)
       and ieba.branch_id = cbb.branch_party_id(+)
       and ai.ACCTS_PAY_CODE_COMBINATION_ID = gcc.code_combination_id
- ) o272412;
+ ) o272412

@@ -33,4 +33,4 @@ SELECT  SUBSTRB(o289371.ITEM_DESCRIPTION,INSTR(o289371.ITEM_DESCRIPTION,';',1,2)
        and mcs.category_set_name like 'Inventory%'
        and tmp.created_by = FU.USER_ID
  ) o289371
- ORDER BY o289371.COGS_ACCT ASC ;
+ ORDER BY o289371.COGS_ACCT ASC

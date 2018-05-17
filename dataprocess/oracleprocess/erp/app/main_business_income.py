@@ -6,15 +6,15 @@ from ..base import BASE
 
 
 ################
-#  主营业务成本
+#  主营业务收入
 ################
-SQL_NAME = "main_business_cost"
+SQL_NAME = "main_business_income"
 
 
-class MainBusinessCost(BASE):
+class MainBusinessIncome(BASE):
 
     def __init__(self):
-        super(MainBusinessCost, self).__init__(SQL_NAME)
+        super(MainBusinessIncome, self).__init__(SQL_NAME)
 
     def __call__(self):
         data = self.get_remote_db_data()
