@@ -1,0 +1,62 @@
+SELECT  o289349.JE_SOURCE_NAME as E289354,o289349.VENDOR_NAME as E289355,o289349.ITEM_NUMBER as E289356,o289349.ITEM_DESCRIPTION as E289357,o289349.ACCOUNTING_DATE as E289358,o289349.CURRENCY_CODE as E289359,o289349.CURRENCY_CONVERSION_RATE as E289360,o289349.ENTERED_AMOUNT as E289361,o289349.ACCOUNTED_AMOUNT as E289362,o289349.QUANTITY as E289363,o289349.RECEIPT_NUM as E289364,o289349.PO_NUMBER as E289365
+ FROM ( select rrsl.je_source_name
+       ,pv.vendor_name
+       ,msi.segment1 item_number
+       ,msi.description item_description
+       ,rrsl.accounting_date
+       ,rrsl.currency_code
+       ,rrsl.currency_conversion_rate
+       ,(NVL(rrsl.entered_dr,0)-NVL(rrsl.entered_cr,0)) Entered_Amount
+       ,(NVL(rrsl.accounted_dr,0)-NVL(rrsl.accounted_cr,0)) Accounted_Amount
+       ,rrsl.source_doc_quantity quantity
+       ,rsh.receipt_num
+       ,rrsl.reference4 po_number
+       ,rsl.shipment_line_id
+       ,rt.transaction_id
+  from rcv_receiving_sub_ledger rrsl
+       ,rcv_transactions rt
+       ,mtl_system_items msi
+       ,rcv_shipment_lines rsl
+       ,rcv_shipment_headers rsh
+       ,po_vendors pv
+ where rt.transaction_id=rrsl.rcv_transaction_id
+       and rt.shipment_line_id=rsl.shipment_line_id
+       and rt.shipment_header_id=rsh.shipment_header_id
+       and rsl.to_organization_id=msi.organization_id
+       and rsl.item_id=msi.inventory_item_id
+       and accounting_line_type like 'Receiving Inspection'
+       and rt.vendor_id=pv.vendor_id
+       and rrsl.set_of_books_id=fnd_profile.value('GL_SET_OF_BKS_ID')
+union all	   
+select 'MTL'
+       ,pv.vendor_name 
+       ,msi.segment1 item_number
+       ,msi.description item_desc
+       ,mmt.transaction_date
+       ,mta.CURRENCY_CODE
+       ,mta.CURRENCY_CONVERSION_RATE
+       ,NVL(mta.transaction_value,mta.base_transaction_value) transaction_value
+       ,mta.base_transaction_value
+       ,mmt.transaction_quantity*-1
+       ,rsh.receipt_num
+       ,ph.segment1 po_number
+       ,rt.shipment_line_id
+       ,rt.transaction_id
+  from apps.MTL_TRANSACTION_ACCOUNTS mta  
+       ,apps.mtl_material_transactions mmt
+       ,rcv_transactions rt
+       ,rcv_shipment_headers rsh
+       ,po_headers_all ph
+       ,po_vendors pv
+       ,mtl_system_items msi
+where mta.transaction_id=mmt.transaction_id
+      and mmt.rcv_transaction_id=rt.transaction_id
+      and mmt.transaction_source_id=ph.po_header_id
+      and mmt.organization_id=msi.organization_id
+      and mmt.inventory_item_id=msi.inventory_item_id
+      and rt.shipment_header_id=rsh.shipment_header_id
+      and rt.vendor_id=pv.vendor_id
+      and mta.transaction_source_type_id=1 -- Purchase Order
+      and mta.accounting_line_type=5  
+      and ph.org_id=fnd_profile.value('ORG_ID')
+ ) o289349;
