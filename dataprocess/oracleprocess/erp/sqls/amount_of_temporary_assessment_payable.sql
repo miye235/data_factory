@@ -86,4 +86,4 @@ select 'B.'||'AP Invoice' Source
        and ph.vendor_id=pv.vendor_id
        and ai.set_of_books_id='2021'
  ) o287518
- WHERE (o287518.MAIN_ACCT = '2151');
+ WHERE (o287518.MAIN_ACCT = '2151')

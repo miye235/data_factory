@@ -59,4 +59,4 @@ where mta.transaction_id=mmt.transaction_id
       and mta.transaction_source_type_id=1
       and mta.accounting_line_type=5
       and ph.org_id='81'
- ) o289349;
+ ) o289349

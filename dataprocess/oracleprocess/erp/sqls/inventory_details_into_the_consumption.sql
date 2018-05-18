@@ -33,4 +33,4 @@ SELECT  o287073.ITEM_NUMBER as 物料编码,o287073.ITEM_DESCRIPTION as 物料�
        and mio.organization_id=mp.organization_id
        and mp.organization_id in (select organization_id from apps.org_access where responsibility_id = FRV.RESPONSIBILITY_ID
 	   )and mio.created_by=FU.USER_ID
- ) o287073;
+ ) o287073
