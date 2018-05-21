@@ -18,7 +18,6 @@ ORACLE_PWD = "BDATA"
 
 SQL_FILE_ROOT = "dataprocess/oracleprocess/erp/sqls/"
 SQL_FILE_NAME = [
-    "accounts_payable",
     "accounts_payable_aging",
     "accounts_receivable",
     "amount_of_temporary_assessment_payable",
