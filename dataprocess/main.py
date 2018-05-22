@@ -2,8 +2,9 @@
 # -*- coding: UTF-8 -*-
 
 
-from dataprocess.oracleprocess.erp.app.accounts_payable \
-    import AccountsPayable
+import pandas
+
+
 from dataprocess.oracleprocess.erp.app.accounts_payable_aging \
     import AccountsPayableAging
 from dataprocess.oracleprocess.erp.app.accounts_receivable \
@@ -33,24 +34,16 @@ from dataprocess.oracleprocess.erp.app.main_business_income \
 ################
 
 
-def show_df(df, line=10):
-    for c in df.columns:
-        print(c, end=" ")
-    print(end="\n")
-    for index in df.index:
-        l = df.loc[index].values[0: -1]
-        for i in l:
-            print(i, end=" ")
-        print("\n")
-        if index > line:
-            break
-    print("\n")
+def write_excel(data):
+    writer = pandas.ExcelWriter("./tmp.xlsx")
+    data.to_excel(writer, sheet_name="sheet1")
+    writer.save()
 
 
 def main():
-    m = AccountsPayable()
+    m = MainBusinessIncome()
     df = m()
-    show_df(df)
+    write_excel(df)
 
 
 if __name__ == "__main__":
