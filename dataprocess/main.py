@@ -4,7 +4,8 @@
 
 import pandas
 
-
+from dataprocess.oracleprocess.erp.app.accounts_payable \
+    import AccountsPayable
 from dataprocess.oracleprocess.erp.app.accounts_payable_aging \
     import AccountsPayableAging
 from dataprocess.oracleprocess.erp.app.accounts_receivable \
@@ -13,8 +14,6 @@ from dataprocess.oracleprocess.erp.app.amount_of_temporary_assessment_payable \
     import AmountOfTemporaryAssessmentPayable
 from dataprocess.oracleprocess.erp.app.construction_in_progress \
     import ConstructionInProgress
-from dataprocess.oracleprocess.erp.app.expenses_for_the_period \
-    import ExpensesForThePeriod
 from dataprocess.oracleprocess.erp.app.inventory_details_interim_inventory \
     import InventoryDetailsInterimInventory
 from dataprocess.oracleprocess.erp.app.inventory_details_into_the_consumption \
@@ -27,7 +26,14 @@ from dataprocess.oracleprocess.erp.app.main_business_cost \
     import MainBusinessCost
 from dataprocess.oracleprocess.erp.app.main_business_income \
     import MainBusinessIncome
-
+from dataprocess.oracleprocess.erp.app.period_cost_financial_cost \
+    import PeriodCostFinancialCost
+from dataprocess.oracleprocess.erp.app.period_cost_management_cost \
+    import PeriodCostManagementCost
+from dataprocess.oracleprocess.erp.app.period_cost_manufacturing_cost \
+    import PeriodCostManufacturingCost
+from dataprocess.oracleprocess.erp.app.period_cost_sales_cost \
+    import PeriodCostSalesCost
 
 ################
 #  test
@@ -41,9 +47,10 @@ def write_excel(data):
 
 
 def main():
-    m = MainBusinessIncome()
+    m = PeriodCostManufacturingCost()
     df = m()
-    write_excel(df)
+    print(df)
+    #write_excel(df)
 
 
 if __name__ == "__main__":

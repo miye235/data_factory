@@ -6,15 +6,15 @@ from ..base import BASE
 
 
 ################
-# 期间费用
+# 应付账款
 ################
-SQL_NAME = "expenses_for_the_period"
+SQL_NAME = "accounts_payable"
 
 
-class ExpensesForThePeriod(BASE):
+class AccountsPayable(BASE):
 
     def __init__(self):
-        super(ExpensesForThePeriod, self).__init__(SQL_NAME)
+        super(AccountsPayable, self).__init__(SQL_NAME)
 
     def __call__(self):
         data = self.get_remote_db_data()

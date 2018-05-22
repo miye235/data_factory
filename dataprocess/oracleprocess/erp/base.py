@@ -18,17 +18,21 @@ ORACLE_PWD = "BDATA"
 
 SQL_FILE_ROOT = "dataprocess/oracleprocess/erp/sqls/"
 SQL_FILE_NAME = [
+    "accounts_payable",
     "accounts_payable_aging",
     "accounts_receivable",
     "amount_of_temporary_assessment_payable",
     "construction_in_progress",
-    "expenses_for_the_period",
     "inventory_details_interim_inventory",
     "inventory_details_into_the_consumption",
     "inventory_details_inventory_name",
     "inventory_details_work_in_progress",
     "main_business_cost",
     "main_business_income",
+    "period_cost_financial_cost",
+    "period_cost_management_cost",
+    "period_cost_manufacturing_cost",
+    "period_cost_sales_cost",
 ]
 
 
