@@ -1,4 +1,4 @@
-SELECT o289440.CUSTOMER_NUMBER as CUSTOMER_NUMBER,o289440.CUSTOMER_NAME as 客户,o289440.LOCATION as LOCATION,o289440.PAYMENT_TERM as PAYMENT_TERM,o289440.INTERFACE_HEADER_ATTRIBUTE1 as INTERFACE_HEADER_ATTRIBUTE1,o289440.TRX_NUMBER as TRX_NUMBER,o289440.SALES_ORDER as SALES_ORDER,o289440.PURCHASE_ORDER as PURCHASE_ORDER,o289440.TRX_DATE as TRX_DATE,o289440.DUE_DATE as DUE_DATE,o289440.CURRENCY as CURRENCY,o289440.AMOUNT_DUE as 原币,o289440.FUNCTIONAL_AMOUNT_DUE as 本币,o289440.SALESREP as SALESREP,o289440.CUSTOMER_ID as CUSTOMER_ID,o289440.BILL_TO_SITE_USE_ID as BILL_TO_SITE_USE_ID,o289440.DAYS_PAST_DUE as DAYS_PAST_DUE,o289440.INVOICE_NUM as INVOICE_NUM,o289440.到期状况 as 到期状况,o289440.COMMENTS as COMMENTS
+SELECT o289440.CUSTOMER_NUMBER as 客户编号,o289440.CUSTOMER_NAME as 客户名称,o289440.CURRENCY as 货币类型 ,sum(o289440.AMOUNT_DUE) as 原币金额,sum(o289440.FUNCTIONAL_AMOUNT_DUE) as 人民币金额,o289440.SALESREP as 销售代表,o289440.到期状况 as 到期状况
 FROM ( SELECT cust.customer_number,
 cust.customer_name,
 hcsu.location,
@@ -19,8 +19,7 @@ rct.customer_trx_id,
 ROUND(TRUNC(SYSDATE) - arps.due_date) days_past_due,
 rct.attribute1 invoice_num,
 decode(sign(ROUND(TRUNC(SYSDATE) - arps.due_date)),-1,'未逾期',0,'未逾期',1,
-decode(ceil(ROUND(TRUNC(SYSDATE) - arps.due_date)/30),0,'逾期1-30天',1,'逾期1-30天',2,'逾期31-60天',3,'逾期61-90天',
-decode(ceil(ROUND(TRUNC(SYSDATE) - arps.due_date)/180),1,'逾期91-180天',2,'逾期181-360天','逾期361天以上'))
+decode(ceil(ROUND(TRUNC(SYSDATE) - arps.due_date)/365),0,'逾期1年以内',1,'逾期1-2年',2,'逾期2-3年',3,'逾期3年以上')
 ) "到期状况",
 rct.comments
 FROM ar.ar_payment_schedules_all arps,
@@ -48,3 +47,5 @@ WHERE rct.bill_to_site_use_id = acpa1.site_use_id(+)
 AND rct.invoice_currency_code = acpa1.currency_code(+)) OR
 acpa.cust_acct_profile_amt_id IS NULL )
 ) o289440
+group by o289440.CUSTOMER_NUMBER,o289440.CUSTOMER_NAME,o289440.CURRENCY,o289440.SALESREP,o289440.到期状况
+order by o289440.CUSTOMER_NUMBER
