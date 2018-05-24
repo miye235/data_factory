@@ -20,6 +20,9 @@ class oracle2pd:
             self.db=db
         except Exception as e:
             raise e
+    def close(self):
+        self.cursor.close()
+        self.conn.close()
     def showtables(self,keyword=None,showpars=False):
         '''
         显示数据库中的表
@@ -93,6 +96,9 @@ class mysql2pd:
         self.host=host
         self.pwd=pwd
         self.port=port
+    def close(self):
+        self.cursor.close()
+        self.conn.close()
     def doget(self,sql):
         '''
         用于执行查询sql语句

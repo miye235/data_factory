@@ -1,0 +1,2 @@
+{'cost': {'T': '1', 'checkpoint': '2017-07-01 00:00:00'},'hezhang': {'T': '0.1', 'checkpoint': '2017-07-01 00:00:00'},'lvlizhuisu': {'T': '1', 'checkpoint': '2017-07-01 00:00:00'}, 'yunfantouru': {'T': '24', 'checkpoint': '2017-06-01 00:00:00'}, 'qiaojiao': {'T': '6', 'checkpoint': '2017-06-01 00:00:00'}, 'fee': {'T': '1', 'checkpoint': '2017-06-01 00:00:00'}}
+total_T=26
