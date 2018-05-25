@@ -33,6 +33,7 @@ SQL_FILE_NAME = [
     "period_cost_management_cost",
     "period_cost_manufacturing_cost",
     "period_cost_sales_cost",
+    "permanent_assets",
 ]
 
 

@@ -1,4 +1,4 @@
-SELECT  o287073.ITEM_NUMBER as 物料编码,o287073.ITEM_DESCRIPTION as 物料名称,o287073.TRANSACTION_DATE_FM as TRANSACTION_DATE_FM,o287073.TRANSACTION_DATE_TO as TRANSACTION_DATE_TO,o287073.CATEGORY_NAME as CATEGORY_NAME,o287073.BEG_STK as BEG_STK,o287073.BEG_AMT as BEG_AMT,o287073.PO_STK_IN as PO_STK_IN,o287073.PO_IN_AMT as PO_IN_AMT,o287073.WIP_STK_IN as WIP_STK_IN,o287073.WIP_IN_AMT as WIP_IN_AMT,o287073.WIP_STK_OUT as WIP_STK_OUT,o287073.WIP_OUT_AMT as WIP_OUT_AMT,o287073.SO_STK_OUT as SO_STK_OUT,o287073.SO_OUT_AMT as SO_OUT_AMT,o287073.DEPT_STK_OUT as DEPT_STK_OUT,o287073.DEPT_OUT_AMT as DEPT_OUT_AMT,o287073.OTHER_STK_OUT as OTHER_STK_OUT,o287073.OTHER_OUT_AMT as OTHER_OUT_AMT,o287073.END_STK as 结束时股数,o287073.END_AMT as 结束时金额,o287073.END_UP as END_UP,o287073.STANDARD_COST as STANDARD_COST
+SELECT  o287073.ITEM_NUMBER as 物料编码,o287073.ITEM_DESCRIPTION as 物料名称,substr(to_char(o287073.TRANSACTION_DATE_FM,'yyyy-mm-dd'),0,7) as 日期,o287073.END_STK as 库存,o287073.END_AMT as 金额
  FROM ( select msi.segment1 item_number
        ,msi.description item_description
        ,transaction_date_fm
@@ -32,5 +32,8 @@ SELECT  o287073.ITEM_NUMBER as 物料编码,o287073.ITEM_DESCRIPTION as 物料�
        and mcs.category_set_name like 'Inventory%'
        and mio.organization_id=mp.organization_id
        and mp.organization_id in (select organization_id from apps.org_access where responsibility_id = FRV.RESPONSIBILITY_ID
-	   )and mio.created_by=FU.USER_ID
+          )and mio.created_by=FU.USER_ID
  ) o287073
+ group by o287073.ITEM_NUMBER,o287073.ITEM_DESCRIPTION,substr(to_char(o287073.TRANSACTION_DATE_FM,'yyyy-mm-dd'),0,7),o287073.TRANSACTION_DATE_TO,o287073.END_STK,o287073.END_AMT
+ order by o287073.ITEM_NUMBER
+ 
