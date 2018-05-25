@@ -34,6 +34,8 @@ from dataprocess.oracleprocess.erp.app.period_cost_manufacturing_cost \
     import PeriodCostManufacturingCost
 from dataprocess.oracleprocess.erp.app.period_cost_sales_cost \
     import PeriodCostSalesCost
+from dataprocess.oracleprocess.erp.app.permanent_assets \
+    import PermanentAssets
 
 ################
 #  test
