@@ -2,11 +2,26 @@
 import cx_Oracle,pymysql
 import pandas as pd
 from sqlalchemy import create_engine
-import os
+import os,time
+import logging
+import warnings
+import logging.config
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+logfile = '../log/logger.txt'
+if not os.path.exists(logfile):
+    fobj = open(logfile, 'w')
+    fobj.close()
+fh = logging.FileHandler(logfile, mode='a')
+fh.setLevel(logging.DEBUG)
+formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s")
+fh.setFormatter(formatter)
+logger.addHandler(fh)
 
 os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8'
 class oracle2pd:
-    def __init__(self,host,port,db,user,pwd):
+    def __init__(self,host,port,db,user,pwd,retry_num=3):
         '''
         :param host: 主机ip
         :param port: 端口号
@@ -19,10 +34,18 @@ class oracle2pd:
             self.cursor=self.conn.cursor()
             self.db=db
         except Exception as e:
-            raise e
+            if retry_num > 0:
+                retry_counter=3-retry_num+1
+                logger.info('Retry get oracle connection , the {} times'.format(retry_counter))
+                retry_num -= 1
+                time.sleep(10)
+                oracle2pd(host,port,db,user,pwd,retry_num)
+            else:
+                raise e
     def close(self):
         self.cursor.close()
         self.conn.close()
+        logger.info('数据库'+str(self.db)+'关闭连接')
     def showtables(self,keyword=None,showpars=False):
         '''
         显示数据库中的表
@@ -33,7 +56,7 @@ class oracle2pd:
         if not showpars:obj='table_name'
         else:obj='*'
         sql="select "+obj+" from all_tables"
-        if keyword:
+        if None!=keyword:
             sql+=" where table_name like '%"+keyword+"%'"
         try:
             self.cursor.execute(sql)
@@ -60,12 +83,12 @@ class oracle2pd:
         :param elimit: 数据行数最大值限制
         :return: dataframe类型查询结果
         '''
-        if pars==None:
+        if None==pars:
             items='*'
         else:
             items=','.join(pars)
         sql1='select '+items+' from '+table
-        if blimit!=None or elimit!=None:
+        if None!=blimit or None!=elimit:
             sql1+=' where rownum'
             if blimit!=None and elimit!=None:sql1+='<='+str(elimit)+' minus '+'select '+items+' from '+table+' where rownum<='+str(blimit)
             elif elimit!=None:sql1+='<='+str(elimit)
@@ -81,7 +104,7 @@ class oracle2pd:
         return res
 
 class mysql2pd:
-    def __init__(self,host,port,db,user,pwd):
+    def __init__(self,host,port,db,user,pwd,retry_num=3):
         '''
         :param host: 主机ip
         :param port: 端口号
@@ -89,7 +112,17 @@ class mysql2pd:
         :param user: 用户名
         :param pwd: 密码
         '''
-        self.conn=pymysql.connect(host=host,user=user,password=pwd,db=db,port=int(port),use_unicode=True, charset="utf8")
+        try:
+            self.conn=pymysql.connect(host=host,user=user,password=pwd,db=db,port=int(port),use_unicode=True, charset="utf8")
+        except Exception as e:
+            if retry_num > 0:
+                retry_counter=3-retry_num+1
+                logger.info('Retry get mysql connection , the {} times'.format(retry_counter))
+                retry_num -= 1
+                time.sleep(10)
+                mysql2pd(host,port,db,user,pwd,retry_num)
+            else:
+                raise e
         self.cursor=self.conn.cursor()
         self.db=db
         self.user=user
@@ -122,11 +155,14 @@ class mysql2pd:
             self.conn.commit()
             res=True
             print("执行成功："+sql)
+            logger.info("执行成功："+sql)
         except Exception as e:
             # 错误回滚
             print("执行失败："+sql)
             print("失败原因：")
             print(e)
+            logger.info("执行失败："+sql+"\n"+"失败原因：")
+            logger.info(e)
             self.conn.rollback()
         return res
     def showtables(self,keyword=None,showpars=False):
@@ -249,7 +285,7 @@ class mysql2pd:
             engine = create_engine("mysql+pymysql://"+self.user+":"+self.pwd+"@"+self.host+":"+self.port+"/"+self.db+"?charset=utf8")
             dataframe.to_sql(name=table, con=engine, if_exists='append', index=False, index_label=False)
             res=True
-            print('chenggg')
         except Exception as e:
             print(e)
+            logger.info(e)
         return res

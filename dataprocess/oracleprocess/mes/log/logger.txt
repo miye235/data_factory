@@ -1,0 +1,6 @@
+2018-05-28 14:30:42,355 - DbCommon.py[line:40] - INFO: Retry get connection , the 1 times
+2018-05-28 14:30:52,360 - DbCommon.py[line:40] - INFO: Retry get connection , the 1 times
+2018-05-28 14:31:02,366 - DbCommon.py[line:40] - INFO: Retry get connection , the 1 times
+2018-05-28 14:38:34,150 - DbCommon.py[line:39] - INFO: Retry get connection , the 1 times
+2018-05-28 14:38:44,157 - DbCommon.py[line:39] - INFO: Retry get connection , the 2 times
+2018-05-28 14:38:54,159 - DbCommon.py[line:39] - INFO: Retry get connection , the 3 times
