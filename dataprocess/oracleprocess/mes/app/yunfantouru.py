@@ -6,10 +6,10 @@ class YunFan(object):
         self.ora.close()
         self.ms.close()
     def __call__(self):
-        ora = oracle2pd('10.232.101.51', '1521', 'MESDB', 'BDATA', 'BDATA')
+        self.ora = oracle2pd('10.232.101.51', '1521', 'MESDB', 'BDATA', 'BDATA')
         sql = open('../sqls/原反投入.sql', 'r').read()
-        ms = mysql2pd('123.59.214.229', '33333', 'offline', 'root', 'Rtsecret')
-        res = ora.doget(sql)
+        self.ms = mysql2pd('123.59.214.229', '33333', 'offline', 'root', 'Rtsecret')
+        res = self.ora.doget(sql)
         res.columns = ['matno', 'lot', 'num', 'uptime', 'formno']
-        ms.dopost('truncate table yuanfantouru')
-        ms.write2mysql(res, 'yuanfantouru')
+        self.ms.dopost('truncate table yuanfantouru')
+        self.ms.write2mysql(res, 'yuanfantouru')

@@ -65,7 +65,5 @@ class HeZhang(object):
                             print('one')
         result=pd.DataFrame(result,columns=['仓别','料号','标签ID','WMS库存量','ERP库存量','差异量','差异时间','差异原因','差异单据号','操作人员'])
         print(result)
-        # self.ms.dopost("truncate table Hzgn_wms_erp")
+        self.ms.dopost("truncate table Hzgn_wms_erp")
         self.ms.write2mysql(result,'Hzgn_wms_erp')
-m=HeZhang()
-m()

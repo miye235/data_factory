@@ -10,13 +10,12 @@ class Cost(object):
         with open('../sqls/损耗.sql','r') as f:
             sql=f.read()
         res = self.ora.doget(sql)
-        print(res[:10])
         self.ms.dopost('truncate table sunhao')
         print(res.shape)
         total=res.shape[0]
         nowrow=0
         while nowrow<total-1000:
-            print(self.ms.write2mysql(res[nowrow:nowrow+1000], 'sunhao'))
+            self.ms.write2mysql(res[nowrow:nowrow+1000], 'sunhao')
             nowrow+=1000
         self.ms.write2mysql(res[nowrow:], 'sunhao')
     def __del__(self):

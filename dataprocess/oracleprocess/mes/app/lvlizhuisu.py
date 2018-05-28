@@ -162,7 +162,7 @@ class LvLi(object):
         custlot = 'KA180200879'
         nonflag = self.nonact['MATERIAL'].fillna('null')
         custlot = self.nonact[nonflag.str.contains('-S-')]['PALLET'].drop_duplicates().dropna()
-        ms = mysql2pd('123.59.214.229', '33333', 'offline', 'root', 'Rtsecret')
+        self.ms = mysql2pd('123.59.214.229', '33333', 'offline', 'root', 'Rtsecret')
         # ms.dopost('truncate table trace_production')
         for c in custlot.values:
             print('开始：' + str(c))
@@ -178,4 +178,4 @@ class LvLi(object):
                                         'pkg_outlot'
                                         ]).drop_duplicates()
             # print(res['pva_lot']+'|'+res['psa_lot']+'|'+res['slt_lot']+'|'+res['rtx_lot'])
-            ms.write2mysql(res, 'trace_production')
+            self.ms.write2mysql(res, 'trace_production')

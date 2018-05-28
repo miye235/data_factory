@@ -4,6 +4,11 @@ from dataprocess.oracleprocess.mes.app.fee import Fee
 from dataprocess.oracleprocess.mes.app.yunfantouru import YunFan
 from dataprocess.oracleprocess.mes.app.cost import Cost
 from dataprocess.oracleprocess.mes.app.erp核账 import HeZhang
+from dataprocess.oracleprocess.mes.app.vlm_mwh import Vlm
+from dataprocess.oracleprocess.mes.app.良率统计 import LiangLv
+from dataprocess.oracleprocess.mes.app.存货明细 import CunHuo
+from dataprocess.oracleprocess.mes.app.资产负债 import FuZhai
+
 
 import config as conf
 from time import strftime,gmtime
@@ -30,7 +35,7 @@ def k2func(name,btime,etime):
     #履历追溯
     if 'lvlizhuisu'==name:
         print('执行：' + name)
-        ll= LvLi()
+        ll= LvLi(btime,etime)
         ll(btime, etime)
         del ll
     #翘角
@@ -58,19 +63,43 @@ def k2func(name,btime,etime):
         c()
         del c
     # erp核账
-    if 'cost' == name:
+    if 'erp核账' == name:
         print('执行：' + name)
         hz = HeZhang()
         hz()
         del hz
+    # vlm_mwh
+    if 'vlm' == name:
+        print('执行：' + name)
+        v = Vlm()
+        v()
+        del v
+    # 良率统计
+    if 'lianglv' == name:
+        print('执行：' + name)
+        lianglv = LiangLv()
+        lianglv()
+        del lianglv
+    # 存货明细
+    if 'cunhuo' == name:
+        print('执行：' + name)
+        cunhuo = CunHuo()
+        cunhuo()
+        del cunhuo
+    # 资产负债
+    if 'fuzhai' == name:
+        print('执行：' + name)
+        fz = FuZhai()
+        fz()
+        del fz
 
 def main():
     config = conf.configs
     lasttime=conf.total_T
     newpoint = strftime("%Y-%m-%d %H:%M:%S", gmtime())
-    newpoint ="2017-07-01 00:00:00"
+    newpoint ="2018-05-18 00:00:00"
     for k,v in config.items():
-        if int(v['T'])%lasttime==0:
+        if lasttime%int(v['T'])==0:
             k2func(k,v['checkpoint'],newpoint)
             config[k]['checkpoint']=newpoint#修改checkpoint
     if lasttime == minx([v['T'] for v in config.values()]):
@@ -78,6 +107,6 @@ def main():
     else:
         new_T = lasttime + 1
     with open ('config.py','w') as f:
-        f.write(str(config)+'\n'+'total_T='+str(new_T))#写入配置文件
+        f.write('configs='+str(config)+'\n'+'total_T='+str(new_T))#写入配置文件
 if __name__ == "__main__":
     main()
