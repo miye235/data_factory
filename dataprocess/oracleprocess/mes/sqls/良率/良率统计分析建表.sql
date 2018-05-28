@@ -1,0 +1,20 @@
+create table lianglv(
+pva_lot varchar(50),
+psa_trantime datetime,
+psa_sub varchar(50),
+pva_trantime datetime,
+slt_lot varchar(50),
+hd_lot varchar(50),
+sub_lot varchar(50),
+cust_lot varchar(50),
+checkout_time datetime,
+device varchar(50),
+hd_wo varchar(50),
+qd_wo varchar(50),
+arr_qty float,
+Agui float,
+reason varchar(50),
+descr varchar(50),
+quantity float,
+bancheng_lot varchar(50)
+)
