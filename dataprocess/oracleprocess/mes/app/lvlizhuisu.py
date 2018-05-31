@@ -179,3 +179,5 @@ class LvLi(object):
                                         ]).drop_duplicates()
             # print(res['pva_lot']+'|'+res['psa_lot']+'|'+res['slt_lot']+'|'+res['rtx_lot'])
             self.ms.write2mysql(res, 'trace_production')
+ll=LvLi()
+ll('2018-05-28 00:00:00','2018-05-30 00:00:00')

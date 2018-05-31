@@ -1,4 +1,4 @@
-from common.DbCommon import mysql2pd,oracle2pd
+from dataprocess.oracleprocess.mes.base import Base
 import pandas as pd
 from time import *
 class HeZhang(object):
@@ -28,9 +28,10 @@ class HeZhang(object):
             return res.values[0][0]
 
     def __call__(self):
-        self.erp=oracle2pd('10.232.1.101','1521','KSERP','BDATA','BDATA')
-        self.wms = oracle2pd('10.232.1.200', '1521', 'WMSDB', 'BDATA', 'BDATA')
-        self.ms=mysql2pd('123.59.214.229','33333','offline','root','Rtsecret')
+        base=Base()
+        self.erp=base.conn('erp')
+        self.wms =base.conn('wms')
+        self.ms=base.conn('offline')
         with open('../sqls/erp核账/erp核账.sql','r') as f:
             sql=f.read()
         res = self.wms.doget(sql)
@@ -66,4 +67,4 @@ class HeZhang(object):
         result=pd.DataFrame(result,columns=['仓别','料号','标签ID','WMS库存量','ERP库存量','差异量','差异时间','差异原因','差异单据号','操作人员'])
         print(result)
         self.ms.dopost("truncate table Hzgn_wms_erp")
-        self.ms.write2mysql(result,'Hzgn_wms_erp')
+        base.batchwri(result,'Hzgn_wms_erp',self.ms)

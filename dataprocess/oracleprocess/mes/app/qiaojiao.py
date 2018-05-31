@@ -1,4 +1,4 @@
-from common.DbCommon import mysql2pd,oracle2pd
+from dataprocess.oracleprocess.mes.base import Base
 import pandas as pd
 
 class QiaoJiao(object):
@@ -29,8 +29,9 @@ class QiaoJiao(object):
 
     def __call__(self,btime,etime):
         sql1 =open('../sqls/翘角信息查询.sql','r').read()
-        self.ora=oracle2pd('10.232.101.51','1521','MESDB','BDATA','BDATA')
-        self.ms=mysql2pd('123.59.214.229','33333','offline','root','Rtsecret')
+        b=Base()
+        self.ora=b.conn('mes')
+        self.ms=b.conn('offline')
         # mess2()
         # print('创建输出表...')
         # createtables(sqlc1)

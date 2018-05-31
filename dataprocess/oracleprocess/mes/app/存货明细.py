@@ -1,37 +1,25 @@
-from common.DbCommon import mysql2pd,oracle2pd
+from dataprocess.oracleprocess.mes.base import Base
+
 import datetime,os
 class CunHuo(object):
     def __init__(self):
         super(CunHuo, self).__init__()
 
-    def batchwri(self,res,table):
-        print(res.shape)
-        total = res.shape[0]
-        nowrow = 0
-        while nowrow < total - 1000:
-            self.ms.write2mysql(res[nowrow:nowrow + 1000],table)
-            nowrow += 1000
-        self.ms.write2mysql(res[nowrow:],table)
-
-    def getYesterday(self):
-        today = datetime.date.today()
-        oneday = datetime.timedelta(days=1)
-        yesterday = today - oneday
-        return yesterday
     def __call__(self):
         os.environ['NLS_LANG'] = 'AMERICAN_AMERICA.ZHS16GBK'
-        self.erp = oracle2pd('10.232.1.101', '1521', 'KSERP', 'BDATA', 'BDATA')
-        self.ms=mysql2pd('123.59.214.229','33333','offline','root','Rtsecret')
+        b=Base()
+        self.erp =b.conn('erp')
+        self.ms=b.conn('offline')
         #暂收存货
         with open('../sqls/存货明细/存货明细-暂收存货SQL_new.sql','r') as f:
-            sql1=f.read().replace('yestoday',str(self.getYesterday()))
+            sql1=f.read().replace('yestoday',str(b.getYesterday()))
         res1 = self.erp.doget(sql1)
         res1.columns=['JE_SOURCE_NAME','VENDOR_NAME','ITEM_NUMBER','ITEM_DESCRIPTION',\
                      'ACCOUNTING_DATE','CURRENCY_CODE','CURRENCY_CONVERSION_RATE',\
                      'ENTERED_AMOUNT','ACCOUNTED_AMOUNT','QUANTITY','RECEIPT_NUM','PO_NUMBER']
 
         self.ms.dopost("delete from zanshoucunhuo where str_to_date(date_format(ACCOUNTING_DATE,'%Y-%m-%d'),'%Y-%m-%d')=str_to_date(date_format(SUBDATE(SYSDATE(),interval 1 day),'%Y-%m-%d'),'%Y-%m-%d')")
-        self.batchwri(res1,'zanshoucunhuo')
+        b.batchwri(res1,'zanshoucunhuo',self.ms)
         del res1,sql1
 
         #在制品
@@ -48,7 +36,7 @@ class CunHuo(object):
         thism=str(datetime.date.today())[:-3]
         res2['upmonth']=thism
         self.ms.dopost("delete from zaizhipin where upmonth='"+thism+"'")
-        self.batchwri(res2,'zaizhipin')
+        b.batchwri(res2,'zaizhipin',self.ms)
         del res2,sql2
 
         # 进耗存
@@ -60,7 +48,7 @@ class CunHuo(object):
 'WIP_OUT_AMT','SO_STK_OUT','SO_OUT_AMT','DEPT_STK_OUT',\
 'DEPT_OUT_AMT','OTHER_STK_OUT','OTHER_OUT_AMT','END_STK','END_AMT','END_UP','STANDARD_COST']
         self.ms.dopost("delete from jinhaocun where str_to_date(date_format(TRANSACTION_DATE_FM,'%Y-%m'),'%Y-%m')=str_to_date('"+thism+"','%Y-%m')")
-        self.batchwri(res3, 'jinhaocun')
+        b.batchwri(res3, 'jinhaocun',self.ms)
         del sql3,res3
     def __del__(self):
         self.erp.close()

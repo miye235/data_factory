@@ -1,13 +1,16 @@
 SELECT
-date_month,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='利息收入' then amount_RMB else 0 end) CW_LXSR,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='貸款利息支出' then amount_RMB else 0 end) CW_DKLXZC,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='金融機構手續費' then amount_RMB else 0 end) CW_JRJSXF,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='匯兌損益' then amount_RMB else 0 end) CW_HDSY,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='融資費用' then amount_RMB else 0 end) CW_RZFY,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='貼現利息支出' then amount_RMB else 0 end) CW_TXLXZC,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='融資租賃利息支出' then amount_RMB else 0 end) CW_RZZLLLZC,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='利息支出資本化' then amount_RMB else 0 end) CW_LXZCZBH
+date_month 日期,
+sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='利息收入' then amount_RMB else 0 end) 利息收入,
+sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='集团内部利息收入' then amount_RMB else 0 end) 集团内部利息收入,
+sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='贷款利息支出' then amount_RMB else 0 end) 贷款利息支出,
+sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='集团内部利息支出' then amount_RMB else 0 end) 集团内部利息支出,
+sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='金融机构手续费' then amount_RMB else 0 end) 金融机构手续费,
+sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='汇兑损益' then amount_RMB else 0 end) 汇兑损益,
+sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='财务顾问费' then amount_RMB else 0 end) 财务顾问费,
+sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='担保费' then amount_RMB else 0 end) 担保费,
+sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='贴现利息支出' then amount_RMB else 0 end) 贴现利息支出,
+sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='融资租赁利支出' then amount_RMB else 0 end) 融资租赁利支出,
+sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='利息支出资本化' then amount_RMB else 0 end) 利息支出资本化
 FROM (SELECT
 o271918.COMPANY_ACCT,
 TO_CHAR(o271918.EFFECTIVE_DATE,'yyyymm') as date_month,

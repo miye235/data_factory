@@ -8,8 +8,10 @@ from dataprocess.oracleprocess.mes.app.vlm_mwh import Vlm
 from dataprocess.oracleprocess.mes.app.良率统计 import LiangLv
 from dataprocess.oracleprocess.mes.app.存货明细 import CunHuo
 from dataprocess.oracleprocess.mes.app.资产负债 import FuZhai
-
-
+from dataprocess.oracleprocess.mes.app.良品 import LiangPin
+from dataprocess.oracleprocess.mes.app.利润 import LiRun
+from dataprocess.oracleprocess.mes.app.良率日报 import LLRB
+from dataprocess.oracleprocess.mes.app.月损耗百分比 import MonCostRate
 import config as conf
 from time import strftime,gmtime
 
@@ -92,12 +94,35 @@ def k2func(name,btime,etime):
         fz = FuZhai()
         fz()
         del fz
+    # 良品率
+    if 'liangpin' == name:
+        print('执行：' + name)
+        lp = LiangPin()
+        lp()
+        del lp
+    # 利润
+    if 'lirun' == name:
+        print('执行：' + name)
+        lrun = LiRun()
+        lrun()
+        del lrun
+    # 良率日报
+    if 'lianglvribao' == name:
+        print('执行：' + name)
+        llrb = LLRB()
+        llrb()
+        del llrb
+    # 月损耗
+    if '月损耗' == name:
+        print('执行：' + name)
+        mcr = MonCostRate()
+        mcr()
+        del mcr
 
 def main():
     config = conf.configs
     lasttime=conf.total_T
     newpoint = strftime("%Y-%m-%d %H:%M:%S", gmtime())
-    newpoint ="2018-05-18 00:00:00"
     for k,v in config.items():
         if lasttime%int(v['T'])==0:
             k2func(k,v['checkpoint'],newpoint)

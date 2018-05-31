@@ -134,7 +134,6 @@ case WHEN SUBSTR(t2.wo,4,1)='D' THEN 'TD试机"' end
      order by substr(T7.TRANSACTIONTIME,1,10) asc )TT
       WHERE 投入数 IS NOT NULL
       AND (点缺项 IS NOT NULL OR 点缺项<>'')
-      ${if(len(LotType) == 0,"","AND 生产状态='" + LotType + "'")}
       ORDER BY 日期 asc,点缺数 desc
       )
 WHERE SORT<4
