@@ -22,6 +22,7 @@ SQL_FILE_NAME = [
     "accounts_payable_aging",
     "accounts_receivable",
     "amount_of_temporary_assessment_payable",
+    "assets_liabilities",
     "construction_in_progress",
     "inventory_details_interim_inventory",
     "inventory_details_into_the_consumption",
@@ -34,6 +35,8 @@ SQL_FILE_NAME = [
     "period_cost_manufacturing_cost",
     "period_cost_sales_cost",
     "permanent_assets",
+    "profit_statement",
+    "shipment_statistics",
 ]
 
 

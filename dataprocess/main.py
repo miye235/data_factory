@@ -12,6 +12,8 @@ from dataprocess.oracleprocess.erp.app.accounts_receivable \
     import AccountsReceivable
 from dataprocess.oracleprocess.erp.app.amount_of_temporary_assessment_payable \
     import AmountOfTemporaryAssessmentPayable
+from dataprocess.oracleprocess.erp.app.assets_liabilities \
+    import AssetsLiabilities
 from dataprocess.oracleprocess.erp.app.construction_in_progress \
     import ConstructionInProgress
 from dataprocess.oracleprocess.erp.app.inventory_details_interim_inventory \
@@ -36,6 +38,10 @@ from dataprocess.oracleprocess.erp.app.period_cost_sales_cost \
     import PeriodCostSalesCost
 from dataprocess.oracleprocess.erp.app.permanent_assets \
     import PermanentAssets
+from dataprocess.oracleprocess.erp.app.profit_statement \
+    import ProfitStatement
+from dataprocess.oracleprocess.erp.app.shipment_statistics \
+    import ShipmentStatistics
 
 ################
 #  test
