@@ -11,7 +11,7 @@ class CunHuo(object):
         self.erp =b.conn('erp')
         self.ms=b.conn('offline')
         #暂收存货
-        with open('../sqls/存货明细/存货明细-暂收存货SQL_new.sql','r') as f:
+        with open('sqls/存货明细/存货明细-暂收存货SQL_new.sql','r') as f:
             sql1=f.read().replace('yestoday',str(b.getYesterday()))
         res1 = self.erp.doget(sql1)
         res1.columns=['JE_SOURCE_NAME','VENDOR_NAME','ITEM_NUMBER','ITEM_DESCRIPTION',\
@@ -23,7 +23,7 @@ class CunHuo(object):
         del res1,sql1
 
         #在制品
-        with open('../sqls/存货明细/存货明细-在制品进耗存SQL_NEW.sql','r') as f:
+        with open('sqls/存货明细/存货明细-在制品进耗存SQL_NEW.sql','r') as f:
             sql2=f.read()
         res2 = self.erp.doget(sql2)
         res2.columns=['WIP_ENTITY_NAME','ITEM_CODE','STATUS_TYPE','DATE_CLOSED',\
@@ -40,7 +40,7 @@ class CunHuo(object):
         del res2,sql2
 
         # 进耗存
-        with open('../sqls/存货明细/存货明细-进耗存SQL_NEW.sql', 'r') as f:
+        with open('sqls/存货明细/存货明细-进耗存SQL_NEW.sql', 'r') as f:
             sql3 = f.read()
         res3 = self.erp.doget(sql3.replace('thismonth',thism))
         res3.columns = ['ITEM_NUMBER','ITEM_DESCRIPTION','TRANSACTION_DATE_FM','TRANSACTION_DATE_TO',\
@@ -50,6 +50,5 @@ class CunHuo(object):
         self.ms.dopost("delete from jinhaocun where str_to_date(date_format(TRANSACTION_DATE_FM,'%Y-%m'),'%Y-%m')=str_to_date('"+thism+"','%Y-%m')")
         b.batchwri(res3, 'jinhaocun',self.ms)
         del sql3,res3
-    def __del__(self):
         self.erp.close()
         self.ms.close()

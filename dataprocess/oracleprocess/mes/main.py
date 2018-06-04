@@ -1,5 +1,5 @@
 from dataprocess.oracleprocess.mes.app.lvlizhuisu import LvLi
-from dataprocess.oracleprocess.mes.app.qiaojiao import QiaoJiao
+from dataprocess.oracleprocess.mes.app.翘角all import QiaoJiao
 from dataprocess.oracleprocess.mes.app.fee import Fee
 from dataprocess.oracleprocess.mes.app.yunfantouru import YunFan
 from dataprocess.oracleprocess.mes.app.cost import Cost
@@ -12,8 +12,15 @@ from dataprocess.oracleprocess.mes.app.良品 import LiangPin
 from dataprocess.oracleprocess.mes.app.利润 import LiRun
 from dataprocess.oracleprocess.mes.app.良率日报 import LLRB
 from dataprocess.oracleprocess.mes.app.月损耗百分比 import MonCostRate
+from dataprocess.oracleprocess.mes.app.包装产能计算 import PkgCal
+from dataprocess.oracleprocess.mes.app.成本计算 import ChengBen
+from dataprocess.oracleprocess.mes.app.LP_rate import LPrate
+from dataprocess.oracleprocess.mes.app.Shipments_now import ShipmentsNow
+from dataprocess.oracleprocess.mes.app.Shipments_statistics import ShipmentsStatistics
+
+
 import config as conf
-from time import strftime,gmtime
+from time import strftime,localtime
 
 def minx(data):
     def lcm(x, y):
@@ -34,13 +41,13 @@ def minx(data):
     return res
 
 def k2func(name,btime,etime):
-    #履历追溯
+    # 履历追溯
     if 'lvlizhuisu'==name:
         print('执行：' + name)
-        ll= LvLi(btime,etime)
-        ll(btime, etime)
+        ll= LvLi()
+        ll(btime,etime)
         del ll
-    #翘角
+    # 翘角
     if 'qiaojiao'==name:
         print('执行：'+name)
         qj= QiaoJiao()
@@ -65,7 +72,7 @@ def k2func(name,btime,etime):
         c()
         del c
     # erp核账
-    if 'erp核账' == name:
+    if 'hezhang' == name:
         print('执行：' + name)
         hz = HeZhang()
         hz()
@@ -118,11 +125,41 @@ def k2func(name,btime,etime):
         mcr = MonCostRate()
         mcr()
         del mcr
+    # 包装产能计算
+    if 'bzcn' == name:
+        print('执行：' + name)
+        pkg = PkgCal()
+        pkg()
+        del pkg
+    # 成本计算计算
+    if 'cbjs' == name:
+        print('执行：' + name)
+        chengben = ChengBen()
+        chengben()
+        del chengben
+    # LP-rate
+    if 'lprate' == name:
+        print('执行：' + name)
+        lprate = LPrate()
+        lprate()
+        del lprate
+    # ShipmentsNow
+    if 'ShipmentsNow' == name:
+        print('执行：' + name)
+        sn= ShipmentsNow()
+        sn()
+        del sn
+    # ShipmentsStatistics
+    if 'ShipmentsStatistics' == name:
+        print('执行：' + name)
+        ss = ShipmentsStatistics()
+        ss()
+        del ss
 
 def main():
     config = conf.configs
     lasttime=conf.total_T
-    newpoint = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+    newpoint = strftime("%Y-%m-%d %H:%M:%S", localtime())
     for k,v in config.items():
         if lasttime%int(v['T'])==0:
             k2func(k,v['checkpoint'],newpoint)

@@ -14,8 +14,8 @@ class QiaoJiao(object):
         res = self.ora.doget(sql)
         res.columns = ['DATA', 'PARAMETER', 'SAMPLESEQ', 'OPERATION', 'LOT']
         self.ms.write2mysql(res, 'qiaojiao_mess')
-    def mess2(self):
-        LOTLIST = self.ms.getdata('trace_production', pars=['rtx_lot']).drop_duplicates().dropna()
+    def mess2(self,btime,etime):
+        LOTLIST = self.ms.getdata('trace_production', pars=['rtx_lot'],tjs=["to_date(rtx_outtime,'yyyy-mm-dd hh24:mi:ss')>=to_date('"+btime+"','yyyy-mm-dd hh24:mi:ss')","to_date(rtx_outtime,'yyyy-mm-dd hh24:mi:ss')<to_date('"+etime+"','yyyy-mm-dd hh24:mi:ss')"]).drop_duplicates().dropna()
         LOTLIST.columns = ['LOT']
         trans = self.ora.getdata('MES.MES_WIP_HIST', pars=['LOT', 'TRANSACTIONTIME'],
                             tjs=["TRANSACTION='CheckOut'", "LOT like '%-B-%'"])
@@ -32,7 +32,7 @@ class QiaoJiao(object):
         b=Base()
         self.ora=b.conn('mes')
         self.ms=b.conn('offline')
-        # mess2()
+        self.mess2('2018-06-01 00:00:00','2018-06-04 00:00:00')
         # print('创建输出表...')
         # createtables(sqlc1)
         # createtables(sqlc2)
@@ -55,5 +55,5 @@ class QiaoJiao(object):
         #     else:
         #         bd=str(i)+'-01'
         #         ed=str(i+1)+'-01'
-        sql1=sql1.replace('begintime',btime).replace('endtime',etime)
+        sql1=sql1.replace('begintime','2018-06-01').replace('endtime','2018-06-04')
         self.mess1(sql1)

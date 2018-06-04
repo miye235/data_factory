@@ -19,13 +19,12 @@ class ChengBen(object):
         b=Base()
         self.erp =b.conn('erp')
         self.ms=b.conn('offline')
-        with open('../sqls/成本计算.sql','r') as f:
+        with open('sqls/成本计算.sql','r') as f:
             sql1=f.read()
         res1 = self.erp.doget(sql1)
         res1.columns=['cpdm','wlbm','UOM','bibie','MSIZE','FROZEN_COST','CURRENT_COST','COMPONENT_QUANTITY']
         self.ms.dopost("truncate table chengbenjisuan")
         b.batchwri(res1,'chengbenjisuan',self.ms)
         del res1,sql1
-    def __del__(self):
         self.erp.close()
         self.ms.close()

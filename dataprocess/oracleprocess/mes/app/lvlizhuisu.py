@@ -1,12 +1,10 @@
 from common.DbCommon import mysql2pd,oracle2pd
+from dataprocess.oracleprocess.mes.base import Base
 import pandas as pd
 class LvLi(object):
 
     def __init__(self):
         super(LvLi, self).__init__()
-    def __del__(self):
-        self.ora.close()
-        self.ms.close()
     def sltmer(self,lotid,ope=None):
         '''
         获取分批并批信息
@@ -120,7 +118,7 @@ class LvLi(object):
                             else:
                                 for psalot in self.sltmer(qdlot,'PSA')['PARENTLOT'].drop_duplicates().dropna().values:
                                 # psalot=qdlot
-                                    print(psalot)
+                                #     print(psalot)
                                     sc_df,sc_intime,sc_outtime,sc_inqty,sc_outqty=self.gethist(psalot,'AGING')
                                     psa_df,psa_intime,psa_outtime,psa_inqty, psa_outqty =self.gethist(psalot,'PSA')
                                     for pva in self.sltmer(psalot,'PVA')['PARENTLOT'].drop_duplicates().dropna().values:
@@ -162,7 +160,8 @@ class LvLi(object):
         custlot = 'KA180200879'
         nonflag = self.nonact['MATERIAL'].fillna('null')
         custlot = self.nonact[nonflag.str.contains('-S-')]['PALLET'].drop_duplicates().dropna()
-        self.ms = mysql2pd('123.59.214.229', '33333', 'offline', 'root', 'Rtsecret')
+        base=Base()
+        self.ms =base.conn('offline')
         # ms.dopost('truncate table trace_production')
         for c in custlot.values:
             print('开始：' + str(c))
@@ -179,5 +178,5 @@ class LvLi(object):
                                         ]).drop_duplicates()
             # print(res['pva_lot']+'|'+res['psa_lot']+'|'+res['slt_lot']+'|'+res['rtx_lot'])
             self.ms.write2mysql(res, 'trace_production')
-ll=LvLi()
-ll('2018-05-28 00:00:00','2018-05-30 00:00:00')
+        self.ora.close()
+        self.ms.close()

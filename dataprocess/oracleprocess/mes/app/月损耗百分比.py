@@ -5,10 +5,8 @@ import datetime
 class MonCostRate(object):
     def __init__(self):
         super(MonCostRate, self).__init__()
-    def __del__(self):
-        self.ms.close()
     def __call__(self):
-        sql = open('../sqls/月损耗金额百分比.sql', 'r').read()
+        sql = open('sqls/月损耗金额百分比.sql', 'r').read()
         b=Base()
         self.ms =b.conn('offline')
         # day='2018/05/20'
@@ -28,3 +26,4 @@ class MonCostRate(object):
         res=pd.DataFrame([[day,rate]],columns=['thisdate','rate'])
         self.ms.dopost("delete from month_cost_rate where str_to_date(thisdate,'%Y/%m/%d')=str_to_date('"+day+"','%Y/%m/%d')")
         b.batchwri(res, 'month_cost_rate',self.ms)
+        self.ms.close()

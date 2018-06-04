@@ -6,7 +6,7 @@ class HeZhang(object):
         super(HeZhang, self).__init__()
 
     def getwms(self,type,t,s,p):
-        with open('../sqls/erp核账/'+type+'.sql') as f:
+        with open('sqls/erp核账/'+type+'.sql') as f:
             sql=f.read().replace("料号（ITEM_CODE）",t).replace("仓别（SUBINVENTORY_CODE）", s)
             if None==p:
                 sql = sql.replace("like '%标签id（PALLET_NO）%'","is null")
@@ -19,7 +19,7 @@ class HeZhang(object):
         else:
             return res.values[0][0]
     def geterp(self,type,t,s,p):
-        with open('../sqls/erp核账/'+type+'.sql') as f:
+        with open('sqls/erp核账/'+type+'.sql') as f:
             sql=f.read().replace("料号（ITEM_CODE）",t).replace("仓别（SUBINVENTORY_CODE）",s).replace("标签id（PALLET_NO）",p)
         res = self.erp.doget(sql).drop_duplicates().dropna()
         if res.empty:
@@ -32,7 +32,7 @@ class HeZhang(object):
         self.erp=base.conn('erp')
         self.wms =base.conn('wms')
         self.ms=base.conn('offline')
-        with open('../sqls/erp核账/erp核账.sql','r') as f:
+        with open('sqls/erp核账/erp核账.sql','r') as f:
             sql=f.read()
         res = self.wms.doget(sql)
         result=[]
@@ -68,3 +68,5 @@ class HeZhang(object):
         print(result)
         self.ms.dopost("truncate table Hzgn_wms_erp")
         base.batchwri(result,'Hzgn_wms_erp',self.ms)
+        self.ms.close()
+        self.wms.close()

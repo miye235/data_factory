@@ -8,7 +8,7 @@ class LiangLv(object):
         b=Base()
         self.ora=b.conn('mes')
         self.ms=b.conn('offline')
-        with open('../sqls/良率/良率统计分析.sql','r') as f:
+        with open('sqls/良率/良率统计分析.sql','r') as f:
             sql=f.read()
         res = self.ora.doget(sql)
         res.columns=['pva_lot','psa_trantime','psa_sub','pva_trantime','slt_lot','hd_lot','sub_lot',\
@@ -16,6 +16,5 @@ class LiangLv(object):
                      'qd_wo','arr_qty','Agui','reason','descr','quantity','bancheng_lot']
         self.ms.dopost('truncate table lianglv')
         b.batchwri(res, 'lianglv',self.ms)
-    def __del__(self):
         self.ora.close()
         self.ms.close()

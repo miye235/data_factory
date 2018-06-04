@@ -8,7 +8,7 @@ class Cost(object):
         base=Base()
         self.ora=base.conn('mes')
         self.ms=base.conn('offline')
-        with open('../sqls/损耗.sql','r') as f:
+        with open('sqls/损耗.sql','r') as f:
             sql=f.read()
         res = self.ora.doget(sql)
         self.ms.dopost('truncate table sunhao')
@@ -16,5 +16,3 @@ class Cost(object):
     def __del__(self):
         self.ora.close()
         self.ms.close()
-c=Cost()
-c()

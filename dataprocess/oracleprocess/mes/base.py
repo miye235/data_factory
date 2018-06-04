@@ -5,8 +5,8 @@ class Base():
     def __init__(self):
         self.dbconfig={
             'erp':('10.232.1.101', '1521', 'KSERP', 'BDATA', 'BDATA'),
-            'offline':('123.59.214.229', '33333', 'offline', 'root', 'Rtsecret'),
-            # 'offline':('10.232.70.203', '33333', 'offline', 'root', 'Rtsecret'),
+            # 'offline':('123.59.214.229', '33333', 'offline', 'root', 'Rtsecret'),
+            'offline':('10.232.70.203', '33333', 'offline', 'root', 'Rtsecret'),
             'mes':('10.232.101.51', '1521', 'MESDB', 'BDATA', 'BDATA'),
             'wms':('10.232.1.200', '1521', 'WMSDB', 'BDATA', 'BDATA')
         }
@@ -24,7 +24,7 @@ class Base():
         today = datetime.date.today()
         oneday = datetime.timedelta(days=1)
         yesterday = today - oneday
-        yesterday = datetime.datetime.strftime(yesterday, '%Y/%m/%d')
+        yesterday = datetime.datetime.strftime(yesterday,'%Y/%m/%d')
         return yesterday
 
     def batchwri(self, res, table,conn):

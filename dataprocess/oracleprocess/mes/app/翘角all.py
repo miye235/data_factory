@@ -1,21 +1,33 @@
 from dataprocess.oracleprocess.mes.base import Base
+import pandas as pd
 
-class QiaoJiaoAll(object):
+class QiaoJiao(object):
+
     def __init__(self):
-        super(QiaoJiaoAll, self).__init__()
-    def __del__(self):
-        self.ms.close()
-    def __call__(self):
-        sql = '''
-        select trace_production.psa_lot AS psa_lot,trace_production.pva_lot AS pva_lot,trace_production.psa_intime AS psa_intime,trace_production.psa_outtime AS psa_outtime,trace_production.pva_intime AS pva_intime,trace_production.pva_outtime AS pva_outtime,trace_production.rtx_intime AS rtx_intime,trace_production.rtx_outtime AS rtx_outtime,trace_production.slt_intime AS slt_intime,trace_production.slt_outtime AS slt_outtime,trace_production.slt_lot AS slt_lot,trace_production.rtx_lot AS hd_lot,qiaojiao_mess.DATA AS DATA,qiaojiao_mess.PARAMETER AS PARAMETER,qiaojiao_mess.SAMPLESEQ AS SAMPLESEQ,qiaojiao_mess.OPERATION AS OPERATION,check_mess.CHECKTIME AS checktime 
-        FROM trace_production 
-        inner join check_mess on trace_production.rtx_lot = check_mess.LOT
-        inner join qiaojiao_mess on trace_production.psa_lot = qiaojiao_mess.LOT
-        '''
-        sql1="select distinct * from view_qiaojiao limit 1000"
+       super(QiaoJiao, self).__init__()
+
+    def dolot(self,lot):
+        sql3=self.sql2.replace('thislot',lot)
+        data2=self.ora.doget(sql3)
+        return data2
+    def __call__(self,btime,etime):
+        with open('../sqls/翘角信息查询.sql','r') as f1:
+            sql1 =f1.read().replace('btime',btime).replace('etime',etime)
+        with open('../sqls/翘角信息查询2.sql', 'r') as f2:
+            self.sql2 = f2.read()
         b=Base()
-        self.ms =b.conn('offline')
-        res = self.ms.doget(sql1)
-        res.columns = ['psa_lot','pva_lot','psa_intime','psa_outtime','pva_intime','pva_outtime','rtx_intime','rtx_outtime','slt_intime','slt_outtime','slt_lot','hd_lot','DATA1','PARAMETER','SAMPLESEQ','OPERATION','checktime']
-        self.ms.dopost('truncate table all_qiaojiao')
-        b.batchwri(res, 'all_qiaojiao',self.ms)
+        self.ora=b.conn('mes')
+        self.ms=b.conn('offline')
+        data=self.ora.doget(sql1)
+        print(data)
+        res=[]
+        for one in data.values:
+            data2=self.dolot(list(one)[4])
+            for v in data2.values:
+                fin=list(one)+list(v)[:-1]
+                res.append(fin)
+        res_pd=pd.DataFrame(res,columns=["pva_outtime","psa_outtime","rtx_outtime","checktime","psa_lot",\
+                                         "slt_lot","hd_lot","data1","PARAMETER","SAMPLESEQ","OPERATION"])
+        b.batchwri(res_pd,"all_qiaojiao",self.ms)
+        self.ora.close()
+        self.ms.close()
