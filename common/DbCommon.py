@@ -3,16 +3,14 @@ import cx_Oracle,pymysql
 import pandas as pd
 from sqlalchemy import create_engine
 import os,time
-import logging
-import warnings
 import logging.config
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
-logfile = '../log/logger.txt'
-if not os.path.exists(logfile):
-    fobj = open(logfile, 'w')
-    fobj.close()
+logfile = '/Users/cloudin1/PycharmProjects/data_factory/dataprocess/oracleprocess/mes/log/mes.log'
+# if not os.path.exists(logfile):
+#     fobj = open(logfile, 'w')
+#     fobj.close()
 fh = logging.FileHandler(logfile, mode='a')
 fh.setLevel(logging.DEBUG)
 formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s")
@@ -45,7 +43,7 @@ class oracle2pd:
     def close(self):
         self.cursor.close()
         self.conn.close()
-        logger.info('数据库'+str(self.db)+'关闭连接')
+        # logger.info('数据库'+str(self.db)+'关闭连接')
     def showtables(self,keyword=None,showpars=False):
         '''
         显示数据库中的表
@@ -182,7 +180,7 @@ class mysql2pd:
         except Exception as e:
             raise e
         return res
-    def getdata(self,table,pars=None,blimit=None,elimit=None):
+    def getdata(self,table,pars=None,tjs=None,blimit=None,elimit=None):
         '''
         从数据库中取出数据放到dataframe中
         :param table: 数据源表
@@ -205,7 +203,10 @@ class mysql2pd:
                 self.cursor.execute(sql_count)
                 n=self.cursor.fetchone()[0]
                 sql1 += str(int(blimit) - 1) + ',' + str(n- int(blimit))
-        print("执行查询："+sql1)
+        if tjs!=None:
+            if sql1.find('where')!=-1:sql1=sql1.replace('where','where '+' and '.join(tjs)+'and')
+            else:sql1+=' where '+' and '.join(tjs)
+        # print("执行查询："+sql1)
         try:
             res = pd.read_sql(sql1, self.conn)
         except Exception as e:
