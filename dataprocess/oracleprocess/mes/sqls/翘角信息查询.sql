@@ -1,36 +1,42 @@
-select DATA, PARAMETER, SAMPLESEQ,OPERATION,LOT
-FROM (
-    SELECT "DATA", "DEVICE", "DEVICE_DESCR", "LOT", "MATERIAL",
-    "OPERATION", "PARAMETER", "RESOURCENAME", "SAMPLESEQ", "UPDATETIME", "USERID", "WO"
-    FROM (
-        SELECT AA.LOT, AA.WO, AA.MATERIAL, AA.DEVICE, AA.DEVICE_DESCR,
-        AA.PARAMETER, AA.SAMPLESEQ, AA.DATA, AA.USERID, AA.UPDATETIME,
-        AA.OPERATION, BB.RESOURCENAME
-        FROM (
-            SELECT vlm.LOT, mell.WO, vlm.MATERIAL, vlm.DEVICE, vlm.DEVICE_DESCR,
-            meld.PARAMETER, meld.SAMPLESEQ, meld.DATA, meli.userid, meli.updatetime,
-            to_char(meli.OPERATION) AS OPERATION
-            FROM MES.view_lotlist_main vlm
-            INNER JOIN MES.mes_edc_lotinfo meli ON meli.lot = vlm.lot
-            INNER JOIN MES.mes_edc_lotdata meld ON meld.edc_lotinfo_sid = meli.edc_lotinfo_sid
-            INNER JOIN MES.VIEW_LOTLIST_MAIN mell ON mell.lot = vlm.lot
-            ) AA
-        INNER JOIN (
-            SELECT DISTINCT LOT, NEWOPERATION, RESOURCENAME
-            FROM MES.MES_WIP_HIST
-            where to_date(TRANSACTIONTIME,'yyyy-MM-dd hh24:mi:ss')>=to_date('begintime','yyyy-MM-dd hh24:mi:ss')
-            and to_date(TRANSACTIONTIME,'yyyy-MM-dd hh24:mi:ss')<to_date('endtime','yyyy-MM-dd hh24:mi:ss')
-            ) BB
-        ON AA.LOT = BB.LOT AND AA.OPERATION = BB.NEWOPERATION
-        WHERE BB.RESOURCENAME IS NOT NULL) A
-    ) B
-where B.PARAMETER LIKE '%curl%'
-GROUP BY DATA, SAMPLESEQ, PARAMETER ,OPERATION,LOT
-ORDER BY CASE WHEN B.PARAMETER LIKE '%DS' then 1
-              WHEN B.PARAMETER LIKE '%DS_01' then 2
-        WHEN B.PARAMETER LIKE '%M' then 3
-              WHEN B.PARAMETER LIKE '%M_01' then 4
-        WHEN B.PARAMETER LIKE '%OS' THEN 5
-              WHEN B.PARAMETER LIKE '%OS_01' THEN 6
-        ELSE 7
-        END, SAMPLESEQ
+select x.PVA站生产时间,x.PSA站生产时间,y.裁切生产时间,p.TRANSACTIONTIME,x.前段批号,x.分条批号,y.LOT as 后段批号
+from
+ (select g.PVA站生产时间 as PVA站生产时间,g.PSA站生产时间 as PSA站生产时间,
+         g.LOT as 前段批号，h.LOT as 分条批号
+ from
+     (select e.LOT as LOT, e.PVA站生产时间 as PVA站生产时间, f.PSA站生产时间 as PSA站生产时间
+  from
+   (select a.LOT as LOT,b.TRANSACTIONTIME as PVA站生产时间
+   from   MES.MES_WIP_LOT_NONACTIVE a , MES.MES_WIP_HIST b
+   where  a.LOT=b.LOT
+	 and to_date(b.TRANSACTIONTIME,'yyyy-mm-dd hh24:mi:ss')>=to_date('btime','yyyy-mm-dd hh24:mi:ss')
+	 and to_date(b.TRANSACTIONTIME,'yyyy-mm-dd hh24:mi:ss')<to_date('etime','yyyy-mm-dd hh24:mi:ss')
+   and    a.MATERIAL  is null
+   and    b.OPERATIONNO='PVA'
+   AND    b.TRANSACTION='CheckOut') e
+   left join
+   (select a.LOT as LOT,b.TRANSACTIONTIME as PSA站生产时间
+   from   MES.MES_WIP_LOT_NONACTIVE a , MES.MES_WIP_HIST b
+   where  a.LOT=b.LOT
+   and    a.MATERIAL  is null
+   and    b.OPERATIONNO='PSA'
+   AND    b.TRANSACTION='CheckOut') f
+  on e.LOT=f.LOT) g
+  left join
+  (select MATERIAL ,LOT
+   from mes.MES_WIP_LOT_NONACTIVE
+   where LOT LIKE 'KP1-S%') h
+ on  g.LOT=h.MATERIAL) x
+ left join
+ (select a.LOT as LOT,a.MATERIAL as MATERIAL,b.TRANSACTIONTIME as 裁切生产时间
+  from   MES.MES_WIP_LOT_NONACTIVE a , MES.MES_WIP_HIST b
+  where  a.LOT=b.LOT
+  and    a.lot not like '%-S-%'
+  AND    b.TRANSACTION='CheckOut') y
+on   (x.分条批号=y.MATERIAL
+      or
+      x.前段批号=y.MATERIAL)
+left join MES.MES_WIP_HIST p
+on (y.LOT=p.LOT
+   and
+   p.TRANSACTION='CheckOut')
+ ORDER BY x.前段批号
