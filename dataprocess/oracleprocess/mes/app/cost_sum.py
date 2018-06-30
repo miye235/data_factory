@@ -10,7 +10,7 @@ class CostSum(object):
         base = Base()
         offline = conns['offline']
         # offline.dopost("drop table CostSum")
-        for dir in ['综合','量产']:
+        for dir in ['综合','量产','量产TD']:
             sqldcit={'PVA':open(base.path1+'sqls/损耗分析晨会/'+dir+'/pva.sql','r').read(),'PET':open(base.path1+'sqls/损耗分析晨会/'+dir+'/pet.sql','r').read(),\
                      '保护膜':open(base.path1+'sqls/损耗分析晨会/'+dir+'/protectshell.sql','r').read(),'上TAC':open(base.path1+'sqls/损耗分析晨会/'+dir+'/tac_on.sql','r').read(),\
                     '下TAC':open(base.path1+'sqls/损耗分析晨会/'+dir+'/tac_under.sql','r').read()}
