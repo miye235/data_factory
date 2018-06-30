@@ -60,7 +60,7 @@ class CunHuo(object):
 'CATEGORY_NAME','BEG_STK','BEG_AMT','PO_STK_IN','PO_IN_AMT','WIP_STK_IN','WIP_IN_AMT','WIP_STK_OUT',\
 'WIP_OUT_AMT','SO_STK_OUT','SO_OUT_AMT','DEPT_STK_OUT',\
 'DEPT_OUT_AMT','OTHER_STK_OUT','OTHER_OUT_AMT','END_STK','END_AMT','END_UP','STANDARD_COST']
-        self.ms.dopost("delete from jinhaocun where date_format(TRANSACTION_DATE_FM,'%Y-%m')='"+"2018-06"+"'")
+        self.ms.dopost("delete from jinhaocun where date_format(TRANSACTION_DATE_FM,'%Y-%m')='"+thism+"'")
         b.batchwri(res3, 'jinhaocun',self.ms)
         del sql3,res3
 
