@@ -131,7 +131,7 @@ class LvLi(object):
                                             front_device=self.nondata(pva)['DEVICE'].drop_duplicates().dropna().values[0]
                                             pva_intime = mlot_df['TRANSACTIONTIME'].drop_duplicates().dropna().values[0]
                                             materialno=mlot_df['MATERIALNO'].drop_duplicates().dropna().values[0]
-                                            mat_df=self.ora.getdata('MES.MES_MMS_MLOT',pars=['CUSTOMER'],tjs=["MLOT='"+mlot+"'"]).drop_duplicates().dropna()
+                                            # mat_df=self.ora.getdata('MES.MES_MMS_MLOT',pars=['CUSTOMER'],tjs=["MLOT='"+mlot+"'"]).drop_duplicates().dropna()
                                             mat_df=self.ora.getdata('MES.VIEW_MMSLOTLIST_MAIN',pars=['CUSTLOT'],tjs=["MLOT='"+mlot+"'"]).drop_duplicates().dropna()
                                             if mat_df.empty:mat_cuslot='null'
                                             else:
