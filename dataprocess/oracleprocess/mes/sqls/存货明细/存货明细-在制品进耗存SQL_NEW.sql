@@ -116,7 +116,7 @@ from APPS.FND_RESPONSIBILITY_VL FRV, apps.yerp_wip_operations_summary ywos,WIP.W
  where WE.WIP_ENTITY_ID = ywos.WIP_ENTITY_ID
    and we.ORGANIZATION_ID = ywos.ORGANIZATION_ID
    and ywos.STATUS_TYPE !='cancelled'
-   and ((DATE_CLOSED is not null and to_char(date_closed,'yyyymm') = to_char(sysdate,'yyyymm'))
+   and ((DATE_CLOSED is not null and to_char(date_closed,'yyyymm') = 'thism')
     or DATE_CLOSED is null)
    and ywos.organization_id in (select organization_id from apps.org_access where responsibility_id=FRV.RESPONSIBILITY_ID
  )) o318403

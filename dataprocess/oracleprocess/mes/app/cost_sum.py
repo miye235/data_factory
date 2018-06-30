@@ -10,11 +10,11 @@ class CostSum(object):
         base = Base()
         offline = conns['offline']
         # offline.dopost("drop table CostSum")
-        for dir in ['综合','量产','量产TD']:
+        for dir in ['量产','综合','量产TD']:
             sqldcit={'PVA':open(base.path1+'sqls/损耗分析晨会/'+dir+'/pva.sql','r').read(),'PET':open(base.path1+'sqls/损耗分析晨会/'+dir+'/pet.sql','r').read(),\
                      '保护膜':open(base.path1+'sqls/损耗分析晨会/'+dir+'/protectshell.sql','r').read(),'上TAC':open(base.path1+'sqls/损耗分析晨会/'+dir+'/tac_on.sql','r').read(),\
                     '下TAC':open(base.path1+'sqls/损耗分析晨会/'+dir+'/tac_under.sql','r').read()}
-            for day in base.datelist('20180601','20180628')[::-1]:
+            for day in base.datelist('20180501','20180531')[::-1]:
                 fin = []
                 offline.dopost("delete from CostSum where rq='"+day+"' and item='"+dir+"'")
                 for k,v in sqldcit.items():
@@ -38,15 +38,15 @@ class CostSum(object):
                 # print(res)
                 base.batchwri(res, 'CostSum', offline)
 
-base = Base()
-erp = base.conn('erp')
-offline = base.conn('offline')
-wms = base.conn('wms')
-mes = base.conn('mes')
-conns = {'offline': offline, 'erp': erp, 'wms': wms, 'mes': mes}
-hz=CostSum()
-hz(conns)
-offline.close()
-erp.close()
-wms.close()
-mes.close()
+# base = Base()
+# erp = base.conn('erp')
+# offline = base.conn('offline')
+# wms = base.conn('wms')
+# mes = base.conn('mes')
+# conns = {'offline': offline, 'erp': erp, 'wms': wms, 'mes': mes}
+# hz=CostSum()
+# hz(conns)
+# offline.close()
+# erp.close()
+# wms.close()
+# mes.close()
