@@ -1,19 +1,19 @@
 SELECT
 date_month 日期,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='利息收入' then amount_RMB else 0 end) 利息收入,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='集团内部利息收入' then amount_RMB else 0 end) 集团内部利息收入,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='贷款利息支出' then amount_RMB else 0 end) 贷款利息支出,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='集团内部利息支出' then amount_RMB else 0 end) 集团内部利息支出,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='金融机构手续费' then amount_RMB else 0 end) 金融机构手续费,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='汇兑损益' then amount_RMB else 0 end) 汇兑损益,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='财务顾问费' then amount_RMB else 0 end) 财务顾问费,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='担保费' then amount_RMB else 0 end) 担保费,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='贴现利息支出' then amount_RMB else 0 end) 贴现利息支出,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='融资租赁利支出' then amount_RMB else 0 end) 融资租赁利支出,
-sum(case when Expense_Attr_Desc='财务费用' and Main_Acct_Desc='利息支出资本化' then amount_RMB else 0 end) 利息支出资本化
+sum(case when Main_Acct_Desc='財務費用-利息收入' then amount_RMB else 0 end) 利息收入,
+sum(case when Main_Acct_Desc='財務費用-集团内部利息收入' then amount_RMB else 0 end) 集团内部利息收入,
+sum(case when Main_Acct_Desc='財務費用-利息費用' then amount_RMB else 0 end) 贷款利息支出,
+sum(case when Main_Acct_Desc='財務費用-集团内部利息支出' then amount_RMB else 0 end) 集团内部利息支出,
+sum(case when Main_Acct_Desc='財務費用-其他' then amount_RMB else 0 end) 金融机构手续费,
+sum(case when Main_Acct_Desc='財務費用-兌換損失' then amount_RMB else 0 end)+sum(case when Main_Acct_Desc='財務費用-兌換利益' then amount_RMB else 0 end) 汇兑损益,
+sum(case when Main_Acct_Desc='財務費用-财务顾问费' then amount_RMB else 0 end) 财务顾问费,
+sum(case when Main_Acct_Desc='財務費用-担保费' then amount_RMB else 0 end) 担保费,
+sum(case when Main_Acct_Desc='財務費用-贴现利息支出' then amount_RMB else 0 end) 贴现利息支出,
+sum(case when Main_Acct_Desc='財務費用-融资租赁利支出' then amount_RMB else 0 end) 融资租赁利支出,
+sum(case when Main_Acct_Desc='財務費用-利息支出资本化' then amount_RMB else 0 end) 利息支出资本化
 FROM (SELECT
 o271918.COMPANY_ACCT,
-TO_CHAR(o271918.EFFECTIVE_DATE,'yyyymm') as date_month,
+TO_CHAR(o271918.EFFECTIVE_DATE,'yyyy-mm') as date_month,
 o271918.EFFECTIVE_DATE,o271918.VOUCHER_NUMBER,o271918.CURRENCY,
 o271918.SOURCE,o271918.EXPENSE_ATTR_DESC as Expense_Attr_Desc,
 o271918.DEPT_ACCT,o271918.DEPT_ACCT_DESC,
@@ -87,7 +87,9 @@ FROM (
         and gjl.created_by = fu.user_id  and gjl.last_updated_by=fu1.user_id
         and gjh.je_category=gjcl.je_category_name
  ) o271918
-WHERE (o271918.COMPANY_ACCT <> '11')
-    AND (o271918.MAIN_ACCT BETWEEN '5410' AND '5579' AND o271918.MAIN_ACCT <> '5491')
+WHERE o271918.COMPANY_ACCT in（ '01','02','03')
+and TO_CHAR(o271918.EFFECTIVE_DATE,'yyyy-mm')='thismonth'
+and o271918.EXPENSE_ATTR_DESC is NULL
+    --AND (o271918.MAIN_ACCT BETWEEN '5410' AND '5579' AND o271918.MAIN_ACCT <> '5491')
 ORDER BY o271918.EFFECTIVE_DATE ASC)
 GROUP BY date_month

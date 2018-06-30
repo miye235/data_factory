@@ -1,13 +1,13 @@
 SELECT
 date_month 日期,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='薪資支出' then amount_RMB else 0 end) 工资,
-sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='職工福利' then amount_RMB else 0 end) 福利,
+sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='福利费' then amount_RMB else 0 end) 福利,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='保險費-人事' then amount_RMB else 0 end) 保險費_人事,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='住房公積金' then amount_RMB else 0 end) 住房公積金,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='工會經費' then amount_RMB else 0 end) 工會經費,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='職工教育經費' then amount_RMB else 0 end) 職工教育經費,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='股份支付' then amount_RMB else 0 end) 股份支付,
-sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='職工薪酬其他' then amount_RMB else 0 end) 職工薪酬其他,
+sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='伙食費' then amount_RMB else 0 end) 職工薪酬其他,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='文具用品' then amount_RMB else 0 end) 文具用品,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='旅費' then amount_RMB else 0 end) 旅費,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='運費' then amount_RMB else 0 end) 運費,
@@ -28,6 +28,7 @@ sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='加工費' th
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='包裝費' then amount_RMB else 0 end) 包裝費,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='間接材料' then amount_RMB else 0 end) 間接材料,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='檢測費' then amount_RMB else 0 end) 檢測費,
+sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='保險費(資產)' then amount_RMB else 0 end) 保險費資產,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='什項購置' then amount_RMB else 0 end) 什項購置,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='書報雜誌' then amount_RMB else 0 end) 書報雜誌,
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='勞務費' then amount_RMB else 0 end) 勞務費,
@@ -40,7 +41,7 @@ sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='交通费' th
 sum(case when Expense_Attr_Desc='销售费用' and Main_Acct_Desc='其他費用' then amount_RMB else 0 end) 其他費用
 FROM (SELECT
 o271918.COMPANY_ACCT,
-TO_CHAR(o271918.EFFECTIVE_DATE,'yyyymm') as date_month,
+TO_CHAR(o271918.EFFECTIVE_DATE,'yyyy-mm') as date_month,
 o271918.EFFECTIVE_DATE,o271918.VOUCHER_NUMBER,o271918.CURRENCY,
 o271918.SOURCE,o271918.EXPENSE_ATTR_DESC as Expense_Attr_Desc,
 o271918.DEPT_ACCT,o271918.DEPT_ACCT_DESC,
@@ -113,8 +114,13 @@ FROM (
         and gjh.je_category not in ('Budget')
         and gjl.created_by = fu.user_id  and gjl.last_updated_by=fu1.user_id
         and gjh.je_category=gjcl.je_category_name
- ) o271918
-WHERE (o271918.COMPANY_ACCT <> '11')
-    AND (o271918.MAIN_ACCT BETWEEN '5410' AND '5579' AND o271918.MAIN_ACCT <> '5491')
+
+        ) o271918
+        where o271918.COMPANY_ACCT in（ '01','02','03')
+		and TO_CHAR(o271918.EFFECTIVE_DATE,'yyyy-mm')='thismonth'
+-- WHERE (o271918.COMPANY_ACCT <> '11')
+-- and o271918.EXPENSE_ATTR_DESC is NULL
+--     AND (o271918.MAIN_ACCT BETWEEN '5410' AND '5579' AND o271918.MAIN_ACCT <> '5491')
+        --and date_month = '2018-04'
 ORDER BY o271918.EFFECTIVE_DATE ASC)
 GROUP BY date_month

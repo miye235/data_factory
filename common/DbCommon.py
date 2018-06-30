@@ -4,10 +4,12 @@ import pandas as pd
 from sqlalchemy import create_engine
 import os,time
 import logging.config
+from DBUtils.PooledDB import PooledDB
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
-logfile = '/Users/cloudin1/PycharmProjects/data_factory/dataprocess/oracleprocess/mes/log/mes.log'
+logfile = '/home/openstack/data_offline/data_factory/dataprocess/oracleprocess/mes/log/mes.log'
+#logfile = '/Users/cloudin1/PycharmProjects/data_factory/dataprocess/oracleprocess/mes/log/mes.log'
 # if not os.path.exists(logfile):
 #     fobj = open(logfile, 'w')
 #     fobj.close()
@@ -17,7 +19,6 @@ formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(l
 fh.setFormatter(formatter)
 logger.addHandler(fh)
 
-os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8'
 class oracle2pd:
     def __init__(self,host,port,db,user,pwd,retry_num=3):
         '''
@@ -27,9 +28,14 @@ class oracle2pd:
         :param user: 用户名
         :param pwd: 密码
         '''
+        if db=='KSERP':
+            os.environ['NLS_LANG'] = 'AMERICAN_AMERICA.ZHS16GBK'
+        else:
+            os.environ['NLS_LANG'] = 'SIMPLIFIED CHINESE_CHINA.UTF8'
         try:
-            self.conn=cx_Oracle.connect(str(user)+'/'+str(pwd)+'@'+str(host)+':'+str(port)+'/'+str(db))
-            self.cursor=self.conn.cursor()
+            self.pool = PooledDB(cx_Oracle, 3,20,user=str(user),password = str(pwd),dsn = "%s:%s/%s" %(str(host),str(port),str(db)))
+            # self.conn=cx_Oracle.connect(str(user)+'/'+str(pwd)+'@'+str(host)+':'+str(port)+'/'+str(db))
+            # self.cursor=self.conn.cursor()
             self.db=db
         except Exception as e:
             if retry_num > 0:
@@ -40,9 +46,11 @@ class oracle2pd:
                 oracle2pd(host,port,db,user,pwd,retry_num)
             else:
                 raise e
+
     def close(self):
-        self.cursor.close()
-        self.conn.close()
+        self.pool.close()
+        # self.cursor.close()
+        # self.conn.close()
         # logger.info('数据库'+str(self.db)+'关闭连接')
     def showtables(self,keyword=None,showpars=False):
         '''
@@ -51,6 +59,8 @@ class oracle2pd:
         :param showpars: 是否显示表的所有信息，若为否则只显示表名
         :return: 查询结果，dataframe格式
         '''
+        self.conn=self.pool.connection()
+        self.cursor=self.conn.cursor()
         if not showpars:obj='table_name'
         else:obj='*'
         sql="select "+obj+" from all_tables"
@@ -67,6 +77,8 @@ class oracle2pd:
         :param sql: 查询语句
         :return: dataframe形式的查询结果
         '''
+        self.conn = self.pool.connection()
+        self.cursor = self.conn.cursor()
         try:
             res=pd.read_sql(sql,self.conn)
         except Exception as e:
@@ -81,6 +93,8 @@ class oracle2pd:
         :param elimit: 数据行数最大值限制
         :return: dataframe类型查询结果
         '''
+        self.conn = self.pool.connection()
+        self.cursor = self.conn.cursor()
         if None==pars:
             items='*'
         else:
@@ -111,7 +125,8 @@ class mysql2pd:
         :param pwd: 密码
         '''
         try:
-            self.conn=pymysql.connect(host=host,user=user,password=pwd,db=db,port=int(port),use_unicode=True, charset="utf8")
+            self.pool = PooledDB(pymysql, 5, host=str(host), user=str(user), passwd=str(pwd), db=str(db), port=int(port),charset='utf8')
+            # self.conn=pymysql.connect(host=host,user=user,password=pwd,db=db,port=int(port),use_unicode=True, charset="utf8")
         except Exception as e:
             if retry_num > 0:
                 retry_counter=3-retry_num+1
@@ -121,21 +136,22 @@ class mysql2pd:
                 mysql2pd(host,port,db,user,pwd,retry_num)
             else:
                 raise e
-        self.cursor=self.conn.cursor()
+        # self.cursor=self.conn.cursor()
         self.db=db
         self.user=user
         self.host=host
         self.pwd=pwd
         self.port=port
     def close(self):
-        self.cursor.close()
-        self.conn.close()
+        self.pool.close()
     def doget(self,sql):
         '''
         用于执行查询sql语句
         :param sql: 查询语句
         :return: dataframe形式的查询结果
         '''
+        self.conn = self.pool.connection()
+        self.cursor = self.conn.cursor()
         try:
             res=pd.read_sql(sql,self.conn)
         except Exception as e:
@@ -147,6 +163,8 @@ class mysql2pd:
         :param sql: 增删改的sql语句
         :return: 执行结果
         '''
+        self.conn = self.pool.connection()
+        self.cursor = self.conn.cursor()
         res=False
         try:
             self.cursor.execute(sql)
@@ -170,6 +188,8 @@ class mysql2pd:
          :param showpars: 是否显示表的所有信息，若为否则只显示表名
          :return: 查询结果
          '''
+        self.conn = self.pool.connection()
+        self.cursor = self.conn.cursor()
         if not showpars:obj='table_name'
         else:obj='*'
         sql="select "+obj+" from information_schema.tables"
@@ -189,6 +209,8 @@ class mysql2pd:
         :param elimit: 数据行数最大值限制
         :return: dataframe类型查询结果
         '''
+        self.conn = self.pool.connection()
+        self.cursor = self.conn.cursor()
         if pars==None:
             items='*'
         else:
@@ -220,6 +242,8 @@ class mysql2pd:
         :param keys:list类型，字段名
         :return:执行结果
         '''
+        self.conn = self.pool.connection()
+        self.cursor = self.conn.cursor()
         sql_insert = "insert into "+table+" "
         for i in range(0,len(values)):
             if not str(values[i]).isdigit() and values[i][0]!="'":
@@ -235,6 +259,8 @@ class mysql2pd:
         :param find_dict: where条件对，例如：{'=':[('部门','业务组'),('性别','男')],'like':[('name','%冯%')]}
         :return: 执行结果
         '''
+        self.conn = self.pool.connection()
+        self.cursor = self.conn.cursor()
         sql="delete from "+table
         if find_dict!=None:
             tj = []
@@ -256,6 +282,8 @@ class mysql2pd:
         :param find_dict: where条件对，例如：{'=':[('部门','业务组'),('性别','男')],'like':[('name','%冯%')]}
         :return:
         '''
+        self.conn = self.pool.connection()
+        self.cursor = self.conn.cursor()
         sql="update "+table+" set "+",".join([str(k)+"="+str(v) for k,v in keyandvals.items()])
         if find_dict!=None:
             tj = []
@@ -276,11 +304,15 @@ class mysql2pd:
         :param pars: 字段属性，例如addtable("`xiaoming`",[("name","varchar(30)","not null"),("sex","varchar(30)"),("age","int(6)")])
         :return: 执行结果
         '''
+        self.conn = self.pool.connection()
+        self.cursor = self.conn.cursor()
         if table[0]!="`":table="`"+table+"`"
         sql="CREATE TABLE IF NOT EXISTS "+table+"("+",".join([' '.join(x) for x in pars])+")ENGINE=InnoDB DEFAULT CHARSET=utf8"
         return self.dopost(sql)
 
     def write2mysql(self,dataframe,table):
+        self.conn = self.pool.connection()
+        self.cursor = self.conn.cursor()
         res=False
         try:
             engine = create_engine("mysql+pymysql://"+self.user+":"+self.pwd+"@"+self.host+":"+self.port+"/"+self.db+"?charset=utf8")

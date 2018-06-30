@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from common.DbCommon import mysql2pd,oracle2pd
 from dataprocess.oracleprocess.mes.base import Base
 import pandas as pd
@@ -74,6 +75,7 @@ class LvLi(object):
         :return:
         '''
         fin=[]
+        self.ms.dopost("delete from trace_production where pkg_outlot='"+c+"'")
         df1=self.nonact[self.nonact['PALLET']==c]
         sltlot=df1['MATERIAL'].drop_duplicates().dropna()#找出对应分条号
         for sid in sltlot.values:
@@ -130,8 +132,10 @@ class LvLi(object):
                                             pva_intime = mlot_df['TRANSACTIONTIME'].drop_duplicates().dropna().values[0]
                                             materialno=mlot_df['MATERIALNO'].drop_duplicates().dropna().values[0]
                                             mat_df=self.ora.getdata('MES.MES_MMS_MLOT',pars=['CUSTOMER'],tjs=["MLOT='"+mlot+"'"]).drop_duplicates().dropna()
+                                            mat_df=self.ora.getdata('MES.VIEW_MMSLOTLIST_MAIN',pars=['CUSTLOT'],tjs=["MLOT='"+mlot+"'"]).drop_duplicates().dropna()
                                             if mat_df.empty:mat_cuslot='null'
-                                            else:mat_cuslot=mat_df.values[0]
+                                            else:
+                                                mat_cuslot=mat_df.values[0][0]
                                             mat_type=self.ora.getdata('MES.VIEW_MMSLOTLIST_MAIN',pars=['MLOTTYPE'],tjs=["MLOT='"+mlot+"'"]).drop_duplicates().dropna().values[0]
                                             resfin=[0,front_device,mat_cuslot,mat_type[0],materialno,mlot,\
                                                     pva_inqty,pva_intime,pva,pva_outtime,pva_outqty,\
@@ -145,10 +149,11 @@ class LvLi(object):
                                             fin.append(resfin)
         return  fin
 
-    def __call__(self,btime,etime):
+    def __call__(self,btime,etime,conns):
         # 取数据
         print('Data Loading...')
-        self.ora = oracle2pd('10.232.101.51', '1521', 'MESDB', 'BDATA', 'BDATA')
+        self.ora = conns['mes']
+        # self.wms=conns['wms']
         # hist=ora.getdata('MES.MES_WIP_HIST',pars=['LOT','OLDOPERATION','TRANSACTIONTIME', 'NEWQUANTITY','TRANSACTION','ACTIVITY'],elimit=100000)
         self.nonact = self.ora.getdata('MES.MES_WIP_LOT_NONACTIVE', ['LOT', 'MATERIAL', 'PALLET', 'QUANTITY', 'CUSTLOT'],tjs=["to_date(WMS_SHIP_DATE,'yyyy-mm-dd hh24:mi:ss')>=to_date('"+btime+"','yyyy-mm-dd hh24:mi:ss')","to_date(WMS_SHIP_DATE,'yyyy-mm-dd hh24:mi:ss')<to_date('"+etime+"','yyyy-mm-dd hh24:mi:ss')"])
         # slt = ora.getdata('MES.MES_WIP_SPLIT', ['SUBLOT', 'PARENTLOT', 'OPERATION'], elimit=10)
@@ -161,7 +166,7 @@ class LvLi(object):
         nonflag = self.nonact['MATERIAL'].fillna('null')
         custlot = self.nonact[nonflag.str.contains('-S-')]['PALLET'].drop_duplicates().dropna()
         base=Base()
-        self.ms =base.conn('offline')
+        self.ms =conns['offline']
         # ms.dopost('truncate table trace_production')
         for c in custlot.values:
             print('开始：' + str(c))
@@ -173,10 +178,20 @@ class LvLi(object):
                                         'aging_inqty', 'aging_outqty', 'aging_intime', 'aging_outtime', 'slt_lot',
                                         'slt_inqty', 'slt_outqty', 'slt_intime', 'slt_outtime', 'rtx_lot', 'rtx_enqu',
                                         'rtx_inqty',
-                                        'rtx_outqty', 'rtx_intime', 'rtx_outtime', 'pkg_pallet', 'pkg_custlot', 'pkg_qty',
-                                        'pkg_outlot'
+                                        'rtx_outqty', 'rtx_intime', 'rtx_outtime', 'pkg_pallet', 'pkg_custlot', 'pkg_qty','pkg_outlot'
                                         ]).drop_duplicates()
             # print(res['pva_lot']+'|'+res['psa_lot']+'|'+res['slt_lot']+'|'+res['rtx_lot'])
             self.ms.write2mysql(res, 'trace_production')
-        self.ora.close()
-        self.ms.close()
+
+# base = Base()
+# erp = base.conn('erp')
+# offline = base.conn('offline')
+# wms = base.conn('wms')
+# mes = base.conn('mes')
+# conns = {'offline': offline, 'erp': erp, 'wms': wms, 'mes': mes}
+# zc=LvLi()
+# zc('2018-06-20 00:00:00','2018-06-28 00:00:00',conns)
+# offline.close()
+# erp.close()
+# wms.close()
+# mes.close()

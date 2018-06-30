@@ -1,9 +1,9 @@
-SELECT 
+SELECT
 date_month 日期,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='薪資支出-直接' then amount_RMB else 0 end) 薪資支出_直接,
-sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='社會保險費-直接' then amount_RMB else 0 end) 社會保險費_直接,
+sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='保險費-直接' then amount_RMB else 0 end) 社會保險費_直接,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='伙食費-直接' then amount_RMB else 0 end) 伙食費_直接,
-sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='外包人力（派遣）-直接' then amount_RMB else 0 end) 外包人力派遣_直接,
+sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='外包人力（派遣）' then amount_RMB else 0 end) 外包人力派遣_直接,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='薪資支出' then amount_RMB else 0 end) 薪資支出,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='保險費-人事' then amount_RMB else 0 end) 保險費_人事,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='文具用品' then amount_RMB else 0 end) 文具用品,
@@ -16,7 +16,7 @@ sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='動力費' th
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='交際費' then amount_RMB else 0 end) 交際費,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='折舊' then amount_RMB else 0 end)  折舊,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='各項攤提' then amount_RMB else 0 end) 各項攤提,
-sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='權利金' then amount_RMB else 0 end) 權利金,
+sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='权利金' then amount_RMB else 0 end) 權利金,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='伙食費' then amount_RMB else 0 end) 伙食費,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='職工福利' then amount_RMB else 0 end) 職工福利,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='研究發展費' then amount_RMB else 0 end) 研究發展費,
@@ -27,7 +27,7 @@ sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='加工費' th
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='包裝費' then amount_RMB else 0 end) 包裝費,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='間接材料' then amount_RMB else 0 end) 間接材料,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='檢測費' then amount_RMB else 0 end) 檢測費,
-sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='保險費（資產）' then amount_RMB else 0 end) 保險費資產,
+sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='保險費(資產)' then amount_RMB else 0 end) 保險費資產,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='什項購置' then amount_RMB else 0 end) 什項購置,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='書報雜誌' then amount_RMB else 0 end) 書報雜誌,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='勞務費' then amount_RMB else 0 end) 勞務費,
@@ -35,12 +35,12 @@ sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='進口費用'
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='會議費' then amount_RMB else 0 end) 會議費,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='租金支出' then amount_RMB else 0 end) 租金支出,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='殘保金' then amount_RMB else 0 end) 殘保金,
-sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='外包人力（派遣）' then amount_RMB else 0 end) 外包人力派遣,
-sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='交通費' then amount_RMB else 0 end) 交通費,
+sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='外包人力(派遣)' then amount_RMB else 0 end) 外包人力派遣,
+sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='交通费' then amount_RMB else 0 end) 交通費,
 sum(case when Expense_Attr_Desc='制造费用' and Main_Acct_Desc='其他費用' then amount_RMB else 0 end) 其他費用
-FROM (SELECT  
+FROM (SELECT
 o271918.COMPANY_ACCT,
-TO_CHAR(o271918.EFFECTIVE_DATE,'yyyymm') as date_month,
+TO_CHAR(o271918.EFFECTIVE_DATE,'yyyy-mm') as date_month,
 o271918.EFFECTIVE_DATE,o271918.VOUCHER_NUMBER,o271918.CURRENCY,
 o271918.SOURCE,o271918.EXPENSE_ATTR_DESC as Expense_Attr_Desc,
 o271918.DEPT_ACCT,o271918.DEPT_ACCT_DESC,
@@ -51,22 +51,21 @@ NVL(o271918.ACCOUNTED_DR,0)-NVL(o271918.ACCOUNTED_CR,0) as amount_RMB,
 o271918.LINE_DESCRIPTION,
 o271918.JOURNAL_DESC,
 o271918.CURRENCY_CONVERSION_RATE
-FROM ( 
+FROM (
     select gjh.je_source Source
-        ,gjh.period_name 
+        ,gjh.period_name
         ,gjh.name Journal_Name
         ,gjh.currency_code Currency
         ,gjh.default_effective_date Effective_Date
         ,gjh.creation_date
         ,gjh.description Journal_Desc
-        ,(case  when gjcl.USER_JE_CATEGORY_NAME in ( 'Purchase Invoices','Payments',                  'Sales Invoices','Credit Memos') then gjl.subledger_doc_sequence_value
-        else
-        gjh.doc_sequence_value end) Voucher_Number
+        ,(case  when gjcl.USER_JE_CATEGORY_NAME in ( 'Purchase Invoices','Payments','Sales Invoices','Credit Memos') then gjl.subledger_doc_sequence_value
+        else gjh.doc_sequence_value end) Voucher_Number
         ,gjcl.USER_JE_CATEGORY_NAME gl_category
         ,gcc.account_type
         ,gcc.segment1   company_acct
         ,asr.parent_flex_value expense_attr
-        ,asr.parent_flex_Desc expense_attr_desc              
+        ,asr.parent_flex_Desc expense_attr_desc
         ,gcc.segment2   dept_acct
         ,gcc.segment3   main_acct
         ,gcc.segment4   sub_acct
@@ -83,7 +82,7 @@ FROM (
         ,gjl.subledger_doc_sequence_value
         ,gjl.status
         ,gjl.ledger_id
-        ,gjl.code_combination_id 
+        ,gjl.code_combination_id
         ,apps.ygl_info_pkg.get_acct_desc(gcc.chart_of_accounts_id,gcc.code_combination_id) acct_desc
         ,apps.ygl_info_pkg.get_segment_desc(gcc.chart_of_accounts_id,gcc.code_combination_id,2) dept_acct_desc
         ,apps.ygl_info_pkg.get_segment_desc(gcc.chart_of_accounts_id,gcc.code_combination_id,3) main_acct_desc
@@ -104,9 +103,9 @@ FROM (
         ,apps.GL_JE_CATEGORIES_TL  gjcl
     where gjh.je_header_id=gjl.je_header_id
         and gjl.code_combination_id=gcc.code_combination_id
-        and gcc.chart_of_accounts_id = asr.id_flex_num(+) 
+        and gcc.chart_of_accounts_id = asr.id_flex_num(+)
         and gcc.segment2 = asr.child_flex_value(+)
-        and asr.segment_num(+)=2       
+        and asr.segment_num(+)=2
         and gcc.chart_of_accounts_id = mag.id_flex_num(+)
         and gcc.segment3 = mag.child_flex_value(+)
         and mag.segment_num(+) = 3
@@ -114,7 +113,9 @@ FROM (
         and gjl.created_by = fu.user_id  and gjl.last_updated_by=fu1.user_id
         and gjh.je_category=gjcl.je_category_name
  ) o271918
-WHERE (o271918.COMPANY_ACCT <> '11')
-    AND (o271918.MAIN_ACCT BETWEEN '5410' AND '5579' AND o271918.MAIN_ACCT <> '5491')
+where o271918.COMPANY_ACCT in（ '01','02','03')
+		and TO_CHAR(o271918.EFFECTIVE_DATE,'yyyy-mm')='thismonth'
+-- WHERE (o271918.COMPANY_ACCT <> '11')
+--     AND (o271918.MAIN_ACCT BETWEEN '5410' AND '5579' AND o271918.MAIN_ACCT <> '5491')
 ORDER BY o271918.EFFECTIVE_DATE ASC)
 GROUP BY date_month

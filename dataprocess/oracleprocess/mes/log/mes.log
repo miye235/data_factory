@@ -1,0 +1,406 @@
+2018-06-30 06:25:02,502 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601396'
+2018-06-30 06:25:05,827 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601397'
+2018-06-30 06:25:07,661 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 06:25:07,815 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 06:25:12,594 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601459'
+2018-06-30 06:25:17,153 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601398'
+2018-06-30 06:25:17,954 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 06:25:18,409 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 06:25:20,783 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601436'
+2018-06-30 06:25:21,667 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601430'
+2018-06-30 06:25:23,784 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601429'
+2018-06-30 06:25:26,442 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601460'
+2018-06-30 06:25:30,135 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601456'
+2018-06-30 06:25:35,401 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601450'
+2018-06-30 06:25:40,659 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601431'
+2018-06-30 06:25:46,518 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601405'
+2018-06-30 06:25:48,059 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601447'
+2018-06-30 06:25:56,834 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601454'
+2018-06-30 06:26:02,825 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601448'
+2018-06-30 06:26:06,134 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601455'
+2018-06-30 06:26:11,916 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601453'
+2018-06-30 06:26:13,775 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601432'
+2018-06-30 06:26:19,075 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601458'
+2018-06-30 06:26:24,908 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601433'
+2018-06-30 06:26:30,441 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601457'
+2018-06-30 06:26:33,341 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601400'
+2018-06-30 06:26:36,367 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601443'
+2018-06-30 06:26:41,025 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601412'
+2018-06-30 06:26:42,783 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601408'
+2018-06-30 06:26:44,217 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601439'
+2018-06-30 06:26:46,859 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601440'
+2018-06-30 06:26:50,992 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601442'
+2018-06-30 06:27:10,991 - DbCommon.py[line:174] - INFO: 执行成功：truncate table yuanfantouru
+2018-06-30 06:27:13,980 - DbCommon.py[line:174] - INFO: 执行成功：truncate table should_pay_age
+2018-06-30 06:28:02,997 - DbCommon.py[line:174] - INFO: 执行成功：truncate table OverallGoodRatio
+2018-06-30 06:29:58,464 - DbCommon.py[line:174] - INFO: 执行成功：truncate table qcvim1
+2018-06-30 06:30:00,795 - DbCommon.py[line:174] - INFO: 执行成功：delete from main_bussiness_income1 where 日期='2018-05'
+2018-06-30 06:30:16,585 - DbCommon.py[line:174] - INFO: 执行成功：delete from manage_fee1 where 日期='2018-05'
+2018-06-30 06:30:31,400 - DbCommon.py[line:174] - INFO: 执行成功：delete from sale_fee1 where 日期='2018-05'
+2018-06-30 06:30:45,577 - DbCommon.py[line:174] - INFO: 执行成功：truncate table qcview
+2018-06-30 06:30:53,364 - DbCommon.py[line:174] - INFO: 执行成功：delete from made_fee1 where 日期='2018-05'
+2018-06-30 06:30:57,464 - DbCommon.py[line:174] - INFO: 执行成功：delete from finance_fee1 where 日期='2018-05'
+2018-06-30 06:30:57,632 - DbCommon.py[line:174] - INFO: 执行成功：truncate table should_pay_age
+2018-06-30 06:30:57,802 - DbCommon.py[line:174] - INFO: 执行成功：delete from gains_analysis where 日期='2018-05'
+2018-06-30 06:31:03,033 - DbCommon.py[line:174] - INFO: 执行成功：truncate table lianglvribao
+2018-06-30 06:31:17,574 - DbCommon.py[line:174] - INFO: 执行成功：truncate table materialprice
+2018-06-30 06:31:28,747 - DbCommon.py[line:174] - INFO: 执行成功：truncate table CMMT_CCD_INFO
+2018-06-30 06:31:37,881 - DbCommon.py[line:174] - INFO: 执行成功：delete from lirun_new where upmonth='2018-05'
+2018-06-30 06:31:47,099 - DbCommon.py[line:174] - INFO: 执行成功：delete from mwhvlm1 where riqi='2018-06-28'
+2018-06-30 06:31:49,877 - DbCommon.py[line:174] - INFO: 执行成功：truncate table liangpin
+2018-06-30 06:31:50,918 - DbCommon.py[line:174] - INFO: 执行成功：delete from zanshoucunhuo where str_to_date(date_format(ACCOUNTING_DATE,'%Y-%m-%d'),'%Y-%m-%d')=str_to_date(date_format(SUBDATE(SYSDATE(),interval 1 day),'%Y-%m-%d'),'%Y-%m-%d')
+2018-06-30 06:31:58,915 - DbCommon.py[line:174] - INFO: 执行成功：delete from zaizhipin where upmonth='2018-06'
+2018-06-30 06:32:00,622 - DbCommon.py[line:174] - INFO: 执行成功：delete from jinhaocun where str_to_date(date_format(TRANSACTION_DATE_FM,'%Y-%m'),'%Y-%m')=str_to_date('2018-06','%Y-%m')
+2018-06-30 06:32:02,913 - DbCommon.py[line:174] - INFO: 执行成功：delete from mwhvlm1 where riqi='2018-06-29'
+2018-06-30 06:32:16,970 - DbCommon.py[line:174] - INFO: 执行成功：truncate table should_get_mon
+2018-06-30 06:32:19,318 - DbCommon.py[line:174] - INFO: 执行成功：delete from quality where dat>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+2018-06-30 06:32:21,890 - DbCommon.py[line:174] - INFO: 执行成功：delete from zichanfz where upmonth='2018-05'
+2018-06-30 06:32:23,374 - DbCommon.py[line:174] - INFO: 执行成功：truncate table yuanfanchanchu
+2018-06-30 06:32:32,357 - DbCommon.py[line:174] - INFO: 执行成功：truncate table CHTJ_AUTOLOAD
+2018-06-30 06:32:33,953 - DbCommon.py[line:174] - INFO: 执行成功：truncate table lianglv
+2018-06-30 06:32:36,975 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+2018-06-30 06:32:37,362 - DbCommon.py[line:174] - INFO: 执行成功：truncate table ShipmentsNow
+2018-06-30 06:32:38,456 - DbCommon.py[line:174] - INFO: 执行成功：truncate table ShipmentsStatistics
+2018-06-30 06:32:44,507 - DbCommon.py[line:174] - INFO: 执行成功：delete from LPrate where dat='2018-06-29'
+2018-06-30 06:32:45,693 - DbCommon.py[line:174] - INFO: 执行成功：truncate table chengbenjisuan
+2018-06-30 06:32:50,444 - DbCommon.py[line:174] - INFO: 执行成功：delete from month_cost_rate where str_to_date(thisdate,'%Y/%m/%d')=str_to_date('2018/06/29','%Y/%m/%d')
+2018-06-30 06:33:59,187 - DbCommon.py[line:174] - INFO: 执行成功：truncate table vlm_mwh
+2018-06-30 06:35:05,374 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 06:35:05,424 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 06:35:15,548 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 06:35:15,612 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 06:35:19,704 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 06:35:30,870 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601451'
+2018-06-30 06:35:35,129 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601401'
+2018-06-30 06:35:37,822 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601403'
+2018-06-30 06:35:40,129 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601413'
+2018-06-30 06:35:42,283 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601414'
+2018-06-30 06:35:44,072 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601427'
+2018-06-30 06:35:50,127 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601434'
+2018-06-30 06:35:59,644 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601428'
+2018-06-30 06:35:59,683 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 06:36:01,229 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601438'
+2018-06-30 06:36:03,036 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601437'
+2018-06-30 06:36:05,484 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601444'
+2018-06-30 06:36:09,301 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601399'
+2018-06-30 06:36:15,010 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601441'
+2018-06-30 06:36:20,152 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601409'
+2018-06-30 06:36:22,662 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-06-30'
+2018-06-30 06:36:23,620 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601406'
+2018-06-30 06:36:26,107 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601410'
+2018-06-30 06:36:30,296 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601445'
+2018-06-30 06:36:34,537 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601419'
+2018-06-30 06:36:40,262 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-07-01'
+2018-06-30 06:36:41,114 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601415'
+2018-06-30 06:36:44,379 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601446'
+2018-06-30 06:36:48,638 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601418'
+2018-06-30 06:36:51,274 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601417'
+2018-06-30 06:36:54,223 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601421'
+2018-06-30 06:36:55,733 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601420'
+2018-06-30 06:37:02,709 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601416'
+2018-06-30 06:37:05,647 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601422'
+2018-06-30 06:37:12,728 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601449'
+2018-06-30 06:37:19,851 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601396'
+2018-06-30 06:37:24,439 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601397'
+2018-06-30 06:37:30,939 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601459'
+2018-06-30 06:37:36,269 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601398'
+2018-06-30 06:37:40,890 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601436'
+2018-06-30 06:37:42,397 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601430'
+2018-06-30 06:37:44,803 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601429'
+2018-06-30 06:37:48,144 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601460'
+2018-06-30 06:37:52,884 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601456'
+2018-06-30 06:37:59,405 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601450'
+2018-06-30 06:38:05,486 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601431'
+2018-06-30 06:38:12,235 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601405'
+2018-06-30 06:38:14,302 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601447'
+2018-06-30 06:38:22,752 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601454'
+2018-06-30 06:38:29,137 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601448'
+2018-06-30 06:38:33,149 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601455'
+2018-06-30 06:38:40,025 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601453'
+2018-06-30 06:38:42,629 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601432'
+2018-06-30 06:38:48,793 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601458'
+2018-06-30 06:38:55,461 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601433'
+2018-06-30 06:39:02,005 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601457'
+2018-06-30 06:39:05,954 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601400'
+2018-06-30 06:39:09,945 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601443'
+2018-06-30 06:39:15,579 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601412'
+2018-06-30 06:39:17,977 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601408'
+2018-06-30 06:39:20,004 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601439'
+2018-06-30 06:39:23,279 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601440'
+2018-06-30 06:39:28,437 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601442'
+2018-06-30 06:39:46,660 - DbCommon.py[line:174] - INFO: 执行成功：truncate table yuanfantouru
+2018-06-30 06:39:50,491 - DbCommon.py[line:174] - INFO: 执行成功：truncate table qcvim1
+2018-06-30 06:39:56,220 - DbCommon.py[line:174] - INFO: 执行成功：truncate table should_pay_age
+2018-06-30 06:40:23,951 - DbCommon.py[line:174] - INFO: 执行成功：delete from main_bussiness_income1 where 日期='2018-05'
+2018-06-30 06:40:39,916 - DbCommon.py[line:174] - INFO: 执行成功：delete from manage_fee1 where 日期='2018-05'
+2018-06-30 06:40:55,573 - DbCommon.py[line:174] - INFO: 执行成功：delete from sale_fee1 where 日期='2018-05'
+2018-06-30 06:40:57,472 - DbCommon.py[line:174] - INFO: 执行成功：truncate table lianglvribao
+2018-06-30 06:41:19,081 - DbCommon.py[line:174] - INFO: 执行成功：delete from made_fee1 where 日期='2018-05'
+2018-06-30 06:41:24,169 - DbCommon.py[line:174] - INFO: 执行成功：delete from finance_fee1 where 日期='2018-05'
+2018-06-30 06:41:25,081 - DbCommon.py[line:174] - INFO: 执行成功：delete from gains_analysis where 日期='2018-05'
+2018-06-30 06:41:29,968 - DbCommon.py[line:174] - INFO: 执行成功：delete from lirun_new where upmonth='2018-05'
+2018-06-30 06:41:41,984 - DbCommon.py[line:174] - INFO: 执行成功：truncate table liangpin
+2018-06-30 06:41:42,973 - DbCommon.py[line:174] - INFO: 执行成功：delete from zanshoucunhuo where str_to_date(date_format(ACCOUNTING_DATE,'%Y-%m-%d'),'%Y-%m-%d')=str_to_date(date_format(SUBDATE(SYSDATE(),interval 1 day),'%Y-%m-%d'),'%Y-%m-%d')
+2018-06-30 06:41:50,866 - DbCommon.py[line:174] - INFO: 执行成功：delete from zaizhipin where upmonth='2018-06'
+2018-06-30 06:41:52,715 - DbCommon.py[line:174] - INFO: 执行成功：delete from jinhaocun where str_to_date(date_format(TRANSACTION_DATE_FM,'%Y-%m'),'%Y-%m')=str_to_date('2018-06','%Y-%m')
+2018-06-30 06:42:14,565 - DbCommon.py[line:174] - INFO: 执行成功：delete from zichanfz where upmonth='2018-05'
+2018-06-30 06:42:26,698 - DbCommon.py[line:174] - INFO: 执行成功：truncate table lianglv
+2018-06-30 06:43:51,774 - DbCommon.py[line:174] - INFO: 执行成功：truncate table vlm_mwh
+2018-06-30 06:45:05,452 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 06:45:10,737 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 06:45:15,744 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 06:45:19,757 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 06:45:23,036 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601451'
+2018-06-30 06:45:27,231 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601401'
+2018-06-30 06:45:29,877 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601403'
+2018-06-30 06:45:32,176 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601413'
+2018-06-30 06:45:34,088 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601414'
+2018-06-30 06:45:35,947 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601427'
+2018-06-30 06:45:36,090 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 06:45:42,063 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601434'
+2018-06-30 06:45:51,404 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601428'
+2018-06-30 06:45:52,861 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601438'
+2018-06-30 06:45:54,789 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601437'
+2018-06-30 06:45:56,634 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601444'
+2018-06-30 06:46:00,598 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601399'
+2018-06-30 06:46:06,471 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601441'
+2018-06-30 06:46:11,343 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601409'
+2018-06-30 06:46:14,480 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601406'
+2018-06-30 06:46:16,665 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601410'
+2018-06-30 06:46:16,722 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 06:46:20,325 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601445'
+2018-06-30 06:46:24,472 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601419'
+2018-06-30 06:46:30,501 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601415'
+2018-06-30 06:46:33,519 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601446'
+2018-06-30 06:46:37,536 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601418'
+2018-06-30 06:46:39,655 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601417'
+2018-06-30 06:46:42,382 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601421'
+2018-06-30 06:46:43,801 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601420'
+2018-06-30 06:46:49,959 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601416'
+2018-06-30 06:46:52,555 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601422'
+2018-06-30 06:46:58,638 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601449'
+2018-06-30 06:47:04,223 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601396'
+2018-06-30 06:47:08,076 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601397'
+2018-06-30 06:47:13,864 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601459'
+2018-06-30 06:47:18,396 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601398'
+2018-06-30 06:47:22,596 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601436'
+2018-06-30 06:47:24,192 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601430'
+2018-06-30 06:47:26,425 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601429'
+2018-06-30 06:47:29,663 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601460'
+2018-06-30 06:47:33,574 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601456'
+2018-06-30 06:47:39,070 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601450'
+2018-06-30 06:47:43,921 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601431'
+2018-06-30 06:47:49,326 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601405'
+2018-06-30 06:47:50,965 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601447'
+2018-06-30 06:47:57,263 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601454'
+2018-06-30 06:48:02,104 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601448'
+2018-06-30 06:48:05,231 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601455'
+2018-06-30 06:48:10,863 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601453'
+2018-06-30 06:48:13,007 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601432'
+2018-06-30 06:48:17,694 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601458'
+2018-06-30 06:48:22,134 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601433'
+2018-06-30 06:48:26,948 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601457'
+2018-06-30 06:48:29,847 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601400'
+2018-06-30 06:48:32,717 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='CA180601443'
+2018-06-30 06:48:36,687 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601412'
+2018-06-30 06:48:38,162 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601408'
+2018-06-30 06:48:39,701 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601439'
+2018-06-30 06:48:42,003 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601440'
+2018-06-30 06:48:45,658 - DbCommon.py[line:174] - INFO: 执行成功：delete from trace_production where pkg_outlot='KA180601442'
+2018-06-30 06:49:02,991 - DbCommon.py[line:174] - INFO: 执行成功：truncate table yuanfantouru
+2018-06-30 06:49:12,089 - DbCommon.py[line:174] - INFO: 执行成功：truncate table should_pay_age
+2018-06-30 06:49:37,849 - DbCommon.py[line:174] - INFO: 执行成功：delete from main_bussiness_income1 where 日期='2018-05'
+2018-06-30 06:49:55,136 - DbCommon.py[line:174] - INFO: 执行成功：delete from manage_fee1 where 日期='2018-05'
+2018-06-30 06:50:11,257 - DbCommon.py[line:174] - INFO: 执行成功：delete from sale_fee1 where 日期='2018-05'
+2018-06-30 06:50:32,106 - DbCommon.py[line:174] - INFO: 执行成功：delete from made_fee1 where 日期='2018-05'
+2018-06-30 06:50:37,606 - DbCommon.py[line:174] - INFO: 执行成功：delete from finance_fee1 where 日期='2018-05'
+2018-06-30 06:50:38,518 - DbCommon.py[line:174] - INFO: 执行成功：delete from gains_analysis where 日期='2018-05'
+2018-06-30 06:55:10,697 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 06:55:10,736 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 06:55:19,280 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 06:55:19,355 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:05:05,767 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:05:07,149 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:05:14,992 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:05:16,275 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:05:19,222 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 07:05:43,087 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 07:06:06,164 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-06-30'
+2018-06-30 07:06:23,705 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-07-01'
+2018-06-30 07:06:40,563 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+2018-06-30 07:15:14,524 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:15:14,578 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:15:24,190 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:15:24,289 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:15:40,600 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 07:16:03,996 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 07:18:10,346 - DbCommon.py[line:174] - INFO: 执行成功：truncate table OverallGoodRatio
+2018-06-30 07:23:38,912 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+2018-06-30 07:25:19,376 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:25:19,396 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:25:28,026 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:25:28,525 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:25:44,264 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 07:26:07,168 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 07:27:57,695 - DbCommon.py[line:174] - INFO: 执行成功：truncate table OverallGoodRatio
+2018-06-30 07:33:22,077 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+2018-06-30 07:35:22,480 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:35:22,586 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:35:31,179 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:35:31,794 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:35:35,010 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 07:35:55,883 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 07:36:18,396 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-06-30'
+2018-06-30 07:36:35,920 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-07-01'
+2018-06-30 07:45:18,998 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:45:19,037 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:45:27,239 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:45:28,413 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:55:22,100 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:55:23,156 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 07:55:31,141 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:55:32,214 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 07:55:48,356 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 07:56:11,858 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 08:05:15,919 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:05:19,054 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:05:25,885 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 08:05:27,511 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 08:05:31,541 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 08:05:54,357 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 08:06:16,592 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-06-30'
+2018-06-30 08:06:34,033 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-07-01'
+2018-06-30 08:06:50,883 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+2018-06-30 08:15:23,011 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:15:23,056 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:15:31,677 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 08:15:32,162 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 08:25:22,539 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:25:22,570 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:25:30,505 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 08:25:31,894 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 08:25:48,031 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 08:26:11,493 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 08:28:11,282 - DbCommon.py[line:174] - INFO: 执行成功：truncate table OverallGoodRatio
+2018-06-30 08:33:35,987 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+2018-06-30 08:35:16,592 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:35:16,672 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:35:25,167 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 08:35:25,704 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 08:35:29,163 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 08:35:42,974 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 08:35:50,771 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 08:36:05,451 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 08:36:13,914 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-06-30'
+2018-06-30 08:36:31,272 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-07-01'
+2018-06-30 08:38:02,194 - DbCommon.py[line:174] - INFO: 执行成功：truncate table OverallGoodRatio
+2018-06-30 08:43:31,503 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+2018-06-30 08:45:10,776 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:45:10,801 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:45:19,809 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 08:45:20,077 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 08:55:12,920 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:55:12,988 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 08:55:20,986 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 08:55:22,011 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:05:11,788 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:05:13,605 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:05:21,421 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:05:22,055 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:05:26,160 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 09:05:37,256 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 09:05:45,867 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 09:05:57,915 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 09:06:08,977 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-06-30'
+2018-06-30 09:06:26,701 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-07-01'
+2018-06-30 09:06:43,942 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+2018-06-30 09:15:12,663 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:15:12,690 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:15:21,820 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:15:22,295 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:25:17,714 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:25:17,799 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:25:26,172 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:25:27,045 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:35:14,063 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:35:14,575 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:35:23,333 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:35:23,449 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:35:27,246 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 09:35:39,476 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 09:35:49,261 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 09:35:58,518 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 09:36:11,513 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-06-30'
+2018-06-30 09:36:28,472 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-07-01'
+2018-06-30 09:37:37,629 - DbCommon.py[line:174] - INFO: 执行成功：truncate table OverallGoodRatio
+2018-06-30 09:43:04,073 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+2018-06-30 09:45:08,825 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:45:12,559 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:45:17,100 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:45:21,287 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:45:37,347 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 09:45:56,432 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 09:47:34,512 - DbCommon.py[line:174] - INFO: 执行成功：truncate table OverallGoodRatio
+2018-06-30 09:53:00,302 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+2018-06-30 09:55:14,280 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:55:14,320 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 09:55:23,288 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 09:55:23,503 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:05:16,718 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:05:16,759 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:05:26,565 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:05:26,568 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:05:30,499 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 10:05:35,149 - DbCommon.py[line:174] - INFO: 执行成功：truncate table warehouse_report
+2018-06-30 10:05:45,032 - DbCommon.py[line:43] - INFO: Retry get oracle connection , the 1 times
+2018-06-30 10:05:48,856 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 10:05:55,106 - DbCommon.py[line:43] - INFO: Retry get oracle connection , the 2 times
+2018-06-30 10:06:05,175 - DbCommon.py[line:43] - INFO: Retry get oracle connection , the 3 times
+2018-06-30 10:06:11,152 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-06-30'
+2018-06-30 10:06:28,676 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-07-01'
+2018-06-30 10:06:45,976 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+2018-06-30 10:06:46,936 - DbCommon.py[line:174] - INFO: 执行成功：truncate table warehouse_report
+2018-06-30 10:06:56,372 - DbCommon.py[line:43] - INFO: Retry get oracle connection , the 1 times
+2018-06-30 10:07:06,442 - DbCommon.py[line:43] - INFO: Retry get oracle connection , the 2 times
+2018-06-30 10:07:16,525 - DbCommon.py[line:43] - INFO: Retry get oracle connection , the 3 times
+2018-06-30 10:08:50,425 - DbCommon.py[line:174] - INFO: 执行成功：truncate table warehouse_report
+2018-06-30 10:09:01,930 - DbCommon.py[line:174] - INFO: 执行成功：truncate table warehouse_report
+2018-06-30 10:15:26,686 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:15:26,731 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:15:38,610 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:15:38,770 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:15:55,138 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 10:16:17,410 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 10:25:27,155 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:25:27,416 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:25:36,316 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:25:36,455 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:34:19,009 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:34:28,967 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:35:26,924 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:35:26,960 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:35:35,757 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:35:36,181 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:35:39,847 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 10:36:01,346 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 10:36:23,651 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-06-30'
+2018-06-30 10:36:40,684 - DbCommon.py[line:174] - INFO: 执行成功：delete from sum_goodratio where rq='2018-07-01'
+2018-06-30 10:41:04,204 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:41:13,788 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:41:29,710 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 10:41:56,112 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 10:43:35,141 - DbCommon.py[line:174] - INFO: 执行成功：truncate table OverallGoodRatio
+2018-06-30 10:45:21,732 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:45:23,364 - DbCommon.py[line:174] - INFO: 执行成功：truncate table Hzgn_wms_erp
+2018-06-30 10:45:30,289 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:45:32,661 - DbCommon.py[line:174] - INFO: 执行成功：truncate table pvachanneng
+2018-06-30 10:45:49,471 - DbCommon.py[line:174] - INFO: 执行成功：truncate table dianque_sumrate
+2018-06-30 10:46:17,674 - DbCommon.py[line:174] - INFO: 执行成功：truncate table sunhao
+2018-06-30 10:48:04,121 - DbCommon.py[line:174] - INFO: 执行成功：truncate table OverallGoodRatio
+2018-06-30 10:49:22,945 - DbCommon.py[line:174] - INFO: 执行成功：delete from assets_fixed where 日期='2018-06'
+2018-06-30 10:49:23,933 - DbCommon.py[line:174] - INFO: 执行成功：truncate table main_bussiness_cost1
+2018-06-30 10:49:52,662 - DbCommon.py[line:174] - INFO: 执行成功：delete from pkg_cap_calcu where riqi=str_to_date('2018/06/30','%Y/%m/%d')
+2018-06-30 10:49:55,407 - DbCommon.py[line:174] - INFO: 执行成功：delete from ShouldPayAtm where 日期='2018-05'
+2018-06-30 10:50:03,400 - DbCommon.py[line:174] - INFO: 执行成功：delete from psa_penmo where 日期>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+2018-06-30 10:50:06,561 - DbCommon.py[line:174] - INFO: 执行成功：delete from jianfan_penmo where 日期>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+2018-06-30 10:53:38,172 - DbCommon.py[line:174] - INFO: 执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'

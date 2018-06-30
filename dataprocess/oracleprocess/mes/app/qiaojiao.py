@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 from dataprocess.oracleprocess.mes.base import Base
 import pandas as pd
 
@@ -27,11 +28,11 @@ class QiaoJiao(object):
         ret=self.ms.getdata(table)
         print(ret)
 
-    def __call__(self,btime,etime):
-        sql1 =open('../sqls/翘角信息查询.sql','r').read()
+    def __call__(self,btime,etime,conns):
         b=Base()
-        self.ora=b.conn('mes')
-        self.ms=b.conn('offline')
+        sql1 =open(b.path1+'sqls/翘角信息查询.sql','r').read()
+        self.ora=conns['mes']
+        self.ms=conns['offline']
         self.mess2('2018-06-01 00:00:00','2018-06-04 00:00:00')
         # print('创建输出表...')
         # createtables(sqlc1)

@@ -1,19 +1,20 @@
 --总体
-SELECT 前段工单,后段工单,料号,批号,生产状态,日期,厂区,分类,类型,sum(投入数) as 投入数 ,sum(良品数) as 良品数 ,点缺数,点缺项,sort
+SELECT 前段工单,后段工单,料号,前段批号,后段批号,生产状态,日期,厂区,分类,类型,sum(投入数) as 投入数 ,sum(良品数) as 良品数 ,点缺数,点缺项,sort, 机速
 FROM (
-SELECT 前段工单,后段工单,料号,批号,生产状态,日期,厂区,分类,类型,投入数,良品数,点缺数,点缺项,
-row_number()over(partition by 前段工单,后段工单,料号,批号,生产状态,日期,厂区,分类,投入数,良品数 order by 点缺数 DESC)sort
+SELECT 前段工单,后段工单,料号,前段批号,后段批号,生产状态,日期,厂区,分类,类型,投入数,良品数,点缺数,点缺项,机速,
+row_number()over(partition by 前段工单,后段工单,料号,前段批号,后段批号,生产状态,日期,厂区,分类,投入数,良品数 order by 点缺数 DESC)sort
 FROM (
 SELECT T8.WO as 前段工单,
        T2.WO as 后段工单,
        T2.DEVICE AS 料号,
-       T2.LOT 批号,
+       T8.LOT as 前段批号,
+       T2.LOT as 后段批号,
        CASE WHEN SUBSTR(T8.WO,4,1)='E' OR SUBSTR(T2.WO,4,1)='E' THEN 'E工单'
                WHEN SUBSTR(T8.WO,4,1)IN('T','M','P') AND SUBSTR(T2.WO,4,1)IN('T','M','P') then 'P工单'
                WHEN SUBSTR(T8.WO,4,1)IN('D') OR SUBSTR(T2.WO,4,1)IN('D') THEN 'D工单'
                WHEN SUBSTR(T2.WO,5,1)IN('R')THEN 'R工单'
                ELSE '' END AS 生产状态,
-       substr(T7.TRANSACTIONTIME,1,10) as 日期,
+       T7.TRANSACTIONTIME AS 日期,
         CASE WHEN substr(T2.WO,1,1)='K' THEN '昆山'
       WHEN substr(T2.WO,1,1)='Q' THEN '重庆'
       ELSE '咸阳' END 厂区,
@@ -36,7 +37,13 @@ CASE WHEN SUBSTR(T2.DEVICE,5,3)='001' THEN '55"'
            WHEN substr(t2.WO,1,1)='Q' THEN '重庆检查'
  end   ||
 case when t2.MATERIAL is not null then '自制品'  else '台湾卷料' end ||
-case WHEN SUBSTR(t2.wo,4,1)='D' THEN 'TD试机"' end
+case WHEN SUBSTR(t2.wo,4,1)='D' THEN 'TD试机"' end||
+                CASE
+                    WHEN INSTR( T12.FABCODE, '25M' ) > 0 THEN
+                    '25米机速'
+                    WHEN INSTR( T12.FABCODE, '16M' ) > 0 THEN
+                    '16米机速'
+                    ELSE '' END
  as 分类
 ,
 --SUBSTR(T2.DEVICE,2,2) AS 客户,
@@ -47,7 +54,14 @@ case WHEN SUBSTR(t2.wo,4,1)='D' THEN 'TD试机"' end
     ,
      case WHEN SUBSTR(t2.DEVICE,4,1) in('F','U') THEN '上片'
      WHEN SUBSTR(t2.DEVICE,4,1) in('R','D') THEN '下片'
-     ELSE '' END  as 类型
+     ELSE '' END  as 类型,
+                CASE
+                    WHEN INSTR( T12.FABCODE, '25M' ) > 0 THEN
+                    '25米机速'
+                    WHEN INSTR( T12.FABCODE, '16M' ) > 0 THEN
+                    '16米机速'
+                    ELSE ''
+                END AS 机速
 
 FROM (
 select MATERIAL,LOT from MES.MES_WIP_LOT_NONACTIVE TT WHERE
@@ -95,10 +109,21 @@ ON T1.LOT=T10.LOT
   /*点缺明细*/
  LEFT JOIN (select REASON, DESCR, QUANTITY,CMMT_BACKEND_INSPECT_SID from mes.CMMT_BACK_INSPECT_DEFECT)T11
  ON T10.CMMT_BACKEND_INSPECT_SID=T11.CMMT_BACKEND_INSPECT_SID
+ LEFT JOIN (
+			SELECT
+					LOT,
+					FABCODE
+			FROM
+					MES.VIEW_LOTLIST_MAIN
+			WHERE
+					INSTR( FABCODE, '25M' ) > 0
+					OR INSTR( FABCODE, '16M' ) > 0
+	) T12 ON T10.LOT = T12.LOT
 
  GROUP BY T8.WO ,
           T2.WO ,
           T2.DEVICE,
+					T8.LOT,
           T2.LOT ,
           T11.DESCR,
           CASE WHEN SUBSTR(T8.WO,4,1)='E' OR SUBSTR(T2.WO,4,1)='E' THEN 'E工单'
@@ -106,7 +131,7 @@ ON T1.LOT=T10.LOT
                WHEN SUBSTR(T8.WO,4,1)IN('D') OR SUBSTR(T2.WO,4,1)IN('D') THEN 'D工单'
                WHEN SUBSTR(T2.WO,5,1)IN('R')THEN 'R工单'
                ELSE '' END ,
-        substr(T7.TRANSACTIONTIME,1,10),
+					T7.TRANSACTIONTIME,
         CASE WHEN substr(T2.WO,1,1)='K' THEN '昆山'
       WHEN substr(T2.WO,1,1)='Q' THEN '重庆'
       ELSE '咸阳' END ,
@@ -129,12 +154,24 @@ CASE WHEN SUBSTR(T2.DEVICE,5,3)='001' THEN '55"'
       WHEN substr(t2.WO,1,1)='Q' THEN '重庆检查'
 end ||
 case when t2.MATERIAL is not null then '自制品'  else '台湾卷料' end ||
-case WHEN SUBSTR(t2.wo,4,1)='D' THEN 'TD试机"' end
+case WHEN SUBSTR(t2.wo,4,1)='D' THEN 'TD试机"' end ||
+CASE
+		WHEN INSTR( T12.FABCODE, '25M' ) > 0 THEN
+		'25米机速'
+		WHEN INSTR( T12.FABCODE, '16M' ) > 0 THEN
+		'16米机速'
+		ELSE '' END,
+CASE
+		WHEN INSTR( T12.FABCODE, '25M' ) > 0 THEN
+		'25米机速'
+		WHEN INSTR( T12.FABCODE, '16M' ) > 0 THEN
+		'16米机速'
+		ELSE '' END
 
-     order by substr(T7.TRANSACTIONTIME,1,10) asc )TT
+     order by T7.TRANSACTIONTIME asc )TT
       WHERE 投入数 IS NOT NULL
       AND (点缺项 IS NOT NULL OR 点缺项<>'')
       ORDER BY 日期 asc,点缺数 desc
       )
 WHERE SORT<4
-group by 前段工单,后段工单,料号,批号,生产状态,日期,厂区,分类,类型,点缺数,点缺项,sort
+group by 前段工单,后段工单,料号,前段批号,后段批号,生产状态,日期, 厂区,分类,类型,点缺数,点缺项,sort, 机速

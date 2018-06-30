@@ -1,0 +1,3590 @@
+------2018-06-29 06:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(48, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 06:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(15, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67202, 11)
+------2018-06-29 06:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 06:50:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 07:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(15, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67202, 11)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 07:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(50, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 07:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 07:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(15, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67205, 11)
+------2018-06-29 07:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 07:50:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 08:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67208, 11)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 08:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 08:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+(1, 4)
+------2018-06-29 08:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67211, 11)
+------2018-06-29 08:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 08:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 09:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67211, 11)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 09:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(49, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 09:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(54, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 09:30:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(462, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67211, 11)
+------2018-06-29 09:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(78, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67211, 11)
+------2018-06-29 09:50:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(37, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 10:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 10:10:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67214, 11)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 10:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 10:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(35, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 10:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(72, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67214, 11)
+------2018-06-29 10:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(45, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 11:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(119, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 11:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(35, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67216, 11)
+------2018-06-29 11:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(35, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 11:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(35, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 11:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(35, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67221, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(176999, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 11:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(35, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67222, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177007, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 12:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 12:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 12:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67222, 11)
+------2018-06-29 12:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 12:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 12:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67224, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177008, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 13:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67224, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177008, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 13:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 13:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 13:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67224, 11)
+------2018-06-29 13:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 13:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 14:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67230, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177013, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 14:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67230, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177013, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 14:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 14:30:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 14:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67231, 11)
+------2018-06-29 14:50:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(36, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 15:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(37, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 15:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(38, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67234, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177013, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 15:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(38, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67234, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177013, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 15:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(38, 10)
+执行：pva_channeng
+------2018-06-29 15:40:02,运行测试程序------
+执行：hezhang
+------2018-06-29 15:50:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(21, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 16:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(21, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 16:10:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(21, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67244, 11)
+------2018-06-29 16:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(28, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 16:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(21, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 16:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(5, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(14, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67244, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177071, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 16:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(6, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(16, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67244, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177071, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 17:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(5, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 17:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(18, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 17:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(18, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(16, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67246, 11)
+------2018-06-29 17:30:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(5, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7545, 7)
+(7044, 7)
+------2018-06-29 17:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(5, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7546, 7)
+(7044, 7)
+------2018-06-29 17:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(5, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7546, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(16, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67251, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177094, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 18:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(5, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7546, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67251, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177094, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 18:10:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(5, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7546, 7)
+(7044, 7)
+------2018-06-29 18:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(5, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7546, 7)
+(7044, 7)
+------2018-06-29 18:30:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(5, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7546, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67255, 11)
+------2018-06-29 18:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(5, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7547, 7)
+(7044, 7)
+------2018-06-29 18:50:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(5, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7548, 7)
+(7044, 7)
+------2018-06-29 19:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7548, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67272, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177144, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 19:10:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7548, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67276, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177166, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 19:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7548, 7)
+(7044, 7)
+------2018-06-29 19:30:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7548, 7)
+(7044, 7)
+------2018-06-29 19:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7549, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67284, 11)
+------2018-06-29 19:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7549, 7)
+(7044, 7)
+------2018-06-29 20:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7549, 7)
+(7044, 7)
+------2018-06-29 20:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7549, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67284, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177280, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 20:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7549, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67284, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177280, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 20:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7550, 7)
+(7044, 7)
+------2018-06-29 20:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7550, 7)
+(7044, 7)
+------2018-06-29 20:50:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7550, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67289, 11)
+------2018-06-29 21:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7550, 7)
+(7044, 7)
+------2018-06-29 21:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7550, 7)
+(7044, 7)
+------2018-06-29 21:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7551, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67294, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177291, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 21:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7551, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67294, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177291, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(59, 4)
+------2018-06-29 21:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7551, 7)
+(7044, 7)
+------2018-06-29 21:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7551, 7)
+(7044, 7)
+------2018-06-29 22:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7551, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67295, 11)
+------2018-06-29 22:10:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7551, 7)
+(7044, 7)
+------2018-06-29 22:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7552, 7)
+(7044, 7)
+------2018-06-29 22:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(16, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7552, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67304, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177298, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(71, 4)
+------2018-06-29 22:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7552, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67305, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177298, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(71, 4)
+------2018-06-29 22:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7552, 7)
+(7044, 7)
+------2018-06-29 23:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7553, 7)
+(7044, 7)
+------2018-06-29 23:10:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7553, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67310, 11)
+------2018-06-29 23:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7554, 7)
+(7044, 7)
+------2018-06-29 23:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7554, 7)
+(7044, 7)
+------2018-06-29 23:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7554, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67320, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177326, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/28 00:00:00'
+(71, 4)
+------2018-06-29 23:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(720, 3)
+(7555, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67324, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177326, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 00:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7555, 7)
+(7044, 7)
+------2018-06-30 00:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7555, 7)
+(7044, 7)
+------2018-06-30 00:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7555, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67324, 11)
+------2018-06-30 00:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7555, 7)
+(7044, 7)
+------2018-06-30 00:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7555, 7)
+(7044, 7)
+------2018-06-30 00:50:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7555, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67326, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177326, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 01:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7555, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67327, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177326, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 01:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7555, 7)
+(7044, 7)
+------2018-06-30 01:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7556, 7)
+(7044, 7)
+------2018-06-30 01:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7556, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67332, 11)
+------2018-06-30 01:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7557, 7)
+(7044, 7)
+------2018-06-30 01:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7557, 7)
+(7044, 7)
+------2018-06-30 02:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7557, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67337, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177338, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 02:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7557, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67339, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177338, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 02:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7557, 7)
+(7044, 7)
+------2018-06-30 02:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7558, 7)
+(7044, 7)
+------2018-06-30 02:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7558, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67348, 11)
+------2018-06-30 02:50:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7558, 7)
+(7044, 7)
+------2018-06-30 03:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7558, 7)
+(7044, 7)
+------2018-06-30 03:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7558, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67350, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177367, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 03:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7558, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67350, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177380, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 03:30:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7559, 7)
+(7044, 7)
+------2018-06-30 03:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7559, 7)
+(7044, 7)
+------2018-06-30 03:50:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7559, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67356, 11)
+------2018-06-30 04:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7560, 7)
+(7044, 7)
+------2018-06-30 04:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7560, 7)
+(7044, 7)
+------2018-06-30 04:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7560, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67364, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177380, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 04:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7560, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67364, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177380, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 04:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7560, 7)
+(7044, 7)
+------2018-06-30 04:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7560, 7)
+(7044, 7)
+------2018-06-30 05:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7560, 7)
+(7044, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67368, 11)
+------2018-06-30 05:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7044, 7)
+------2018-06-30 05:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7044, 7)
+------2018-06-30 05:50:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+------2018-06-30 05:30:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7045, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67371, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177380, 27)
+执行af
+执行成功：delete from assets_fixed where 日期='2018-06'
+(310, 8)
+执行mbc
+执行成功：truncate table main_bussiness_cost1
+(36, 8)
+(4, 8)
+(53, 8)
+(61, 8)
+(77, 8)
+执行lyo
+(1, 6)
+执行lyi
+(1, 6)
+执行：bzcn
+执行成功：delete from pkg_cap_calcu where riqi=str_to_date('2018/06/30','%Y/%m/%d')
+(4, 4)
+执行：should_pay_atm
+执行成功：delete from ShouldPayAtm where 日期='2018-05'
+        SUM(金额)       日期
+0  4.868943e+07  2018-05
+(1, 2)
+执行：penmo
+执行成功：delete from psa_penmo where 日期>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(1, 3)
+执行成功：delete from jianfan_penmo where 日期>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(0, 3)
+执行：qcview
+执行成功：truncate table qcview
+(23147, 15)
+执行：materialprice
+执行成功：truncate table materialprice
+(3717, 55)
+执行：cmmtinfo
+执行成功：truncate table CMMT_CCD_INFO
+(10303, 23)
+执行：wmhmes
+2018/06/29
+执行成功：delete from mwhvlm1 where riqi='2018-06-28'
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+2018/06/30
+执行成功：delete from mwhvlm1 where riqi='2018-06-29'
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+执行：should_get
+执行成功：truncate table should_get_mon
+(10, 6)
+执行：qlt
+执行成功：delete from quality where dat>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(16, 5)
+执行：yfch
+执行成功：truncate table yuanfanchanchu
+(6907, 6)
+执行：chtj
+      出货性质   Size Shipment_Date ...          未税金额       含税单价  id
+0     None    55"    2017-01-05 ...  1.582703e+03  18.154539   0
+1     None    55"    2017-01-09 ...  0.000000e+00   0.000000   0
+2       送样    32"    2017-01-19 ...  0.000000e+00   0.000000   0
+3     None    55"    2017-03-25 ...  7.076000e+05  82.789200   0
+4     None  38.5"    2017-03-27 ...  6.714000e+05  39.276900   0
+5     None  38.5"    2017-04-05 ...  6.986000e+05  40.868100   0
+6     None  38.5"    2017-04-18 ...  6.986000e+05  40.868100   0
+7     None  15.6"    2017-04-19 ...  2.792000e+03   8.166600   0
+8       送样    32"    2017-04-28 ...  0.000000e+00   0.000000   0
+9     None  38.5"    2017-05-11 ...  6.986000e+05  40.868100   0
+10    None    55"    2017-05-22 ...  6.113700e+05  79.478100   0
+11    None  38.5"    2017-05-21 ...  6.986000e+05  40.868100   0
+12    None    32"    2017-06-03 ...  3.922000e+05  22.943700   0
+13    None  38.5"    2017-06-01 ...  6.714000e+05  39.276900   0
+14    None  38.5"    2017-06-30 ...  6.986000e+05  40.868100   0
+15    None    55"    2017-06-05 ...  8.041025e+04  39.199996   0
+16    None    55"    2017-06-05 ...  1.883077e+05  40.799994   0
+17    None    55"    2017-06-05 ...  6.834871e+05  40.799994   0
+18    None    32"    2017-06-15 ...  2.941500e+05  22.943700   0
+19    None    55"    2017-06-06 ...  1.076250e+06  83.947500   0
+20    None    32"    2017-06-13 ...  1.961000e+05  22.943700   0
+21    None  38.5"    2017-06-20 ...  6.714000e+05  39.276900   0
+22    None    55"    2017-06-26 ...  1.076250e+05  83.947500   0
+23    None    55"    2017-06-26 ...  5.381250e+05  83.947500   0
+24    None    32"    2017-07-10 ...  4.871250e+05  25.330500   0
+25    None    32"    2017-07-14 ...  9.742500e+05  25.330500   0
+26    None    32"    2017-07-17 ...  9.742500e+05  25.330500   0
+27    None    55"    2017-07-17 ...  6.066000e+05  78.858000   0
+28    None    32"    2017-07-21 ...  4.297500e+05  22.347000   0
+29    None    32"    2017-07-22 ...  4.871250e+05  25.330500   0
+...    ...    ...           ... ...           ...        ...  ..
+2212  正常出货    50"    2018-06-15 ...  1.538400e+05  59.484800   0
+2213  正常出货    32"    2018-06-16 ...  4.599000e+05  23.710400   0
+2214  正常出货  31.5"    2018-06-15 ...  1.624500e+05  20.938000   0
+2215  正常出货  23.6"    2018-06-16 ...  2.149700e+05  12.017600   0
+2216  B规出货    32"    2018-06-20 ...  3.545719e+05   7.083621   0
+2217  B规出货  64.5"    2018-06-20 ...  1.544962e+03   7.083621   0
+2218  B规出货  38.5"    2018-06-21 ...  8.346020e+00   9.681383   0
+2219  正常出货    50"    2018-06-21 ...  2.909491e+05  59.566000   0
+2220    送样    32"    2018-06-22 ...  0.000000e+00   0.000000   0
+2221  正常出货    50"    2018-06-25 ...  4.786250e+05  63.452000   0
+2222  正常出货    50"    2018-06-25 ...  1.030257e+06  57.222800   0
+2223  正常出货    32"    2018-06-26 ...  4.613580e+04  20.938000   0
+2224  正常出货  31.5"    2018-06-26 ...  2.452800e+05  23.710400   0
+2225  B规出货   None    2018-06-28 ...  1.681217e+03  26.354214   0
+2226  正常出货  31.5"    2018-06-27 ...  1.839600e+05  23.710400   0
+2227  正常出货    32"    2018-06-28 ...  4.512500e+04  20.938000   0
+2228  B规出货  64.5"    2018-06-28 ...  3.921897e+01   6.499144   0
+2229  B规出货    32"    2018-06-28 ...  3.126312e+03   6.499144   0
+2230  B规出货    32"    2018-06-28 ...  5.109672e+03   6.499144   0
+2231  B规出货  38.5"    2018-06-28 ...  2.246687e+03   6.499144   0
+2232  B规出货    55"    2018-06-28 ...  1.177129e+04   6.499144   0
+2233  B规出货    32"    2018-06-28 ...  5.933280e+03   6.499155   0
+2234  正常出货  31.5"    2018-06-29 ...  2.778075e+05  20.938000   0
+2235  None    55"    2017-06-21 ...           NaN  39.199996   0
+2236  None  31.5"    2018-05-28 ...           NaN   1.649700   0
+2237  None  31.5"    2018-06-28 ...           NaN   1.438400   0
+2238  None    55"          None ...           NaN  78.858000   0
+2239  None    32"          None ...           NaN  25.330500   0
+2240  None    55"          None ...           NaN   0.783900   0
+2241  None   None          None ...           NaN  13.273650   0
+
+[2242 rows x 16 columns]
+执行成功：truncate table CHTJ_AUTOLOAD
+(2242, 16)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+执行：ShipmentsNow
+执行成功：truncate table ShipmentsNow
+(964, 3)
+执行：ShipmentsStatistics
+执行成功：truncate table ShipmentsStatistics
+(29, 4)
+执行：lprate
+执行成功：delete from LPrate where dat='2018-06-29'
+执行：cbjs
+执行成功：truncate table chengbenjisuan
+(3154, 8)
+执行：yuesunhao
+执行成功：delete from month_cost_rate where str_to_date(thisdate,'%Y/%m/%d')=str_to_date('2018/06/29','%Y/%m/%d')
+(1, 2)
+执行qcview1
+执行成功：truncate table qcvim1
+(23172, 38)
+执行：lianglvribao
+执行成功：truncate table lianglvribao
+(23608, 16)
+执行：lirun
+执行成功：delete from lirun_new where upmonth='2018-05'
+(1, 12)
+执行：liangpin
+执行成功：truncate table liangpin
+(817, 4)
+执行：cunhuo
+执行成功：delete from zanshoucunhuo where str_to_date(date_format(ACCOUNTING_DATE,'%Y-%m-%d'),'%Y-%m-%d')=str_to_date(date_format(SUBDATE(SYSDATE(),interval 1 day),'%Y-%m-%d'),'%Y-%m-%d')
+(4, 12)
+执行成功：delete from zaizhipin where upmonth='2018-06'
+(489, 30)
+执行成功：delete from jinhaocun where str_to_date(date_format(TRANSACTION_DATE_FM,'%Y-%m'),'%Y-%m')=str_to_date('2018-06','%Y-%m')
+(14508, 23)
+执行：fuzhai
+执行成功：delete from zichanfz where upmonth='2018-05'
+(1, 38)
+执行：lianglv
+执行成功：truncate table lianglv
+(54519, 18)
+执行：vlm
+执行成功：truncate table vlm_mwh
+(94421, 7)
+执行：lvlizhuisu
+Data Loading...
+Data Loading finish!
+Data processing...
+开始：KA180601451
+执行成功：delete from trace_production where pkg_outlot='KA180601451'
+开始：KA180601401
+执行成功：delete from trace_production where pkg_outlot='KA180601401'
+开始：KA180601403
+执行成功：delete from trace_production where pkg_outlot='KA180601403'
+开始：KA180601413
+执行成功：delete from trace_production where pkg_outlot='KA180601413'
+开始：KA180601414
+执行成功：delete from trace_production where pkg_outlot='KA180601414'
+开始：CA180601427
+执行成功：delete from trace_production where pkg_outlot='CA180601427'
+开始：CA180601434
+执行成功：delete from trace_production where pkg_outlot='CA180601434'
+开始：CA180601428
+执行成功：delete from trace_production where pkg_outlot='CA180601428'
+开始：KA180601438
+执行成功：delete from trace_production where pkg_outlot='KA180601438'
+开始：KA180601437
+执行成功：delete from trace_production where pkg_outlot='KA180601437'
+开始：KA180601444
+执行成功：delete from trace_production where pkg_outlot='KA180601444'
+开始：KA180601399
+执行成功：delete from trace_production where pkg_outlot='KA180601399'
+开始：KA180601441
+执行成功：delete from trace_production where pkg_outlot='KA180601441'
+开始：KA180601409
+执行成功：delete from trace_production where pkg_outlot='KA180601409'
+开始：KA180601406
+执行成功：delete from trace_production where pkg_outlot='KA180601406'
+开始：KA180601410
+执行成功：delete from trace_production where pkg_outlot='KA180601410'
+开始：KA180601445
+执行成功：delete from trace_production where pkg_outlot='KA180601445'
+开始：KA180601419
+执行成功：delete from trace_production where pkg_outlot='KA180601419'
+开始：KA180601415
+执行成功：delete from trace_production where pkg_outlot='KA180601415'
+开始：KA180601446
+执行成功：delete from trace_production where pkg_outlot='KA180601446'
+开始：KA180601418
+执行成功：delete from trace_production where pkg_outlot='KA180601418'
+开始：KA180601417
+执行成功：delete from trace_production where pkg_outlot='KA180601417'
+开始：KA180601421
+执行成功：delete from trace_production where pkg_outlot='KA180601421'
+开始：KA180601420
+执行成功：delete from trace_production where pkg_outlot='KA180601420'
+开始：KA180601416
+执行成功：delete from trace_production where pkg_outlot='KA180601416'
+开始：CA180601422
+执行成功：delete from trace_production where pkg_outlot='CA180601422'
+开始：CA180601449
+执行成功：delete from trace_production where pkg_outlot='CA180601449'
+开始：KA180601396
+执行成功：delete from trace_production where pkg_outlot='KA180601396'
+开始：CA180601397
+执行成功：delete from trace_production where pkg_outlot='CA180601397'
+开始：KA180601459
+执行成功：delete from trace_production where pkg_outlot='KA180601459'
+开始：CA180601398
+执行成功：delete from trace_production where pkg_outlot='CA180601398'
+开始：KA180601436
+执行成功：delete from trace_production where pkg_outlot='KA180601436'
+开始：KA180601430
+执行成功：delete from trace_production where pkg_outlot='KA180601430'
+开始：KA180601429
+执行成功：delete from trace_production where pkg_outlot='KA180601429'
+开始：KA180601460
+执行成功：delete from trace_production where pkg_outlot='KA180601460'
+开始：CA180601456
+执行成功：delete from trace_production where pkg_outlot='CA180601456'
+开始：KA180601450
+执行成功：delete from trace_production where pkg_outlot='KA180601450'
+开始：KA180601431
+执行成功：delete from trace_production where pkg_outlot='KA180601431'
+开始：KA180601405
+执行成功：delete from trace_production where pkg_outlot='KA180601405'
+开始：CA180601447
+执行成功：delete from trace_production where pkg_outlot='CA180601447'
+开始：KA180601454
+执行成功：delete from trace_production where pkg_outlot='KA180601454'
+开始：KA180601448
+执行成功：delete from trace_production where pkg_outlot='KA180601448'
+开始：KA180601455
+执行成功：delete from trace_production where pkg_outlot='KA180601455'
+开始：KA180601453
+执行成功：delete from trace_production where pkg_outlot='KA180601453'
+开始：KA180601432
+执行成功：delete from trace_production where pkg_outlot='KA180601432'
+开始：KA180601458
+执行成功：delete from trace_production where pkg_outlot='KA180601458'
+开始：KA180601433
+执行成功：delete from trace_production where pkg_outlot='KA180601433'
+开始：KA180601457
+执行成功：delete from trace_production where pkg_outlot='KA180601457'
+开始：KA180601400
+执行成功：delete from trace_production where pkg_outlot='KA180601400'
+开始：CA180601443
+执行成功：delete from trace_production where pkg_outlot='CA180601443'
+开始：KA180601412
+执行成功：delete from trace_production where pkg_outlot='KA180601412'
+开始：KA180601408
+执行成功：delete from trace_production where pkg_outlot='KA180601408'
+开始：KA180601439
+执行成功：delete from trace_production where pkg_outlot='KA180601439'
+开始：KA180601440
+执行成功：delete from trace_production where pkg_outlot='KA180601440'
+开始：KA180601442
+执行成功：delete from trace_production where pkg_outlot='KA180601442'
+执行：yunfantouru
+执行成功：truncate table yuanfantouru
+(8034, 6)
+执行：spa
+执行成功：truncate table should_pay_age
+(12011, 24)
+执行：qiaojiao
+Empty DataFrame
+Columns: [PVA站生产时间, PSA站生产时间, 裁切生产时间, TRANSACTIONTIME, 前段批号, 分条批号, 后段批号]
+Index: []
+(0, 11)
+执行mbi
+执行成功：delete from main_bussiness_income1 where 日期='2018-05'
+(37, 6)
+执行：fee
+正在进行manage_fee1
+执行成功：delete from manage_fee1 where 日期='2018-05'
+        日期          工资  福利    ...      外包人力派遣       交通费       其他费用
+0  2018-05  1320160.38   0    ...           0  41894.63  126004.89
+
+[1 rows x 39 columns]
+(1, 39)
+正在进行sale_fee1
+执行成功：delete from sale_fee1 where 日期='2018-05'
+        日期         工资  福利    保险费_人事   ...     残保金  外包人力派遣       交通费     其他费用
+0  2018-05  396846.33   0  33805.91   ...       0       0  16965.92  9998.39
+
+[1 rows x 40 columns]
+(1, 40)
+正在进行made_fee1
+执行成功：delete from made_fee1 where 日期='2018-05'
+        日期     薪资支出_直接   社会保险费_直接    ...      外包人力派遣        交通费       其他费用
+0  2018-05  1911108.75  257103.99    ...           0  176658.04  452084.19
+
+[1 rows x 39 columns]
+(1, 39)
+正在进行finance_fee1
+执行成功：delete from finance_fee1 where 日期='2018-05'
+        日期      利息收入  集团内部利息收入   ...     贴现利息支出  融资租赁利支出  利息支出资本化
+0  2018-05  183413.2         0   ...          0        0        0
+
+[1 rows x 12 columns]
+(1, 12)
+执行gan
+执行成功：delete from gains_analysis where 日期='2018-05'
+(1, 12)
+------2018-06-30 05:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7045, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67371, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177380, 27)
+执行af
+执行成功：delete from assets_fixed where 日期='2018-06'
+(310, 8)
+执行mbc
+执行成功：truncate table main_bussiness_cost1
+(36, 8)
+(4, 8)
+(53, 8)
+(61, 8)
+(77, 8)
+执行lyo
+(1, 6)
+执行lyi
+(1, 6)
+执行：bzcn
+执行成功：delete from pkg_cap_calcu where riqi=str_to_date('2018/06/30','%Y/%m/%d')
+(4, 4)
+执行：should_pay_atm
+执行成功：delete from ShouldPayAtm where 日期='2018-05'
+        SUM(金额)       日期
+0  4.868943e+07  2018-05
+(1, 2)
+执行：penmo
+执行成功：delete from psa_penmo where 日期>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(1, 3)
+执行成功：delete from jianfan_penmo where 日期>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(0, 3)
+执行：qcview
+执行成功：truncate table qcview
+(23147, 15)
+执行：materialprice
+执行成功：truncate table materialprice
+(3717, 55)
+执行：cmmtinfo
+执行成功：truncate table CMMT_CCD_INFO
+(10303, 23)
+执行：wmhmes
+2018/06/29
+执行成功：delete from mwhvlm1 where riqi='2018-06-28'
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+2018/06/30
+执行成功：delete from mwhvlm1 where riqi='2018-06-29'
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+执行：should_get
+执行成功：truncate table should_get_mon
+(10, 6)
+执行：qlt
+执行成功：delete from quality where dat>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(16, 5)
+执行：yfch
+执行成功：truncate table yuanfanchanchu
+(6907, 6)
+执行：chtj
+      出货性质   Size Shipment_Date ...          未税金额       含税单价  id
+0     None    55"    2017-01-05 ...  1.582703e+03  18.154539   0
+1     None    55"    2017-01-09 ...  0.000000e+00   0.000000   0
+2       送样    32"    2017-01-19 ...  0.000000e+00   0.000000   0
+3     None    55"    2017-03-25 ...  7.076000e+05  82.789200   0
+4     None  38.5"    2017-03-27 ...  6.714000e+05  39.276900   0
+5     None  38.5"    2017-04-05 ...  6.986000e+05  40.868100   0
+6     None  38.5"    2017-04-18 ...  6.986000e+05  40.868100   0
+7     None  15.6"    2017-04-19 ...  2.792000e+03   8.166600   0
+8       送样    32"    2017-04-28 ...  0.000000e+00   0.000000   0
+9     None  38.5"    2017-05-11 ...  6.986000e+05  40.868100   0
+10    None    55"    2017-05-22 ...  6.113700e+05  79.478100   0
+11    None  38.5"    2017-05-21 ...  6.986000e+05  40.868100   0
+12    None    32"    2017-06-03 ...  3.922000e+05  22.943700   0
+13    None  38.5"    2017-06-01 ...  6.714000e+05  39.276900   0
+14    None  38.5"    2017-06-30 ...  6.986000e+05  40.868100   0
+15    None    55"    2017-06-05 ...  8.041025e+04  39.199996   0
+16    None    55"    2017-06-05 ...  1.883077e+05  40.799994   0
+17    None    55"    2017-06-05 ...  6.834871e+05  40.799994   0
+18    None    32"    2017-06-15 ...  2.941500e+05  22.943700   0
+19    None    55"    2017-06-06 ...  1.076250e+06  83.947500   0
+20    None    32"    2017-06-13 ...  1.961000e+05  22.943700   0
+21    None  38.5"    2017-06-20 ...  6.714000e+05  39.276900   0
+22    None    55"    2017-06-26 ...  1.076250e+05  83.947500   0
+23    None    55"    2017-06-26 ...  5.381250e+05  83.947500   0
+24    None    32"    2017-07-10 ...  4.871250e+05  25.330500   0
+25    None    32"    2017-07-14 ...  9.742500e+05  25.330500   0
+26    None    32"    2017-07-17 ...  9.742500e+05  25.330500   0
+27    None    55"    2017-07-17 ...  6.066000e+05  78.858000   0
+28    None    32"    2017-07-21 ...  4.297500e+05  22.347000   0
+29    None    32"    2017-07-22 ...  4.871250e+05  25.330500   0
+...    ...    ...           ... ...           ...        ...  ..
+2212  正常出货    50"    2018-06-15 ...  1.538400e+05  59.484800   0
+2213  正常出货    32"    2018-06-16 ...  4.599000e+05  23.710400   0
+2214  正常出货  31.5"    2018-06-15 ...  1.624500e+05  20.938000   0
+2215  正常出货  23.6"    2018-06-16 ...  2.149700e+05  12.017600   0
+2216  B规出货    32"    2018-06-20 ...  3.545719e+05   7.083621   0
+2217  B规出货  64.5"    2018-06-20 ...  1.544962e+03   7.083621   0
+2218  B规出货  38.5"    2018-06-21 ...  8.346020e+00   9.681383   0
+2219  正常出货    50"    2018-06-21 ...  2.909491e+05  59.566000   0
+2220    送样    32"    2018-06-22 ...  0.000000e+00   0.000000   0
+2221  正常出货    50"    2018-06-25 ...  4.786250e+05  63.452000   0
+2222  正常出货    50"    2018-06-25 ...  1.030257e+06  57.222800   0
+2223  正常出货    32"    2018-06-26 ...  4.613580e+04  20.938000   0
+2224  正常出货  31.5"    2018-06-26 ...  2.452800e+05  23.710400   0
+2225  B规出货   None    2018-06-28 ...  1.681217e+03  26.354214   0
+2226  正常出货  31.5"    2018-06-27 ...  1.839600e+05  23.710400   0
+2227  正常出货    32"    2018-06-28 ...  4.512500e+04  20.938000   0
+2228  B规出货  64.5"    2018-06-28 ...  3.921897e+01   6.499144   0
+2229  B规出货    32"    2018-06-28 ...  3.126312e+03   6.499144   0
+2230  B规出货    32"    2018-06-28 ...  5.109672e+03   6.499144   0
+2231  B规出货  38.5"    2018-06-28 ...  2.246687e+03   6.499144   0
+2232  B规出货    55"    2018-06-28 ...  1.177129e+04   6.499144   0
+2233  B规出货    32"    2018-06-28 ...  5.933280e+03   6.499155   0
+2234  正常出货  31.5"    2018-06-29 ...  2.778075e+05  20.938000   0
+2235  None    55"    2017-06-21 ...           NaN  39.199996   0
+2236  None  31.5"    2018-05-28 ...           NaN   1.649700   0
+2237  None  31.5"    2018-06-28 ...           NaN   1.438400   0
+2238  None    55"          None ...           NaN  78.858000   0
+2239  None    32"          None ...           NaN  25.330500   0
+2240  None    55"          None ...           NaN   0.783900   0
+2241  None   None          None ...           NaN  13.273650   0
+
+[2242 rows x 16 columns]
+执行成功：truncate table CHTJ_AUTOLOAD
+(2242, 16)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+执行：ShipmentsNow
+执行成功：truncate table ShipmentsNow
+(964, 3)
+执行：ShipmentsStatistics
+执行成功：truncate table ShipmentsStatistics
+(29, 4)
+执行：lprate
+执行成功：delete from LPrate where dat='2018-06-29'
+执行：cbjs
+执行成功：truncate table chengbenjisuan
+(3154, 8)
+执行：yuesunhao
+执行成功：delete from month_cost_rate where str_to_date(thisdate,'%Y/%m/%d')=str_to_date('2018/06/29','%Y/%m/%d')
+(1, 2)
+执行qcview1
+执行成功：truncate table qcvim1
+(23172, 38)
+执行：lianglvribao
+执行成功：truncate table lianglvribao
+(23611, 16)
+执行：lirun
+执行成功：delete from lirun_new where upmonth='2018-05'
+(1, 12)
+执行：liangpin
+执行成功：truncate table liangpin
+(817, 4)
+执行：cunhuo
+执行成功：delete from zanshoucunhuo where str_to_date(date_format(ACCOUNTING_DATE,'%Y-%m-%d'),'%Y-%m-%d')=str_to_date(date_format(SUBDATE(SYSDATE(),interval 1 day),'%Y-%m-%d'),'%Y-%m-%d')
+(4, 12)
+执行成功：delete from zaizhipin where upmonth='2018-06'
+(489, 30)
+执行成功：delete from jinhaocun where str_to_date(date_format(TRANSACTION_DATE_FM,'%Y-%m'),'%Y-%m')=str_to_date('2018-06','%Y-%m')
+(14508, 23)
+执行：fuzhai
+执行成功：delete from zichanfz where upmonth='2018-05'
+(1, 38)
+执行：lianglv
+执行成功：truncate table lianglv
+(54519, 18)
+执行：vlm
+执行成功：truncate table vlm_mwh
+(94423, 7)
+执行：lvlizhuisu
+Data Loading...
+Data Loading finish!
+Data processing...
+开始：KA180601451
+执行成功：delete from trace_production where pkg_outlot='KA180601451'
+开始：KA180601401
+执行成功：delete from trace_production where pkg_outlot='KA180601401'
+开始：KA180601403
+执行成功：delete from trace_production where pkg_outlot='KA180601403'
+开始：KA180601413
+执行成功：delete from trace_production where pkg_outlot='KA180601413'
+开始：KA180601414
+执行成功：delete from trace_production where pkg_outlot='KA180601414'
+开始：CA180601427
+执行成功：delete from trace_production where pkg_outlot='CA180601427'
+开始：CA180601434
+执行成功：delete from trace_production where pkg_outlot='CA180601434'
+开始：CA180601428
+执行成功：delete from trace_production where pkg_outlot='CA180601428'
+开始：KA180601438
+执行成功：delete from trace_production where pkg_outlot='KA180601438'
+开始：KA180601437
+执行成功：delete from trace_production where pkg_outlot='KA180601437'
+开始：KA180601444
+执行成功：delete from trace_production where pkg_outlot='KA180601444'
+开始：KA180601399
+执行成功：delete from trace_production where pkg_outlot='KA180601399'
+开始：KA180601441
+执行成功：delete from trace_production where pkg_outlot='KA180601441'
+开始：KA180601409
+执行成功：delete from trace_production where pkg_outlot='KA180601409'
+开始：KA180601406
+执行成功：delete from trace_production where pkg_outlot='KA180601406'
+开始：KA180601410
+执行成功：delete from trace_production where pkg_outlot='KA180601410'
+开始：KA180601445
+执行成功：delete from trace_production where pkg_outlot='KA180601445'
+开始：KA180601419
+执行成功：delete from trace_production where pkg_outlot='KA180601419'
+开始：KA180601415
+执行成功：delete from trace_production where pkg_outlot='KA180601415'
+开始：KA180601446
+执行成功：delete from trace_production where pkg_outlot='KA180601446'
+开始：KA180601418
+执行成功：delete from trace_production where pkg_outlot='KA180601418'
+开始：KA180601417
+执行成功：delete from trace_production where pkg_outlot='KA180601417'
+开始：KA180601421
+执行成功：delete from trace_production where pkg_outlot='KA180601421'
+开始：KA180601420
+执行成功：delete from trace_production where pkg_outlot='KA180601420'
+开始：KA180601416
+执行成功：delete from trace_production where pkg_outlot='KA180601416'
+开始：CA180601422
+执行成功：delete from trace_production where pkg_outlot='CA180601422'
+开始：CA180601449
+执行成功：delete from trace_production where pkg_outlot='CA180601449'
+开始：KA180601396
+执行成功：delete from trace_production where pkg_outlot='KA180601396'
+开始：CA180601397
+执行成功：delete from trace_production where pkg_outlot='CA180601397'
+开始：KA180601459
+执行成功：delete from trace_production where pkg_outlot='KA180601459'
+开始：CA180601398
+执行成功：delete from trace_production where pkg_outlot='CA180601398'
+开始：KA180601436
+执行成功：delete from trace_production where pkg_outlot='KA180601436'
+开始：KA180601430
+执行成功：delete from trace_production where pkg_outlot='KA180601430'
+开始：KA180601429
+执行成功：delete from trace_production where pkg_outlot='KA180601429'
+开始：KA180601460
+执行成功：delete from trace_production where pkg_outlot='KA180601460'
+开始：CA180601456
+执行成功：delete from trace_production where pkg_outlot='CA180601456'
+开始：KA180601450
+执行成功：delete from trace_production where pkg_outlot='KA180601450'
+开始：KA180601431
+执行成功：delete from trace_production where pkg_outlot='KA180601431'
+开始：KA180601405
+执行成功：delete from trace_production where pkg_outlot='KA180601405'
+开始：CA180601447
+执行成功：delete from trace_production where pkg_outlot='CA180601447'
+开始：KA180601454
+执行成功：delete from trace_production where pkg_outlot='KA180601454'
+开始：KA180601448
+执行成功：delete from trace_production where pkg_outlot='KA180601448'
+开始：KA180601455
+执行成功：delete from trace_production where pkg_outlot='KA180601455'
+开始：KA180601453
+执行成功：delete from trace_production where pkg_outlot='KA180601453'
+开始：KA180601432
+执行成功：delete from trace_production where pkg_outlot='KA180601432'
+开始：KA180601458
+执行成功：delete from trace_production where pkg_outlot='KA180601458'
+开始：KA180601433
+执行成功：delete from trace_production where pkg_outlot='KA180601433'
+开始：KA180601457
+执行成功：delete from trace_production where pkg_outlot='KA180601457'
+开始：KA180601400
+执行成功：delete from trace_production where pkg_outlot='KA180601400'
+开始：CA180601443
+执行成功：delete from trace_production where pkg_outlot='CA180601443'
+开始：KA180601412
+执行成功：delete from trace_production where pkg_outlot='KA180601412'
+开始：KA180601408
+执行成功：delete from trace_production where pkg_outlot='KA180601408'
+开始：KA180601439
+执行成功：delete from trace_production where pkg_outlot='KA180601439'
+开始：KA180601440
+执行成功：delete from trace_production where pkg_outlot='KA180601440'
+开始：KA180601442
+执行成功：delete from trace_production where pkg_outlot='KA180601442'
+执行：yunfantouru
+执行成功：truncate table yuanfantouru
+(8035, 6)
+执行：spa
+执行成功：truncate table should_pay_age
+(12011, 24)
+执行：qiaojiao
+Empty DataFrame
+Columns: [PVA站生产时间, PSA站生产时间, 裁切生产时间, TRANSACTIONTIME, 前段批号, 分条批号, 后段批号]
+Index: []
+(0, 11)
+执行mbi
+执行成功：delete from main_bussiness_income1 where 日期='2018-05'
+(37, 6)
+执行：fee
+正在进行manage_fee1
+执行成功：delete from manage_fee1 where 日期='2018-05'
+        日期          工资  福利    ...      外包人力派遣       交通费       其他费用
+0  2018-05  1320160.38   0    ...           0  41894.63  126004.89
+
+[1 rows x 39 columns]
+(1, 39)
+正在进行sale_fee1
+执行成功：delete from sale_fee1 where 日期='2018-05'
+        日期         工资  福利    保险费_人事   ...     残保金  外包人力派遣       交通费     其他费用
+0  2018-05  396846.33   0  33805.91   ...       0       0  16965.92  9998.39
+
+[1 rows x 40 columns]
+(1, 40)
+正在进行made_fee1
+执行成功：delete from made_fee1 where 日期='2018-05'
+        日期     薪资支出_直接   社会保险费_直接    ...      外包人力派遣        交通费       其他费用
+0  2018-05  1911108.75  257103.99    ...           0  176658.04  452084.19
+
+[1 rows x 39 columns]
+(1, 39)
+正在进行finance_fee1
+执行成功：delete from finance_fee1 where 日期='2018-05'
+        日期      利息收入  集团内部利息收入   ...     贴现利息支出  融资租赁利支出  利息支出资本化
+0  2018-05  183413.2         0   ...          0        0        0
+
+[1 rows x 12 columns]
+(1, 12)
+执行gan
+执行成功：delete from gains_analysis where 日期='2018-05'
+(1, 12)
+------2018-06-30 06:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7046, 7)
+------2018-06-30 06:30:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7046, 7)
+------2018-06-30 06:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7045, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67373, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177390, 27)
+执行af
+执行成功：delete from assets_fixed where 日期='2018-06'
+(310, 8)
+执行mbc
+执行成功：truncate table main_bussiness_cost1
+(36, 8)
+(4, 8)
+(53, 8)
+(61, 8)
+(77, 8)
+执行lyo
+(2, 6)
+执行lyi
+(2, 6)
+执行：bzcn
+执行成功：delete from pkg_cap_calcu where riqi=str_to_date('2018/06/30','%Y/%m/%d')
+(4, 4)
+执行：should_pay_atm
+执行成功：delete from ShouldPayAtm where 日期='2018-05'
+        SUM(金额)       日期
+0  4.868943e+07  2018-05
+(1, 2)
+执行：penmo
+执行成功：delete from psa_penmo where 日期>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(2, 3)
+执行成功：delete from jianfan_penmo where 日期>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(0, 3)
+执行：qcview
+执行成功：truncate table qcview
+(23147, 15)
+执行：materialprice
+执行成功：truncate table materialprice
+(3717, 55)
+执行：cmmtinfo
+执行成功：truncate table CMMT_CCD_INFO
+(10305, 23)
+执行：wmhmes
+2018/06/29
+执行成功：delete from mwhvlm1 where riqi='2018-06-28'
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+2018/06/30
+执行成功：delete from mwhvlm1 where riqi='2018-06-29'
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+执行：should_get
+执行成功：truncate table should_get_mon
+(10, 6)
+执行：qlt
+执行成功：delete from quality where dat>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(17, 5)
+执行：yfch
+执行成功：truncate table yuanfanchanchu
+(6908, 6)
+执行：chtj
+      出货性质   Size Shipment_Date ...          未税金额       含税单价  id
+0     None    55"    2017-01-05 ...  1.582703e+03  18.154539   0
+1     None    55"    2017-01-09 ...  0.000000e+00   0.000000   0
+2       送样    32"    2017-01-19 ...  0.000000e+00   0.000000   0
+3     None    55"    2017-03-25 ...  7.076000e+05  82.789200   0
+4     None  38.5"    2017-03-27 ...  6.714000e+05  39.276900   0
+5     None  38.5"    2017-04-05 ...  6.986000e+05  40.868100   0
+6     None  38.5"    2017-04-18 ...  6.986000e+05  40.868100   0
+7     None  15.6"    2017-04-19 ...  2.792000e+03   8.166600   0
+8       送样    32"    2017-04-28 ...  0.000000e+00   0.000000   0
+9     None  38.5"    2017-05-11 ...  6.986000e+05  40.868100   0
+10    None    55"    2017-05-22 ...  6.113700e+05  79.478100   0
+11    None  38.5"    2017-05-21 ...  6.986000e+05  40.868100   0
+12    None    32"    2017-06-03 ...  3.922000e+05  22.943700   0
+13    None  38.5"    2017-06-01 ...  6.714000e+05  39.276900   0
+14    None  38.5"    2017-06-30 ...  6.986000e+05  40.868100   0
+15    None    55"    2017-06-05 ...  8.041025e+04  39.199996   0
+16    None    55"    2017-06-05 ...  1.883077e+05  40.799994   0
+17    None    55"    2017-06-05 ...  6.834871e+05  40.799994   0
+18    None    32"    2017-06-15 ...  2.941500e+05  22.943700   0
+19    None    55"    2017-06-06 ...  1.076250e+06  83.947500   0
+20    None    32"    2017-06-13 ...  1.961000e+05  22.943700   0
+21    None  38.5"    2017-06-20 ...  6.714000e+05  39.276900   0
+22    None    55"    2017-06-26 ...  1.076250e+05  83.947500   0
+23    None    55"    2017-06-26 ...  5.381250e+05  83.947500   0
+24    None    32"    2017-07-10 ...  4.871250e+05  25.330500   0
+25    None    32"    2017-07-14 ...  9.742500e+05  25.330500   0
+26    None    32"    2017-07-17 ...  9.742500e+05  25.330500   0
+27    None    55"    2017-07-17 ...  6.066000e+05  78.858000   0
+28    None    32"    2017-07-21 ...  4.297500e+05  22.347000   0
+29    None    32"    2017-07-22 ...  4.871250e+05  25.330500   0
+...    ...    ...           ... ...           ...        ...  ..
+2212  正常出货    50"    2018-06-15 ...  1.538400e+05  59.484800   0
+2213  正常出货    32"    2018-06-16 ...  4.599000e+05  23.710400   0
+2214  正常出货  31.5"    2018-06-15 ...  1.624500e+05  20.938000   0
+2215  正常出货  23.6"    2018-06-16 ...  2.149700e+05  12.017600   0
+2216  B规出货    32"    2018-06-20 ...  3.545719e+05   7.083621   0
+2217  B规出货  64.5"    2018-06-20 ...  1.544962e+03   7.083621   0
+2218  B规出货  38.5"    2018-06-21 ...  8.346020e+00   9.681383   0
+2219  正常出货    50"    2018-06-21 ...  2.909491e+05  59.566000   0
+2220    送样    32"    2018-06-22 ...  0.000000e+00   0.000000   0
+2221  正常出货    50"    2018-06-25 ...  4.786250e+05  63.452000   0
+2222  正常出货    50"    2018-06-25 ...  1.030257e+06  57.222800   0
+2223  正常出货    32"    2018-06-26 ...  4.613580e+04  20.938000   0
+2224  正常出货  31.5"    2018-06-26 ...  2.452800e+05  23.710400   0
+2225  B规出货   None    2018-06-28 ...  1.681217e+03  26.354214   0
+2226  正常出货  31.5"    2018-06-27 ...  1.839600e+05  23.710400   0
+2227  正常出货    32"    2018-06-28 ...  4.512500e+04  20.938000   0
+2228  B规出货  64.5"    2018-06-28 ...  3.921897e+01   6.499144   0
+2229  B规出货    32"    2018-06-28 ...  3.126312e+03   6.499144   0
+2230  B规出货    32"    2018-06-28 ...  5.109672e+03   6.499144   0
+2231  B规出货  38.5"    2018-06-28 ...  2.246687e+03   6.499144   0
+2232  B规出货    55"    2018-06-28 ...  1.177129e+04   6.499144   0
+2233  B规出货    32"    2018-06-28 ...  5.933280e+03   6.499155   0
+2234  正常出货  31.5"    2018-06-29 ...  2.778075e+05  20.938000   0
+2235  None    55"    2017-06-21 ...           NaN  39.199996   0
+2236  None  31.5"    2018-05-28 ...           NaN   1.649700   0
+2237  None  31.5"    2018-06-28 ...           NaN   1.438400   0
+2238  None    55"          None ...           NaN  78.858000   0
+2239  None    32"          None ...           NaN  25.330500   0
+2240  None    55"          None ...           NaN   0.783900   0
+2241  None   None          None ...           NaN  13.273650   0
+
+[2242 rows x 16 columns]
+执行成功：truncate table CHTJ_AUTOLOAD
+(2242, 16)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+执行：ShipmentsNow
+执行成功：truncate table ShipmentsNow
+(964, 3)
+执行：ShipmentsStatistics
+执行成功：truncate table ShipmentsStatistics
+(29, 4)
+执行：lprate
+执行成功：delete from LPrate where dat='2018-06-29'
+执行：cbjs
+执行成功：truncate table chengbenjisuan
+(3154, 8)
+执行：yuesunhao
+执行成功：delete from month_cost_rate where str_to_date(thisdate,'%Y/%m/%d')=str_to_date('2018/06/29','%Y/%m/%d')
+(1, 2)
+执行qcview1
+执行成功：truncate table qcvim1
+(23173, 38)
+执行：lianglvribao
+执行成功：truncate table lianglvribao
+(23613, 16)
+执行：lirun
+执行成功：delete from lirun_new where upmonth='2018-05'
+(1, 12)
+执行：liangpin
+执行成功：truncate table liangpin
+(817, 4)
+执行：cunhuo
+执行成功：delete from zanshoucunhuo where str_to_date(date_format(ACCOUNTING_DATE,'%Y-%m-%d'),'%Y-%m-%d')=str_to_date(date_format(SUBDATE(SYSDATE(),interval 1 day),'%Y-%m-%d'),'%Y-%m-%d')
+(4, 12)
+执行成功：delete from zaizhipin where upmonth='2018-06'
+(489, 30)
+执行成功：delete from jinhaocun where str_to_date(date_format(TRANSACTION_DATE_FM,'%Y-%m'),'%Y-%m')=str_to_date('2018-06','%Y-%m')
+(14508, 23)
+执行：fuzhai
+执行成功：delete from zichanfz where upmonth='2018-05'
+(1, 38)
+执行：lianglv
+执行成功：truncate table lianglv
+(54521, 18)
+执行：vlm
+执行成功：truncate table vlm_mwh
+(94436, 7)
+执行：lvlizhuisu
+Data Loading...
+Data Loading finish!
+Data processing...
+开始：KA180601451
+执行成功：delete from trace_production where pkg_outlot='KA180601451'
+开始：KA180601401
+执行成功：delete from trace_production where pkg_outlot='KA180601401'
+开始：KA180601403
+执行成功：delete from trace_production where pkg_outlot='KA180601403'
+开始：KA180601413
+执行成功：delete from trace_production where pkg_outlot='KA180601413'
+开始：KA180601414
+执行成功：delete from trace_production where pkg_outlot='KA180601414'
+开始：CA180601427
+执行成功：delete from trace_production where pkg_outlot='CA180601427'
+开始：CA180601434
+执行成功：delete from trace_production where pkg_outlot='CA180601434'
+开始：CA180601428
+执行成功：delete from trace_production where pkg_outlot='CA180601428'
+开始：KA180601438
+执行成功：delete from trace_production where pkg_outlot='KA180601438'
+开始：KA180601437
+执行成功：delete from trace_production where pkg_outlot='KA180601437'
+开始：KA180601444
+执行成功：delete from trace_production where pkg_outlot='KA180601444'
+开始：KA180601399
+执行成功：delete from trace_production where pkg_outlot='KA180601399'
+开始：KA180601441
+执行成功：delete from trace_production where pkg_outlot='KA180601441'
+开始：KA180601409
+执行成功：delete from trace_production where pkg_outlot='KA180601409'
+开始：KA180601406
+执行成功：delete from trace_production where pkg_outlot='KA180601406'
+开始：KA180601410
+执行成功：delete from trace_production where pkg_outlot='KA180601410'
+开始：KA180601445
+执行成功：delete from trace_production where pkg_outlot='KA180601445'
+开始：KA180601419
+执行成功：delete from trace_production where pkg_outlot='KA180601419'
+开始：KA180601415
+执行成功：delete from trace_production where pkg_outlot='KA180601415'
+开始：KA180601446
+执行成功：delete from trace_production where pkg_outlot='KA180601446'
+开始：KA180601418
+执行成功：delete from trace_production where pkg_outlot='KA180601418'
+开始：KA180601417
+执行成功：delete from trace_production where pkg_outlot='KA180601417'
+开始：KA180601421
+执行成功：delete from trace_production where pkg_outlot='KA180601421'
+开始：KA180601420
+执行成功：delete from trace_production where pkg_outlot='KA180601420'
+开始：KA180601416
+执行成功：delete from trace_production where pkg_outlot='KA180601416'
+开始：CA180601422
+执行成功：delete from trace_production where pkg_outlot='CA180601422'
+开始：CA180601449
+执行成功：delete from trace_production where pkg_outlot='CA180601449'
+开始：KA180601396
+执行成功：delete from trace_production where pkg_outlot='KA180601396'
+开始：CA180601397
+执行成功：delete from trace_production where pkg_outlot='CA180601397'
+开始：KA180601459
+执行成功：delete from trace_production where pkg_outlot='KA180601459'
+开始：CA180601398
+执行成功：delete from trace_production where pkg_outlot='CA180601398'
+开始：KA180601436
+执行成功：delete from trace_production where pkg_outlot='KA180601436'
+开始：KA180601430
+执行成功：delete from trace_production where pkg_outlot='KA180601430'
+开始：KA180601429
+执行成功：delete from trace_production where pkg_outlot='KA180601429'
+开始：KA180601460
+执行成功：delete from trace_production where pkg_outlot='KA180601460'
+开始：CA180601456
+执行成功：delete from trace_production where pkg_outlot='CA180601456'
+开始：KA180601450
+执行成功：delete from trace_production where pkg_outlot='KA180601450'
+开始：KA180601431
+执行成功：delete from trace_production where pkg_outlot='KA180601431'
+开始：KA180601405
+执行成功：delete from trace_production where pkg_outlot='KA180601405'
+开始：CA180601447
+执行成功：delete from trace_production where pkg_outlot='CA180601447'
+开始：KA180601454
+执行成功：delete from trace_production where pkg_outlot='KA180601454'
+开始：KA180601448
+执行成功：delete from trace_production where pkg_outlot='KA180601448'
+开始：KA180601455
+执行成功：delete from trace_production where pkg_outlot='KA180601455'
+开始：KA180601453
+执行成功：delete from trace_production where pkg_outlot='KA180601453'
+开始：KA180601432
+执行成功：delete from trace_production where pkg_outlot='KA180601432'
+开始：KA180601458
+执行成功：delete from trace_production where pkg_outlot='KA180601458'
+开始：KA180601433
+执行成功：delete from trace_production where pkg_outlot='KA180601433'
+开始：KA180601457
+执行成功：delete from trace_production where pkg_outlot='KA180601457'
+开始：KA180601400
+执行成功：delete from trace_production where pkg_outlot='KA180601400'
+开始：CA180601443
+执行成功：delete from trace_production where pkg_outlot='CA180601443'
+开始：KA180601412
+执行成功：delete from trace_production where pkg_outlot='KA180601412'
+开始：KA180601408
+执行成功：delete from trace_production where pkg_outlot='KA180601408'
+开始：KA180601439
+执行成功：delete from trace_production where pkg_outlot='KA180601439'
+开始：KA180601440
+执行成功：delete from trace_production where pkg_outlot='KA180601440'
+开始：KA180601442
+执行成功：delete from trace_production where pkg_outlot='KA180601442'
+执行：yunfantouru
+执行成功：truncate table yuanfantouru
+(8035, 6)
+执行：spa
+执行成功：truncate table should_pay_age
+(12011, 24)
+执行：qiaojiao
+Empty DataFrame
+Columns: [PVA站生产时间, PSA站生产时间, 裁切生产时间, TRANSACTIONTIME, 前段批号, 分条批号, 后段批号]
+Index: []
+(0, 11)
+执行mbi
+执行成功：delete from main_bussiness_income1 where 日期='2018-05'
+(37, 6)
+执行：fee
+正在进行manage_fee1
+执行成功：delete from manage_fee1 where 日期='2018-05'
+        日期          工资  福利    ...      外包人力派遣       交通费       其他费用
+0  2018-05  1320160.38   0    ...           0  41894.63  126004.89
+
+[1 rows x 39 columns]
+(1, 39)
+正在进行sale_fee1
+执行成功：delete from sale_fee1 where 日期='2018-05'
+        日期         工资  福利    保险费_人事   ...     残保金  外包人力派遣       交通费     其他费用
+0  2018-05  396846.33   0  33805.91   ...       0       0  16965.92  9998.39
+
+[1 rows x 40 columns]
+(1, 40)
+正在进行made_fee1
+执行成功：delete from made_fee1 where 日期='2018-05'
+        日期     薪资支出_直接   社会保险费_直接    ...      外包人力派遣        交通费       其他费用
+0  2018-05  1911108.75  257103.99    ...           0  176658.04  452084.19
+
+[1 rows x 39 columns]
+(1, 39)
+正在进行finance_fee1
+执行成功：delete from finance_fee1 where 日期='2018-05'
+        日期      利息收入  集团内部利息收入   ...     贴现利息支出  融资租赁利支出  利息支出资本化
+0  2018-05  183413.2         0   ...          0        0        0
+
+[1 rows x 12 columns]
+(1, 12)
+执行gan
+执行成功：delete from gains_analysis where 日期='2018-05'
+(1, 12)
+------2018-06-30 06:10:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7046, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67375, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177391, 27)
+执行af
+执行成功：delete from assets_fixed where 日期='2018-06'
+(310, 8)
+执行mbc
+执行成功：truncate table main_bussiness_cost1
+(36, 8)
+(4, 8)
+(53, 8)
+(61, 8)
+(77, 8)
+执行lyo
+(2, 6)
+执行lyi
+(2, 6)
+执行：bzcn
+执行成功：delete from pkg_cap_calcu where riqi=str_to_date('2018/06/30','%Y/%m/%d')
+(4, 4)
+执行：should_pay_atm
+执行成功：delete from ShouldPayAtm where 日期='2018-05'
+        SUM(金额)       日期
+0  4.868943e+07  2018-05
+(1, 2)
+执行：penmo
+执行成功：delete from psa_penmo where 日期>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(2, 3)
+执行成功：delete from jianfan_penmo where 日期>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(0, 3)
+执行：qcview
+执行成功：truncate table qcview
+(23149, 15)
+执行：materialprice
+执行成功：truncate table materialprice
+(3717, 55)
+执行：cmmtinfo
+执行成功：truncate table CMMT_CCD_INFO
+(10305, 23)
+执行：wmhmes
+2018/06/29
+执行成功：delete from mwhvlm1 where riqi='2018-06-28'
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+2018/06/30
+执行成功：delete from mwhvlm1 where riqi='2018-06-29'
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+(1, 3)
+执行：should_get
+执行成功：truncate table should_get_mon
+(10, 6)
+执行：qlt
+执行成功：delete from quality where dat>str_to_date('2018-06-29 00:00:00','%Y-%m-%d %H:%i:%s')
+(18, 5)
+执行：yfch
+执行成功：truncate table yuanfanchanchu
+(6908, 6)
+执行：chtj
+      出货性质   Size Shipment_Date ...          未税金额       含税单价  id
+0     None    55"    2017-01-05 ...  1.582703e+03  18.154539   0
+1     None    55"    2017-01-09 ...  0.000000e+00   0.000000   0
+2       送样    32"    2017-01-19 ...  0.000000e+00   0.000000   0
+3     None    55"    2017-03-25 ...  7.076000e+05  82.789200   0
+4     None  38.5"    2017-03-27 ...  6.714000e+05  39.276900   0
+5     None  38.5"    2017-04-05 ...  6.986000e+05  40.868100   0
+6     None  38.5"    2017-04-18 ...  6.986000e+05  40.868100   0
+7     None  15.6"    2017-04-19 ...  2.792000e+03   8.166600   0
+8       送样    32"    2017-04-28 ...  0.000000e+00   0.000000   0
+9     None  38.5"    2017-05-11 ...  6.986000e+05  40.868100   0
+10    None    55"    2017-05-22 ...  6.113700e+05  79.478100   0
+11    None  38.5"    2017-05-21 ...  6.986000e+05  40.868100   0
+12    None    32"    2017-06-03 ...  3.922000e+05  22.943700   0
+13    None  38.5"    2017-06-01 ...  6.714000e+05  39.276900   0
+14    None  38.5"    2017-06-30 ...  6.986000e+05  40.868100   0
+15    None    55"    2017-06-05 ...  8.041025e+04  39.199996   0
+16    None    55"    2017-06-05 ...  1.883077e+05  40.799994   0
+17    None    55"    2017-06-05 ...  6.834871e+05  40.799994   0
+18    None    32"    2017-06-15 ...  2.941500e+05  22.943700   0
+19    None    55"    2017-06-06 ...  1.076250e+06  83.947500   0
+20    None    32"    2017-06-13 ...  1.961000e+05  22.943700   0
+21    None  38.5"    2017-06-20 ...  6.714000e+05  39.276900   0
+22    None    55"    2017-06-26 ...  1.076250e+05  83.947500   0
+23    None    55"    2017-06-26 ...  5.381250e+05  83.947500   0
+24    None    32"    2017-07-10 ...  4.871250e+05  25.330500   0
+25    None    32"    2017-07-14 ...  9.742500e+05  25.330500   0
+26    None    32"    2017-07-17 ...  9.742500e+05  25.330500   0
+27    None    55"    2017-07-17 ...  6.066000e+05  78.858000   0
+28    None    32"    2017-07-21 ...  4.297500e+05  22.347000   0
+29    None    32"    2017-07-22 ...  4.871250e+05  25.330500   0
+...    ...    ...           ... ...           ...        ...  ..
+2212  正常出货    50"    2018-06-15 ...  1.538400e+05  59.484800   0
+2213  正常出货    32"    2018-06-16 ...  4.599000e+05  23.710400   0
+2214  正常出货  31.5"    2018-06-15 ...  1.624500e+05  20.938000   0
+2215  正常出货  23.6"    2018-06-16 ...  2.149700e+05  12.017600   0
+2216  B规出货    32"    2018-06-20 ...  3.545719e+05   7.083621   0
+2217  B规出货  64.5"    2018-06-20 ...  1.544962e+03   7.083621   0
+2218  B规出货  38.5"    2018-06-21 ...  8.346020e+00   9.681383   0
+2219  正常出货    50"    2018-06-21 ...  2.909491e+05  59.566000   0
+2220    送样    32"    2018-06-22 ...  0.000000e+00   0.000000   0
+2221  正常出货    50"    2018-06-25 ...  4.786250e+05  63.452000   0
+2222  正常出货    50"    2018-06-25 ...  1.030257e+06  57.222800   0
+2223  正常出货    32"    2018-06-26 ...  4.613580e+04  20.938000   0
+2224  正常出货  31.5"    2018-06-26 ...  2.452800e+05  23.710400   0
+2225  B规出货   None    2018-06-28 ...  1.681217e+03  26.354214   0
+2226  正常出货  31.5"    2018-06-27 ...  1.839600e+05  23.710400   0
+2227  正常出货    32"    2018-06-28 ...  4.512500e+04  20.938000   0
+2228  B规出货  64.5"    2018-06-28 ...  3.921897e+01   6.499144   0
+2229  B规出货    32"    2018-06-28 ...  3.126312e+03   6.499144   0
+2230  B规出货    32"    2018-06-28 ...  5.109672e+03   6.499144   0
+2231  B规出货  38.5"    2018-06-28 ...  2.246687e+03   6.499144   0
+2232  B规出货    55"    2018-06-28 ...  1.177129e+04   6.499144   0
+2233  B规出货    32"    2018-06-28 ...  5.933280e+03   6.499155   0
+2234  正常出货  31.5"    2018-06-29 ...  2.778075e+05  20.938000   0
+2235  None    55"    2017-06-21 ...           NaN  39.199996   0
+2236  None  31.5"    2018-05-28 ...           NaN   1.649700   0
+2237  None  31.5"    2018-06-28 ...           NaN   1.438400   0
+2238  None    55"          None ...           NaN  78.858000   0
+2239  None    32"          None ...           NaN  25.330500   0
+2240  None    55"          None ...           NaN   0.783900   0
+2241  None   None          None ...           NaN  13.273650   0
+
+[2242 rows x 16 columns]
+执行成功：truncate table CHTJ_AUTOLOAD
+(2242, 16)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+执行：ShipmentsNow
+执行成功：truncate table ShipmentsNow
+(964, 3)
+执行：ShipmentsStatistics
+执行成功：truncate table ShipmentsStatistics
+(29, 4)
+执行：lprate
+执行成功：delete from LPrate where dat='2018-06-29'
+执行：cbjs
+执行成功：truncate table chengbenjisuan
+(3154, 8)
+执行：yuesunhao
+执行成功：delete from month_cost_rate where str_to_date(thisdate,'%Y/%m/%d')=str_to_date('2018/06/29','%Y/%m/%d')
+(1, 2)
+执行qcview1
+执行成功：truncate table qcvim1
+(23174, 38)
+执行：lianglvribao
+执行成功：truncate table lianglvribao
+(23613, 16)
+执行：lirun
+执行成功：delete from lirun_new where upmonth='2018-05'
+(1, 12)
+执行：liangpin
+执行成功：truncate table liangpin
+(817, 4)
+执行：cunhuo
+执行成功：delete from zanshoucunhuo where str_to_date(date_format(ACCOUNTING_DATE,'%Y-%m-%d'),'%Y-%m-%d')=str_to_date(date_format(SUBDATE(SYSDATE(),interval 1 day),'%Y-%m-%d'),'%Y-%m-%d')
+(4, 12)
+执行成功：delete from zaizhipin where upmonth='2018-06'
+(489, 30)
+执行成功：delete from jinhaocun where str_to_date(date_format(TRANSACTION_DATE_FM,'%Y-%m'),'%Y-%m')=str_to_date('2018-06','%Y-%m')
+(14508, 23)
+执行：fuzhai
+执行成功：delete from zichanfz where upmonth='2018-05'
+(1, 38)
+执行：lianglv
+执行成功：truncate table lianglv
+(54521, 18)
+执行：vlm
+执行成功：truncate table vlm_mwh
+(94446, 7)
+执行：lvlizhuisu
+Data Loading...
+Data Loading finish!
+Data processing...
+开始：KA180601451
+执行成功：delete from trace_production where pkg_outlot='KA180601451'
+开始：KA180601401
+执行成功：delete from trace_production where pkg_outlot='KA180601401'
+开始：KA180601403
+执行成功：delete from trace_production where pkg_outlot='KA180601403'
+开始：KA180601413
+执行成功：delete from trace_production where pkg_outlot='KA180601413'------2018-06-30 06:40:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7046, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67379, 11)
+
+开始：KA180601414
+执行成功：delete from trace_production where pkg_outlot='KA180601414'
+开始：CA180601427
+执行成功：delete from trace_production where pkg_outlot='CA180601427'
+开始：CA180601434
+执行成功：delete from trace_production where pkg_outlot='CA180601434'
+开始：CA180601428
+执行成功：delete from trace_production where pkg_outlot='CA180601428'
+开始：KA180601438
+执行成功：delete from trace_production where pkg_outlot='KA180601438'
+开始：KA180601437
+执行成功：delete from trace_production where pkg_outlot='KA180601437'
+开始：KA180601444
+执行成功：delete from trace_production where pkg_outlot='KA180601444'
+开始：KA180601399
+执行成功：delete from trace_production where pkg_outlot='KA180601399'
+开始：KA180601441
+执行成功：delete from trace_production where pkg_outlot='KA180601441'
+开始：KA180601409
+执行成功：delete from trace_production where pkg_outlot='KA180601409'
+开始：KA180601406
+执行成功：delete from trace_production where pkg_outlot='KA180601406'
+开始：KA180601410
+执行成功：delete from trace_production where pkg_outlot='KA180601410'
+开始：KA180601445
+执行成功：delete from trace_production where pkg_outlot='KA180601445'
+开始：KA180601419
+执行成功：delete from trace_production where pkg_outlot='KA180601419'
+开始：KA180601415
+执行成功：delete from trace_production where pkg_outlot='KA180601415'
+开始：KA180601446
+执行成功：delete from trace_production where pkg_outlot='KA180601446'
+开始：KA180601418
+执行成功：delete from trace_production where pkg_outlot='KA180601418'
+开始：KA180601417
+执行成功：delete from trace_production where pkg_outlot='KA180601417'
+开始：KA180601421
+执行成功：delete from trace_production where pkg_outlot='KA180601421'
+开始：KA180601420
+执行成功：delete from trace_production where pkg_outlot='KA180601420'
+开始：KA180601416
+执行成功：delete from trace_production where pkg_outlot='KA180601416'
+开始：CA180601422
+执行成功：delete from trace_production where pkg_outlot='CA180601422'
+开始：CA180601449
+执行成功：delete from trace_production where pkg_outlot='CA180601449'
+开始：KA180601396
+执行成功：delete from trace_production where pkg_outlot='KA180601396'
+开始：CA180601397
+执行成功：delete from trace_production where pkg_outlot='CA180601397'
+开始：KA180601459
+执行成功：delete from trace_production where pkg_outlot='KA180601459'
+开始：CA180601398
+执行成功：delete from trace_production where pkg_outlot='CA180601398'
+开始：KA180601436
+执行成功：delete from trace_production where pkg_outlot='KA180601436'
+开始：KA180601430
+执行成功：delete from trace_production where pkg_outlot='KA180601430'
+开始：KA180601429
+执行成功：delete from trace_production where pkg_outlot='KA180601429'
+开始：KA180601460
+执行成功：delete from trace_production where pkg_outlot='KA180601460'
+开始：CA180601456
+执行成功：delete from trace_production where pkg_outlot='CA180601456'
+开始：KA180601450
+执行成功：delete from trace_production where pkg_outlot='KA180601450'
+开始：KA180601431
+执行成功：delete from trace_production where pkg_outlot='KA180601431'
+开始：KA180601405
+执行成功：delete from trace_production where pkg_outlot='KA180601405'
+开始：CA180601447
+执行成功：delete from trace_production where pkg_outlot='CA180601447'
+开始：KA180601454
+执行成功：delete from trace_production where pkg_outlot='KA180601454'
+开始：KA180601448
+执行成功：delete from trace_production where pkg_outlot='KA180601448'
+开始：KA180601455
+执行成功：delete from trace_production where pkg_outlot='KA180601455'
+开始：KA180601453
+执行成功：delete from trace_production where pkg_outlot='KA180601453'
+开始：KA180601432
+执行成功：delete from trace_production where pkg_outlot='KA180601432'
+开始：KA180601458
+执行成功：delete from trace_production where pkg_outlot='KA180601458'
+开始：KA180601433
+执行成功：delete from trace_production where pkg_outlot='KA180601433'
+开始：KA180601457
+执行成功：delete from trace_production where pkg_outlot='KA180601457'
+开始：KA180601400
+执行成功：delete from trace_production where pkg_outlot='KA180601400'
+开始：CA180601443
+执行成功：delete from trace_production where pkg_outlot='CA180601443'
+开始：KA180601412
+执行成功：delete from trace_production where pkg_outlot='KA180601412'
+开始：KA180601408
+执行成功：delete from trace_production where pkg_outlot='KA180601408'
+开始：KA180601439
+执行成功：delete from trace_production where pkg_outlot='KA180601439'
+开始：KA180601440
+执行成功：delete from trace_production where pkg_outlot='KA180601440'
+开始：KA180601442
+执行成功：delete from trace_production where pkg_outlot='KA180601442'
+执行：yunfantouru
+执行成功：truncate table yuanfantouru
+(8035, 6)
+执行：spa
+执行成功：truncate table should_pay_age
+(12011, 24)
+执行：qiaojiao
+Empty DataFrame
+Columns: [PVA站生产时间, PSA站生产时间, 裁切生产时间, TRANSACTIONTIME, 前段批号, 分条批号, 后段批号]
+Index: []
+(0, 11)
+执行mbi
+执行成功：delete from main_bussiness_income1 where 日期='2018-05'
+(37, 6)
+执行：fee
+正在进行manage_fee1
+执行成功：delete from manage_fee1 where 日期='2018-05'
+        日期          工资  福利    ...      外包人力派遣       交通费       其他费用
+0  2018-05  1320160.38   0    ...           0  41894.63  126004.89
+
+[1 rows x 39 columns]
+(1, 39)
+正在进行sale_fee1
+执行成功：delete from sale_fee1 where 日期='2018-05'
+        日期         工资  福利    保险费_人事   ...     残保金  外包人力派遣       交通费     其他费用
+0  2018-05  396846.33   0  33805.91   ...       0       0  16965.92  9998.39
+
+[1 rows x 40 columns]
+(1, 40)
+正在进行made_fee1
+执行成功：delete from made_fee1 where 日期='2018-05'
+        日期     薪资支出_直接   社会保险费_直接    ...      外包人力派遣        交通费       其他费用
+0  2018-05  1911108.75  257103.99    ...           0  176658.04  452084.19
+
+[1 rows x 39 columns]
+(1, 39)
+正在进行finance_fee1
+执行成功：delete from finance_fee1 where 日期='2018-05'
+        日期      利息收入  集团内部利息收入   ...     贴现利息支出  融资租赁利支出  利息支出资本化
+0  2018-05  183413.2         0   ...          0        0        0
+
+[1 rows x 12 columns]
+(1, 12)
+执行gan
+执行成功：delete from gains_analysis where 日期='2018-05'
+(1, 12)
+------2018-06-30 06:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7046, 7)
+------2018-06-30 07:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7047, 7)
+------2018-06-30 07:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7047, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67384, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177458, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 07:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7047, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67386, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177458, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 07:30:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7047, 7)
+------2018-06-30 07:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7047, 7)
+------2018-06-30 07:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7048, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(17, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67389, 11)
+------2018-06-30 08:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7048, 7)
+------2018-06-30 08:10:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7048, 7)
+(1, 4)
+------2018-06-30 08:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7048, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(12, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67392, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177533, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 08:30:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7049, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(12, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67394, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177533, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 08:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7049, 7)
+------2018-06-30 08:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7049, 7)
+------2018-06-30 09:00:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7049, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(12, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67396, 11)
+------2018-06-30 09:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7049, 7)
+------2018-06-30 09:20:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(7, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7049, 7)
+------2018-06-30 09:30:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7050, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(12, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67397, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177540, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 09:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7050, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(12, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67397, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177540, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
+------2018-06-30 09:50:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7561, 7)
+(7050, 7)
+------2018-06-30 10:00:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(11, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7563, 7)
+(7050, 7)
+------2018-06-30 10:10:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7565, 7)
+(7050, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(12, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67415, 11)
+------2018-06-30 10:20:02,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7566, 7)
+(7050, 7)
+------2018-06-30 10:30:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7567, 7)
+(7050, 7)
+------2018-06-30 10:40:01,运行测试程序------
+执行：hezhang
+执行成功：truncate table Hzgn_wms_erp
+(3, 10)
+执行：pva_channeng
+执行成功：truncate table pvachanneng
+(724, 3)
+(7567, 7)
+(7050, 7)
+执行：dianquesumrate
+执行成功：truncate table dianque_sumrate
+(12, 3)
+执行：cost
+执行成功：truncate table sunhao
+(67424, 11)
+执行：ogr
+执行成功：truncate table OverallGoodRatio
+(177555, 27)
+执行：itemcost
+执行成功：delete from item_cost where LAST_UPDATE_DATE>'2018/06/29 00:00:00'
+(71, 4)
