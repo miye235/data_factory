@@ -11,7 +11,10 @@ class OverallGoodRatio(object):
                                       int(base_time[11:13]), int(base_time[14:16]), int(base_time[17:19]))
         this_time = datetime.datetime(int(this_time[:4]), int(this_time[5:7]), int(this_time[8:10]),
                                       int(this_time[11:13]), int(this_time[14:16]), int(this_time[17:19]))
-        return '2018年第'+str((this_time - base_time).days // 7 + 1)+'周'
+        if (this_time - base_time).days // 7 + 1<10:
+            return '2018年第0' + str((this_time - base_time).days // 7 + 1) + '周'
+        else:
+            return '2018年第'+str((this_time - base_time).days // 7 + 1)+'周'
     def __call__(self, conns):
         base = Base()
         mes = conns['mes']

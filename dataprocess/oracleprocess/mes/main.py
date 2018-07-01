@@ -50,6 +50,7 @@ from dataprocess.oracleprocess.mes.app.qcview1 import QcVim1
 from dataprocess.oracleprocess.mes.app.should_pay import ShouldPay
 from dataprocess.oracleprocess.mes.app.qty_delres import QtyDelRes
 from dataprocess.oracleprocess.mes.app.assets_fixed import AssetsFixed
+from dataprocess.oracleprocess.mes.app.chuhuotongji_zhejiu import CHTJZJ
 
 import config as conf
 from time import strftime,localtime
@@ -349,6 +350,12 @@ def k2func(name,btime,etime,conns):
         af = AssetsFixed()
         af(conns)
         del af
+    # 固定资产
+    if 'chtjzj' == name:
+        print('执行' + name)
+        chtjzj = CHTJZJ()
+        chtjzj(conns)
+        del chtjzj
 def main():
     print('------'+time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))+',运行在线程序'+'------')
     base=Base()
