@@ -1,4 +1,5 @@
 from dataprocess.oracleprocess.mes.base import Base
+import datetime
 class LossYuanfanOutput(object):
     def __inint__(self):
         super(LossYuanfanOutput,self).__init__()
@@ -10,7 +11,6 @@ class LossYuanfanOutput(object):
             sql=f.read()
         # offline.dopost("truncate table loss_yuanfan_output")
         for date in [base.gettoday(),base.getYesterday()]:
-        # for date in base.datelist('20180101','20180702')[::-1]:
             res = mes.doget(sql.replace('thistime', date))
             res['業務日期']=date
             offline.dopost("delete from loss_yuanfan_output where 業務日期='"+date+"'")

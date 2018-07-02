@@ -38,7 +38,15 @@ class Base():
         today = datetime.date.today()
         res = datetime.datetime.strftime(today,'%Y/%m/%d')
         return res
-
+    def getTomorrow(self,day=None,add=1):
+        if None==day:
+            today = datetime.date.today()
+        else:
+            today=datetime.datetime(int(day[0:4]), int(day[5:7]), int(day[8:10]))
+        oneday = datetime.timedelta(days=add)
+        tomorrow = today + oneday
+        tomorrow = datetime.datetime.strftime(tomorrow,'%Y/%m/%d')
+        return tomorrow
     def batchwri(self, res, table,conn):
         print(res.shape)
         total = res.shape[0]

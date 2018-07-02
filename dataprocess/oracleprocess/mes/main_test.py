@@ -51,6 +51,7 @@ from dataprocess.oracleprocess.mes.app.should_pay import ShouldPay
 from dataprocess.oracleprocess.mes.app.qty_delres import QtyDelRes
 from dataprocess.oracleprocess.mes.app.assets_fixed import AssetsFixed
 from dataprocess.oracleprocess.mes.app.chuhuotongji_zhejiu import CHTJZJ
+from dataprocess.oracleprocess.mes.app.costyuanfan import CostYuanfan
 
 import config_test as conf
 from time import strftime,localtime
@@ -338,12 +339,18 @@ def k2func(name,btime,etime,conns):
         qtr_delres = QtyDelRes()
         qtr_delres(conns)
         del qtr_delres
-    # 固定资产
+    # 出货统计含折旧
     if 'chtjzj' == name:
         print('执行' + name)
         chtjzj = CHTJZJ()
         chtjzj(conns)
         del chtjzj
+    # 原反损耗
+    if 'cstyf' == name:
+        print('执行' + name)
+        cstyf = CostYuanfan()
+        cstyf(conns)
+        del cstyf
 def main():
     print('------'+time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))+',运行测试程序'+'------')
     base=Base()
