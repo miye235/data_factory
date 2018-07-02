@@ -8,8 +8,9 @@ class LossYuanfanOutput(object):
         offline=conns['offline']
         with open(base.path1+'sqls/原返损耗产出.sql','r') as f:
             sql=f.read()
-        offline.dopost("truncate table loss_yuanfan_output")
+        # offline.dopost("truncate table loss_yuanfan_output")
         for date in [base.gettoday(),base.getYesterday()]:
+        # for date in base.datelist('20180101','20180702')[::-1]:
             res = mes.doget(sql.replace('thistime', date))
             res['業務日期']=date
             offline.dopost("delete from loss_yuanfan_output where 業務日期='"+date+"'")
