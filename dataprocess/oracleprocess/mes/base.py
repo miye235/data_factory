@@ -5,9 +5,10 @@ import os
 
 class Base():
     def __init__(self):
-        # self.path1='/home/openstack/data_offline/data_factory/dataprocess/oracleprocess/mes/'
-        self.path1='/Users/cloudin1/PycharmProjects/data_factory_new/dataprocess/oracleprocess/mes/'
+        self.path1='/home/openstack/data_offline/data_factory/dataprocess/oracleprocess/mes/'
+        # self.path1='/Users/cloudin1/PycharmProjects/data_factory_new/dataprocess/oracleprocess/mes/'
         self.dbconfig={
+            'aoi':('10.232.70.203','30001''aoi_process','root','Rtsecret'),
             'erp':('10.232.1.101', '1521', 'KSERP', 'BDATA', 'BDATA'),
             'offline_test':('123.59.214.229', '33333', 'offline', 'root', 'Rtsecret'),
             'offline':('10.232.70.203', '33333', 'offline', 'root', 'Rtsecret'),
@@ -15,8 +16,8 @@ class Base():
             'wms':('10.232.1.200', '1521', 'WMSDB', 'BDATA', 'BDATA')
         }
     def conn(self,db):
-        if db=='offline' or db=='offline_test':
-            return mysql2pd(*self.dbconfig['offline'])
+        if db=='offline' or db=='offline_test' or db=='aoi':
+            return mysql2pd(*self.dbconfig[db])
         else:
             return oracle2pd(*self.dbconfig[db])
     def datelist(self,beginDate, endDate):
