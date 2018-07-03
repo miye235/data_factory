@@ -57,24 +57,23 @@ class HeZhang(object):
                         tim=None
                     else:
                         tim=pd.to_datetime(str(self.geterp('差异时间',t,s,p)),format="%Y-%m-%dT%H:%M:%S")
-                    if wsp!=0:
-                        if erpqty!=yishangpao:
-                            reason='卡账、未上抛'
+                        if wsp!=0:
+                            if erpqty!=yishangpao:
+                                reason='卡账、未上抛'
+                            else:
+                                reason='未上抛'
+                            result.append(
+                                [s, t, p,q, erpqty, chayi, tim, reason, listno,
+                                 user])
+                        elif erpqty<yishangpao:
+                            reason='卡账'
+                            result.append([s,t,p,q,erpqty,chayi,tim,reason,listno,user])
                         else:
-                            reason='未上抛'
-                        result.append(
-                            [s, t, p,q, erpqty, chayi, tim, reason, listno,
-                             user])
-                    elif erpqty<yishangpao:
-                        reason='卡账'
-                        result.append([s,t,p,q,erpqty,chayi,tim,reason,listno,user])
-                    else:
-                        reason = '其他'
-                        result.append(
-                            [s, t, p, q, erpqty, chayi, tim, reason, listno,
-                             user])
-
-        result=pd.DataFrame(result,columns=['仓别','料号','标签ID','WMS库存量','ERP库存量','差异量','差异时间','差异原因','差异单据号','操作人员'])
-        print(result)
-        self.ms.dopost("truncate table Hzgn_wms_erp")
-        self.base.batchwri(result,'Hzgn_wms_erp',self.ms)
+                            reason = '其他'
+                            result.append(
+                                [s, t, p, q, erpqty, chayi, tim, reason, listno,
+                                 user])
+                        result=pd.DataFrame(result,columns=['仓别','料号','标签ID','WMS库存量','ERP库存量','差异量','差异时间','差异原因','差异单据号','操作人员'])
+                        print(result)
+                        self.ms.dopost("truncate table Hzgn_wms_erp")
+                        self.base.batchwri(result,'Hzgn_wms_erp',self.ms)
