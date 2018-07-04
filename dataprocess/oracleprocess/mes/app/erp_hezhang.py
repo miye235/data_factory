@@ -73,7 +73,6 @@ class HeZhang(object):
                             result.append(
                                 [s, t, p, q, erpqty, chayi, tim, reason, listno,
                                  user])
-                        result=pd.DataFrame(result,columns=['仓别','料号','标签ID','WMS库存量','ERP库存量','差异量','差异时间','差异原因','差异单据号','操作人员'])
-                        print(result)
-                        self.ms.dopost("truncate table Hzgn_wms_erp")
-                        self.base.batchwri(result,'Hzgn_wms_erp',self.ms)
+        result=pd.DataFrame(result,columns=['仓别','料号','标签ID','WMS库存量','ERP库存量','差异量','差异时间','差异原因','差异单据号','操作人员'])
+        self.ms.dopost("truncate table Hzgn_wms_erp")
+        self.base.batchwri(result,'Hzgn_wms_erp',self.ms)

@@ -51,7 +51,7 @@ from dataprocess.oracleprocess.mes.app.should_pay import ShouldPay
 from dataprocess.oracleprocess.mes.app.qty_delres import QtyDelRes
 from dataprocess.oracleprocess.mes.app.assets_fixed import AssetsFixed
 from dataprocess.oracleprocess.mes.app.chuhuotongji_zhejiu import CHTJZJ
-from dataprocess.oracleprocess.mes.app.costyuanfan import CostYuanfan
+from dataprocess.oracleprocess.mes.app.cost_yuanfan_wuliao import CostYuanfanWuliao
 
 import config_test as conf
 from time import strftime,localtime
@@ -226,11 +226,11 @@ def k2func(name,btime,etime,conns):
         pcn(conns)
         del pcn
     # 整体良率
-    if 'ogr' == name:
-        print('执行：' + name)
-        ogr = OverallGoodRatio()
-        ogr(conns)
-        del ogr
+    #if 'ogr' == name:
+     #   print('执行：' + name)
+      #  ogr = OverallGoodRatio()
+       # ogr(conns)
+        #del ogr
     # should_pay_age
     if 'spa' == name:
         print('执行：' + name)
@@ -348,7 +348,7 @@ def k2func(name,btime,etime,conns):
     # 原反损耗
     if 'cstyf' == name:
         print('执行' + name)
-        cstyf = CostYuanfan()
+        cstyf = CostYuanfanWuliao()
         cstyf(conns)
         del cstyf
 def main():
