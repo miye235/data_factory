@@ -1,15 +1,15 @@
-损耗分类：PVA损耗，保护膜，上T损耗，PET损耗，下T损耗，离型膜损耗，原反损耗（单价获取方式不一样，先不做）
+损耗分类:PVA损耗，保护膜，上T损耗，PET损耗，下T损耗，离型膜损耗，原反损耗（单价获取方式不一样，先不做）
 
-需要做的离线：上面这几种损耗的-月累计损耗金额，月累计投入成本，月累计损耗米数，过去15日损耗金额百分比，过去30日损耗金额百分比
-其中每种损耗的分：量产，TD,RD
+需要做的离线:上面这几种损耗的-月累计损耗金额，月累计投入成本，月累计损耗米数，过去15日损耗金额百分比，过去30日损耗金额百分比
+其中每种损耗的分:量产，TD,RD
 
-PVA损耗-量产投入：
+PVA损耗-量产投入:
 
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_0103%'
 AND WOTYPE='量产'
@@ -18,13 +18,13 @@ AND WOTYPE='量产'
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-PVA损耗-量产产出：
+PVA损耗-量产产出:
 
 
 select outqty as rcc from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
   and   MATERIALNO LIKE '_0103%'
   AND WO NOT LIKE 'KP1%'
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
@@ -35,11 +35,11 @@ AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 
 
 
-PVA损耗-TD投入：
+PVA损耗-TD投入:
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_0103%'
@@ -50,13 +50,13 @@ AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-PVA损耗-TD产出：
+PVA损耗-TD产出:
 
 
 select outqty as rcc from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
    AND MATERIALNO LIKE '_0103%'
 AND EQUIPMENT IS NOT NULL
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
@@ -68,11 +68,11 @@ AND WO NOT LIKE 'KP1%'
 
 
 
-PVA损耗-RD投入：
+PVA损耗-RD投入:
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_0103%'
 AND WO NOT LIKE 'KP1%'
@@ -83,12 +83,12 @@ AND WOTYPE !='TD'
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-PVA损耗-RD产出：
+PVA损耗-RD产出:
 
 select outqty as rcc from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_0103%'
 AND EQUIPMENT IS NOT NULL
@@ -103,10 +103,10 @@ AND WOTYPE !='TD'
 
 
 
-保护膜量产-投入：
+保护膜量产-投入:
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_0104%'
 AND WO NOT LIKE 'KP1%'
@@ -116,12 +116,12 @@ AND WOTYPE='量产'
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-保护膜量产-产出：
+保护膜量产-产出:
 
 select outqty as rcc from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_0104%'
 AND EQUIPMENT IS NOT NULL
@@ -132,12 +132,12 @@ AND WOTYPE='量产'
 
 
 
-保护膜-TD-投入：
+保护膜-TD-投入:
 
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_0104%'
 AND WO NOT LIKE 'KP1%'
@@ -148,13 +148,13 @@ WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
 
-保护膜-TD-产出：
+保护膜-TD-产出:
 
 
 select outqty as rcc from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_0104%'
 AND EQUIPMENT IS NOT NULL
@@ -166,13 +166,13 @@ AND WOTYPE='TD'
 
 
 
-保护膜-RD-投入：
+保护膜-RD-投入:
 
 
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_0104%'
 AND WO NOT LIKE 'KP1%'
@@ -183,12 +183,12 @@ AND WOTYPE !='TD'
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-保护膜-RD-产出：
+保护膜-RD-产出:
 
 select outqty as rcc from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_0104%'
 AND WO NOT LIKE 'KP1%'
@@ -201,11 +201,11 @@ AND WOTYPE !='TD'
 
 
 
-上T损耗-量产-投入：
+上T损耗-量产-投入:
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 AND (MATERIALNO LIKE '_0102%' OR MATERIALNO LIKE '_0108%')
 AND WO NOT LIKE 'KP1%'
@@ -215,7 +215,7 @@ AND WO NOT LIKE 'KP1%'
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-上T损耗-量产-产出：
+上T损耗-量产-产出:
 
 select outqty as rcc from
 
@@ -232,14 +232,14 @@ AND WO NOT LIKE 'KP1%'
 
 
 
-上T损耗-TD-投入：
+上T损耗-TD-投入:
 
 
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 AND MATERIALNO LIKE '_0102%'
 AND WO NOT LIKE 'KP1%'
@@ -249,12 +249,12 @@ AND WOTYPE='TD'
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-上T损耗-TD-产出：
+上T损耗-TD-产出:
 
 select outqty as rcc from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 AND MATERIALNO LIKE '_0102%'
 AND EQUIPMENT IS NOT NULL
@@ -265,12 +265,12 @@ AND WOTYPE='TD'
 
 
 
-上T损耗-RD-投入：
+上T损耗-RD-投入:
 
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 AND (MATERIALNO LIKE '_0102%' or MATERIALNO LIKE '_0108%')
 AND WO NOT LIKE 'KP1%'
@@ -281,13 +281,13 @@ AND WO NOT LIKE 'KP1%'
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-上T损耗-RD-产出：
+上T损耗-RD-产出:
 
 
 select outqty as rcc from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 AND (MATERIALNO LIKE '_0102%' or MATERIALNO LIKE '_0108%')
 AND EQUIPMENT IS NOT NULL
@@ -300,10 +300,10 @@ AND WO NOT LIKE 'KP1%'
 
 
 
-PET损耗-量产-投入：
+PET损耗-量产-投入:
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_011%'
 AND WO NOT LIKE 'KP1%'
@@ -314,7 +314,7 @@ WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
 
-PET损耗-量产-产出：
+PET损耗-量产-产出:
 
 select outqty as rcc from
 
@@ -331,7 +331,7 @@ AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 
 
 
-PET损耗-TD-投入：
+PET损耗-TD-投入:
 
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
@@ -348,7 +348,7 @@ WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
 
-PET损耗-TD-产出：
+PET损耗-TD-产出:
 select outqty as rcc from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
@@ -363,7 +363,7 @@ AND WOTYPE='TD'
 
 
 
-PET损耗-RD-投入：
+PET损耗-RD-投入:
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
@@ -378,7 +378,7 @@ AND WO NOT LIKE 'KP1%'
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-PET损耗-RD-产出：
+PET损耗-RD-产出:
 
 select outqty as rcc from
 
@@ -397,11 +397,11 @@ AND WO NOT LIKE 'KP1%'
 
 
 
-下T损耗-量产-投入：
+下T损耗-量产-投入:
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
  AND MATERIALNO LIKE '_0107%'
 AND WO NOT LIKE 'KP1%'
@@ -412,7 +412,7 @@ WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
 
-下T损耗-量产-产出：
+下T损耗-量产-产出:
 
 select outqty as rcc from
 
@@ -430,12 +430,12 @@ AND WO NOT LIKE 'KP1%'
 
 
 
-下T损耗-TD-投入：
+下T损耗-TD-投入:
 
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 AND MATERIALNO LIKE '_0107%'
 AND WO NOT LIKE 'KP1%'
@@ -445,7 +445,7 @@ AND WOTYPE='TD'
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-下T损耗-TD-产出：
+下T损耗-TD-产出:
 
 select outqty as rcc from
 
@@ -463,11 +463,11 @@ AND WOTYPE='TD'
 
 
 
-下T损耗-RD-投入：
+下T损耗-RD-投入:
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 AND MATERIALNO LIKE '_0107%'
 AND WO NOT LIKE 'KP1%'
@@ -480,7 +480,7 @@ WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
 
-下T损耗-RD-产出：
+下T损耗-RD-产出:
 
 select outqty as rcc from
 
@@ -498,13 +498,13 @@ AND WOTYPE !='TD'
 
 
 
-离型膜损耗-量产-投入：
+离型膜损耗-量产-投入:
 
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 AND MATERIALNO LIKE '_0105%'
 AND WO NOT LIKE 'KP1%'
@@ -515,7 +515,7 @@ AND WO NOT LIKE 'KP1%'
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-离型膜损耗-量产-产出：
+离型膜损耗-量产-产出:
 
 select outqty as rcc from
 
@@ -532,13 +532,13 @@ AND WO NOT LIKE 'KP1%'
 
 
 
-离型膜损耗-TD-投入：
+离型膜损耗-TD-投入:
 
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 AND MATERIALNO LIKE '_0105%'
 AND WO NOT LIKE 'KP1%'
@@ -548,7 +548,7 @@ AND WOTYPE='TD'
 WHERE b.ITEM_COST != 0 and b.COST_TYPE= 'Frozen'
 
 
-离型膜损耗-TD-产出：
+离型膜损耗-TD-产出:
 
 select outqty as rcc from
 
@@ -564,13 +564,13 @@ AND WOTYPE='TD'
 
 
 
-离型膜损耗-RD-投入：
+离型膜损耗-RD-投入:
 
 
 select sum(MLOTCONSUMEQTY) as rtr,b.ITEM_COST,rq from
 
 (select *,DATE_FORMAT(date_sub(UPDATETIME,interval 7 hour),'%Y-%m-%d') as rq from offline.sunhao where
-DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07：00：00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07：00：00')
+DATE_FORMAT(UPDATETIME, '%Y-%m-%d %H:%i:%s') between DATE_FORMAT('${startime}', '%Y-%m-%d 07:00:00') and DATE_FORMAT('${endtime}','%Y-%m-%d 07:00:00')
 AND OPERATION IN ('PSA','TAC-PVA','PVA','TAC','AGING')
 AND MATERIALNO LIKE '_0105%'
 AND WO NOT LIKE 'KP1%'

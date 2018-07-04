@@ -17,7 +17,9 @@ FROM WMS.A_PALLET_ITEM
 WHERE  SUBINVENTORY_CODE IN ('F1FGA','F1RDA','F1CAA') AND QC_STATUS NOT IN ('B','D')
 GROUP BY ITEM_CODE'''
         res = self.ora.doget(sql)
-        self.ms.dopost('truncate table swgkc')
+        day=base.gettoday()
+        res['日期']=day
+        self.ms.dopost("delete from swgkc where 日期='"+day+"'")
         b.batchwri(res, 'swgkc',self.ms)
 
 base = Base()

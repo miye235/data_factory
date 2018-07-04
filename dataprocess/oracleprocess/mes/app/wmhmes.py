@@ -46,15 +46,15 @@ WHERE	SEQUENCE = (SELECT MAX(SEQUENCE) FROM mes.mes_wip_hist WHERE lot = vlm.lot
 	AND replace(mwh.transactiontime,'/','-') < 'today'||' 07:00:00'
 ''','RTC-KS':'''
 SELECT
-SUM(mwh.newquantity) 
-FROM	mes.view_lotlist_main vlm
+SUM(mwh.newquantity) 產出數量
+FROM mes.view_lotlist_main vlm
 INNER JOIN mes.mes_wip_hist mwh 
-ON 	mwh.lot = vlm.lot
+ON  mwh.lot = vlm.lot
 AND mwh.oldoperation = 'RTC-QC'
 WHERE SEQUENCE = (SELECT MAX(SEQUENCE) FROM mes.mes_wip_hist WHERE lot = vlm.lot  AND oldoperation = 'RTC-QC')
-	and vlm.operationseq = '003'
-	AND replace(mwh.transactiontime,'/','-') >= 'yesterday'||' 08:30:00'
-	AND replace(mwh.transactiontime,'/','-') < 'today'||' 08:30:00'
+ and vlm.operationseq IN('002','003')
+ AND replace(mwh.transactiontime,'/','-') >= 'yesterday'||' 08:30:00'
+ AND replace(mwh.transactiontime,'/','-') < 'today'||' 08:30:00'
 '''
 ,'RTP-XY':'''
 SELECT 
@@ -97,7 +97,9 @@ ON  mwh.lot = vlm.lot
   AND mwh.oldoperation LIKE '檢查%'
 WHERE SEQUENCE = (SELECT MAX(SEQUENCE) FROM mes.mes_wip_hist WHERE lot = vlm.lot AND TRANSACTION = 'CheckOut' AND oldoperation LIKE '檢查%')
  and vlm.wo like 'K%'
- and vlm.lottype <> 'Pilot Run'
+ and vlm.operation <> '凹凸靜置站' 
+ AND vlm.operation <> 'D規內包裝'
+ AND vlm.operation <> '翹曲靜置' 
  AND replace(mwh.transactiontime,'/','-') >= 'yesterday'||' 08:30:00'
  AND replace(mwh.transactiontime,'/','-') < 'today'||' 08:30:00'
 ''','WIP-psa':'''
@@ -141,8 +143,8 @@ WHERE SEQUENCE = (SELECT MAX(SEQUENCE) FROM mes.mes_wip_hist WHERE lot = vlm.lot
         self.ora = conns['mes']
         self.ms = conns['offline']
         # self.ms.dopost("truncate table mwhvlm1")
-        for day in [b.getYesterday(),b.gettoday()]:
-        # for day in b.datelist('20180101','20180301')[::-1]:
+        # for day in [b.getYesterday(),b.gettoday()]:
+        for day in b.datelist('20180702','20180703')[::-1]:
             print(day)
             self.ms.dopost("delete from mwhvlm1 where riqi='" + b.getYesterday(day).replace('/', '-') + "'")
             for k,v in sqldict.items():
@@ -153,15 +155,3 @@ WHERE SEQUENCE = (SELECT MAX(SEQUENCE) FROM mes.mes_wip_hist WHERE lot = vlm.lot
                 res['riqi']=b.getYesterday(day).replace('/','-')
                 b.batchwri(res, 'mwhvlm1',self.ms)
                 del res
-# base = Base()
-# erp = base.conn('erp')
-# offline = base.conn('offline')
-# wms = base.conn('wms')
-# mes = base.conn('mes')
-# conns = {'offline': offline, 'erp': erp, 'wms': wms, 'mes': mes}
-# zc=WmhMes()
-# zc(conns)
-# offline.close()
-# erp.close()
-# wms.close()
-# mes.close()
