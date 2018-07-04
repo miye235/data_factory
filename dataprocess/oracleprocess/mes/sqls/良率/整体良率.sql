@@ -51,6 +51,7 @@ where cbi.LOT in (SELECT DISTINCT INSP.LOT FROM mes.VIEW_LOTLIST_MAIN LOT , MES.
 WHERE LOT.LOT = INSP.LOT )
 --and cbi.LOT IN ('QP1-B-1805-0095')
 and oo.TRANSACTION='Terminated'
+and to_date(oo.TRANSACTIONTIME,'yyyy-mm-dd hh24:mi:ss') between to_date('thisbegtime','yyyy-mm-dd hh24:mi:ss') and to_date('thisendtime','yyyy-mm-dd hh24:mi:ss')
 group by cbi.LOT ,vlm.DEVICE,AA.WO, vlm.MATERIAL, vlm.LOTNO,vl1.MATERIAL,vmm.MATERIALNO,vmm.CUSTLOT,vl1.DEVICE,vlm.WO,vlm.LOTTYPE,AA.FABCODE,vl1.FABCODE,dd.REASON,dd.DESCR,dd.QUANTITY,tt.bin,tt.QUANTITY,oo.TRANSACTIONTIME,oo.TRANSACTION) MM
 LEFT JOIN MES.mes_edc_lotinfo MEL
 ON NVL(CUSTLOT,NVL(MM.MLOT,MM.MATERIAL)) = MEL.LOT AND MEL.OPERATION IN ('TAC-PVA','PVA')) MMO
