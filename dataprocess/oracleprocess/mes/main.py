@@ -374,16 +374,16 @@ def main():
     config = conf.configs
     lasttime=conf.total_T
     newpoint = strftime("%Y-%m-%d %H:%M:%S", localtime())
-    for k,v in config.items():
-        if lasttime%int(v['T'])==0:
-            k2func(k,v['checkpoint'],newpoint,conns)
-            config[k]['checkpoint']=newpoint#修改checkpoint
     if lasttime == minx([v['T'] for v in config.values()]):
         new_T = 1  # 周期循环
     else:
         new_T = lasttime + 1
     with open (base.path1+'config.py','w') as f:
         f.write('configs='+str(config)+'\n'+'total_T='+str(new_T))#写入配置文件
+    for k,v in config.items():
+        if lasttime%int(v['T'])==0:
+            k2func(k,v['checkpoint'],newpoint,conns)
+            config[k]['checkpoint']=newpoint#修改checkpoint
     offline.close()
     erp.close()
     wms.close()
