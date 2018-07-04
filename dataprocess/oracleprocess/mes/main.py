@@ -37,7 +37,7 @@ from dataprocess.oracleprocess.mes.app.gains_analysis import GainsAnalysis
 from dataprocess.oracleprocess.mes.app.should_pay_atm import ShouldPayAtm
 from dataprocess.oracleprocess.mes.app.should_get import ShouldGet
 from dataprocess.oracleprocess.mes.app.qcview import QCview
-from dataprocess.oracleprocess.mes.app.wmhmes import WmhMes
+# from dataprocess.oracleprocess.mes.app.wmhmes import WmhMes
 from dataprocess.oracleprocess.mes.app.cmmtinfo import CmmtInfo
 from dataprocess.oracleprocess.mes.app.main_business_cost import MainBusinessCost
 from dataprocess.oracleprocess.mes.app.loss_yuanfan_output import LossYuanfanOutput
@@ -273,12 +273,12 @@ def k2func(name,btime,etime,conns):
         qcview = QCview()
         qcview(conns)
         del qcview
-    # wmhmes
-    if 'wmhmes' == name:
-        print('执行：' + name)
-        wmhmes = WmhMes()
-        wmhmes(conns)
-        del wmhmes
+    # # wmhmes
+    # if 'wmhmes' == name:
+    #     print('执行：' + name)
+    #     wmhmes = WmhMes()
+    #     wmhmes(conns)
+    #     del wmhmes
     # cmmtinfo
     if 'cmmtinfo' == name:
         print('执行：' + name)

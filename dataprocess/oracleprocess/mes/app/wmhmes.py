@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import sys
+sys.path.append('/home/openstack/data_offline/data_factory/')
 from dataprocess.oracleprocess.mes.base import Base
 
 class WmhMes(object):
@@ -144,8 +146,7 @@ WHERE SEQUENCE = (SELECT MAX(SEQUENCE) FROM mes.mes_wip_hist WHERE lot = vlm.lot
         self.ms = conns['offline']
         # self.ms.dopost("truncate table mwhvlm1")
         # for day in [b.getYesterday(),b.gettoday()]:
-        for day in b.datelist('20180702','20180703')[::-1]:
-            print(day)
+        for day in [b.getYesterday(),b.gettoday()]:
             self.ms.dopost("delete from mwhvlm1 where riqi='" + b.getYesterday(day).replace('/', '-') + "'")
             for k,v in sqldict.items():
                 sqlthis=v.replace('yesterday',b.getYesterday(day).replace('/','-')).replace('today',day.replace('/','-'))
@@ -155,3 +156,14 @@ WHERE SEQUENCE = (SELECT MAX(SEQUENCE) FROM mes.mes_wip_hist WHERE lot = vlm.lot
                 res['riqi']=b.getYesterday(day).replace('/','-')
                 b.batchwri(res, 'mwhvlm1',self.ms)
                 del res
+base = Base()
+offline = base.conn('offline')
+offline1 = base.conn('offline_test')
+wms = base.conn('wms')
+conns = {'offline': offline,'wms': wms}
+conns1 = {'offline': offline1,'wms': wms}
+t3s = WmhMes()
+t3s(conns)
+t3s(conns1)
+offline.close()
+wms.close()
