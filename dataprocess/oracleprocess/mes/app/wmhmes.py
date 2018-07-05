@@ -158,10 +158,11 @@ WHERE SEQUENCE = (SELECT MAX(SEQUENCE) FROM mes.mes_wip_hist WHERE lot = vlm.lot
                 del res
 base = Base()
 offline = base.conn('offline')
+mes=base.conn('mes')
 offline1 = base.conn('offline_test')
 wms = base.conn('wms')
-conns = {'offline': offline,'wms': wms}
-conns1 = {'offline': offline1,'wms': wms}
+conns = {'offline': offline,'wms': wms,'mes':mes}
+conns1 = {'offline': offline1,'wms': wms,'mes':mes}
 t3s = WmhMes()
 t3s(conns)
 t3s(conns1)
