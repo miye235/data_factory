@@ -371,7 +371,7 @@ def main():
     for k, v in config.items():
         if lasttime % int(v['T']) == 0:
             config[k]['checkpoint'] = newpoint  # 修改checkpoint
-    with open(base.path1 + 'config.py', 'w') as f:
+    with open(base.path1 + 'config_test.py', 'w') as f:
         f.write('configs=' + str(config) + '\n' + 'total_T=' + str(new_T))  # 写入配置文件
     for k, v in config_new.items():
         if lasttime % int(v['T']) == 0:
