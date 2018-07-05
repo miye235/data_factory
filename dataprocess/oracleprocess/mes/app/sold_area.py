@@ -9,6 +9,6 @@ class SoldArea(object):
         with open(base.path1+'sqls/销售面积.sql','r') as f:
             sql=f.read()
         res=erp.doget(sql)
-        offline.dopost("truncate table should_pay_age")
+        offline.dopost("truncate table sold_area")
         base.batchwri(res,'sold_area',offline)
 

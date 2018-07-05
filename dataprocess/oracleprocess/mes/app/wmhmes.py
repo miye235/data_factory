@@ -156,15 +156,17 @@ WHERE SEQUENCE = (SELECT MAX(SEQUENCE) FROM mes.mes_wip_hist WHERE lot = vlm.lot
                 res['riqi']=b.getYesterday(day).replace('/','-')
                 b.batchwri(res, 'mwhvlm1',self.ms)
                 del res
-base = Base()
-offline = base.conn('offline')
-mes=base.conn('mes')
-offline1 = base.conn('offline_test')
-wms = base.conn('wms')
-conns = {'offline': offline,'wms': wms,'mes':mes}
-conns1 = {'offline': offline1,'wms': wms,'mes':mes}
-t3s = WmhMes()
-t3s(conns)
-t3s(conns1)
-offline.close()
-wms.close()
+
+if __name__ == '__main__':
+    base = Base()
+    offline = base.conn('offline')
+    mes=base.conn('mes')
+    offline1 = base.conn('offline_test')
+    wms = base.conn('wms')
+    conns = {'offline': offline,'wms': wms,'mes':mes}
+    conns1 = {'offline': offline1,'wms': wms,'mes':mes}
+    t3s = WmhMes()
+    t3s(conns)
+    t3s(conns1)
+    offline.close()
+    wms.close()

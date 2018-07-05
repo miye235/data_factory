@@ -183,15 +183,16 @@ class LvLi(object):
             # print(res['pva_lot']+'|'+res['psa_lot']+'|'+res['slt_lot']+'|'+res['rtx_lot'])
             self.ms.write2mysql(res, 'trace_production')
 
-# base = Base()
-# erp = base.conn('erp')
-# offline = base.conn('offline')
-# wms = base.conn('wms')
-# mes = base.conn('mes')
-# conns = {'offline': offline, 'erp': erp, 'wms': wms, 'mes': mes}
-# zc=LvLi()
-# zc('2018-06-20 00:00:00','2018-06-28 00:00:00',conns)
-# offline.close()
-# erp.close()
-# wms.close()
-# mes.close()
+if __name__ == '__main__':
+    base = Base()
+    erp = base.conn('erp')
+    offline = base.conn('offline')
+    wms = base.conn('wms')
+    mes = base.conn('mes')
+    conns = {'offline': offline, 'erp': erp, 'wms': wms, 'mes': mes}
+    zc=LvLi()
+    zc('2018-06-04 00:00:00','2018-06-06 00:00:00',conns)
+    offline.close()
+    erp.close()
+    wms.close()
+    mes.close()

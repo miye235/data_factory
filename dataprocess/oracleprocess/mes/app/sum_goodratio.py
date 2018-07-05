@@ -1,4 +1,4 @@
-from dataprocess.oracleprocess.mes.base import Base
+from dataprocess.oracleprocess.mes.base_test import Base
 import pandas as pd
 import datetime
 class SumGoodRatio(object):
@@ -43,6 +43,7 @@ class SumGoodRatio(object):
         #ms.dopost("truncate table sum_goodratio")
         #for day in base.datelist('20180101', '20180627')[::-1]:
         for day in [today.strftime('%Y/%m/%d'), tomorrow.strftime('%Y/%m/%d')]:
+        # for day in base.datelist('20180629', '20180705')[::-1]:
             day = day.replace('/', '-')
             day30 = base.getYesterday(day, 30).replace('/', '-')
             ms.dopost("delete from sum_goodratio where rq="+"'"+day+"'")

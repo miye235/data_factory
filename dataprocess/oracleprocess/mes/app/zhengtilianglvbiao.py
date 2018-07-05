@@ -51,6 +51,7 @@ class OverallGoodRatio(object):
         #         res['week'] = res.apply(lambda r: self.trandate(r), axis=1)
         #         base.batchwri(res, 'OverallGoodRatio00', offline)
 
+        # todaybeg = '2018/07/05' + ' 08:00:00'
         todaybeg = datetime.datetime.now().strftime('%Y/%m/%d') + ' 08:00:00'
         todayend = datetime.datetime.strptime(todaybeg, '%Y/%m/%d %H:%M:%S') + datetime.timedelta(1)
         todayend = todayend.strftime('%Y/%m/%d %H:%M:%S')
@@ -58,7 +59,7 @@ class OverallGoodRatio(object):
         res = mes.doget(thissql)
         if not res.empty:
             lotmu = res['LOT'].apply(self.findmu)
-            offline.dopost("delete from OverallGoodRatio00 where date_format(CHECKOUTTIME,'%Y-%m-%d %H:%i:%s')>date_format('"+todaybeg+"','%Y-%m-%d %H:%i:%s') ")
+            offline.dopost("delete from OverallGoodRatio where date_format(CHECKOUTTIME,'%Y-%m-%d %H:%i:%s')>date_format('"+todaybeg+"','%Y-%m-%d %H:%i:%s') ")
             lotmures = []
             for idx in lotmu.index:
                 if lotmu[idx] in lotmu.values[:idx] or lotmu[idx] in lotmu.values[idx + 1:]:
@@ -67,7 +68,7 @@ class OverallGoodRatio(object):
                     lotmures.append(res.loc[idx, 'LOT'])
             res['LOT_MU'] = lotmures
             res['week'] = res.apply(lambda r: self.trandate(r), axis=1)
-            base.batchwri(res, 'OverallGoodRatio00', offline)
+            base.batchwri(res, 'OverallGoodRatio', offline)
 
 
 if __name__ == "__main__":

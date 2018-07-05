@@ -3,6 +3,7 @@ from dataprocess.oracleprocess.mes.base import Base
 import pandas as pd
 import datetime
 
+
 class MonCostRate(object):
     def __init__(self):
         super(MonCostRate, self).__init__()
