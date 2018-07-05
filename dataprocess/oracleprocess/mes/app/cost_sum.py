@@ -46,9 +46,9 @@ class CostSum(object):
                         mi30=0
                     else:
                         if k == 'PVA':
-                            mi30 = 1 - float(sh30)/ (5.88 * float(tr30))
+                            mi30 = float(sh30)/ (5.88 * float(tr30))
                         else:
-                            mi30 = 1 -float(sh30) / float(tr30)
+                            mi30 = float(sh30) / float(tr30)
                     fin.append([day,sunhao_money,touru_money,sh_sum,tr_sum,sh30,tr30,mi_sh,mi30,k])
                 res=pd.DataFrame(fin,columns=['rq','moneysh','moneytr', 'moneysh_mon', 'moneytr_mon','sh30','tr30','mi_sh','mi30','type'])
                 res['item']=dir
