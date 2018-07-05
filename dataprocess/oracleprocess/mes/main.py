@@ -50,7 +50,7 @@ from dataprocess.oracleprocess.mes.app.qcview1 import QcVim1
 from dataprocess.oracleprocess.mes.app.should_pay import ShouldPay
 from dataprocess.oracleprocess.mes.app.qty_delres import QtyDelRes
 from dataprocess.oracleprocess.mes.app.assets_fixed import AssetsFixed
-from dataprocess.oracleprocess.mes.app.chuhuotongji_zhejiu import CHTJZJ
+# from dataprocess.oracleprocess.mes.app.chuhuotongji_zhejiu import CHTJZJ
 from dataprocess.oracleprocess.mes.app.cost_yuanfan_wuliao import CostYuanfanWuliao
 
 import config as conf
@@ -351,12 +351,12 @@ def k2func(name,btime,etime,conns):
         af = AssetsFixed()
         af(conns)
         del af
-    # 出货统计含折旧
-    if 'chtjzj' == name:
-        print('执行' + name)
-        chtjzj = CHTJZJ()
-        chtjzj(conns)
-        del chtjzj
+    # # 出货统计含折旧
+    # if 'chtjzj' == name:
+    #     print('执行' + name)
+    #     chtjzj = CHTJZJ()
+    #     chtjzj(conns)
+    #     del chtjzj
     # 原反损耗
     if 'cstyf' == name:
         print('执行' + name)

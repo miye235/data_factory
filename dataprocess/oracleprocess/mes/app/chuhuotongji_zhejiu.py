@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+import sys
+sys.path.append('/home/openstack/data_offline/data_factory/')
 from dataprocess.oracleprocess.mes.base import Base
 import os,cx_Oracle
 import pandas as pd
@@ -38,6 +40,7 @@ class CHTJZJ(object):
             print('erp连接成功！')
         finally:
             self.Func(self.conn)
+            # for day in b.datelist('20180629','20180705'):
             for day in [b.getYesterday(),b.gettoday()]:
                 day = day.replace('/', '-')
                 print(day)
@@ -48,9 +51,26 @@ class CHTJZJ(object):
                     sql = f.read().replace('thisday',day)
                 self.cursor.execute(sql)
                 res = pd.DataFrame(self.cursor.fetchall())
+                self.ms.dopost("delete from CHTJZJ where SHIPMENTDATE='"+day+"'")
                 if not res.empty:
                     res.columns=['SALETYPE','Size','SHIPMENTDATE','TRIPNO','SOURCEID','LINEID','SHIPQUANTITY','DELIVERYNO','SHIPAERA','ORDEREDITEM','NONTAXAMOUNT','TAXAMOUNT','LINE_TYPE','ORDER_NUMBER','UNITSELLPRICE','SUBINVENTORY','DESCRIPTION','CUSTOMERNAME','FRUD','UNITAERA','TAXPRICE']
                     res['class']=res.apply(lambda r:self.caltype(r),axis=1)
                     b.batchwri(res, 'CHTJZJ',self.ms)
                 self.cursor.close()
             self.conn.close()
+if __name__ == "__main__":
+    base = Base()
+    erp = base.conn('erp')
+    offline = base.conn('offline')
+    offline1 = base.conn('offline_test')
+    wms = base.conn('wms')
+    mes = base.conn('mes')
+    conns = {'offline': offline, 'erp': erp, 'wms': wms, 'mes': mes}
+    conns1 = {'offline': offline1, 'erp': erp, 'wms': wms, 'mes': mes}
+    t3s = CHTJZJ()
+    t3s(conns)
+    t3s(conns1)
+    offline.close()
+    erp.close()
+    wms.close()
+    mes.close()
